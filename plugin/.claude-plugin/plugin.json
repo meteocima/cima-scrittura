@@ -1,7 +1,7 @@
 {
   "name": "cima-scrittura",
   "version": "0.2.0",
-  "description": "Scrittura CIMA: email e testi istituzionali, paper scientifici, proposte di progetto europee, deliverable e report di progetti finanziati. Nucleo comune anti-invenzione e anti-pattern AI, revisione indipendente con subagent in Cowork.",
+  "description": "Scrittura CIMA: email e testi istituzionali, paper scientifici, proposte di progetto europee, deliverable e report di progetti finanziati, presentazioni sul tema della fondazione. Lavora sui documenti nel formato in cui arrivano (Word, PowerPoint, PDF). Nucleo comune anti-invenzione e anti-pattern AI, revisione indipendente in un contesto separato dove l'ambiente lo permette.",
   "author": {
     "name": "CimaMeteoIdro"
   },
@@ -13,6 +13,8 @@
     "proposte",
     "progetti",
     "deliverable",
+    "presentazioni",
+    "slide",
     "horizon-europe",
     "CIMA"
   ]

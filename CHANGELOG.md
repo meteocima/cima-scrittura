@@ -1,5 +1,26 @@
 # Changelog
 
+## [0.2.0] in lavorazione
+
+### Aggiunto
+- `nucleo/formati-e-file.md`: il plugin legge e consegna i documenti nel
+  formato in cui arrivano (Word, PowerPoint, Excel, PDF), rispetta i template
+  imposti e puo' restituire una revisione dentro il documento con modifiche
+  tracciate (ADR 0018).
+- Skill `generale-presentazione` e agente `generale-revisore-presentazione`:
+  mazzi di slide con il tema CIMA per tutti i domini, con griglia di revisione
+  propria (ADR 0019). Il template e' in
+  `plugin/skills/generale-presentazione/references/tema-cima.pptx`.
+- `prove/`: un ciclo di verifica per aggiornamento, con almeno una prova per
+  ambiente, e i prompt di regressione per dominio in `prove/domini/`.
+  `build.py --check` avvisa quando la versione non ha la sua cartella.
+
+### Modificato
+- Il punto medio e' vietato come il trattino em, nel nucleo e nei controlli
+  bloccanti della build (ADR 0014).
+- `plugin.json`: versione 0.2.0, descrizione e parole chiave aggiornate, via
+  il nome di prodotto dalla descrizione.
+
 ## [Non rilasciato]
 
 ### Aggiunto

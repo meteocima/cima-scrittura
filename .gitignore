@@ -2,3 +2,4 @@ dist/
 materiali/
 __pycache__/
 .DS_Store
+template_cima/

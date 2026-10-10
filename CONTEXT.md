@@ -188,6 +188,19 @@ confermare]`. Alternativa unica all'invenzione, ed elencati in fondo alla
 consegna perché l'utente veda subito cosa manca.
 _Evitare_: TBD, XXX, testo provvisorio.
 
+**Mazzo**:
+Una presentazione come oggetto unico: le slide, la loro sequenza e le note di
+chi parla. Si costruisce copiando il template CIMA, non ricostruendolo.
+_Evitare_: slideshow, pacchetto di slide. "Presentazione" è il sinonimo
+accettato, ed è la parola usata nei nomi (`generale-presentazione`); "slide"
+indica la singola pagina.
+
+**Scaletta**:
+L'elenco numerato che precede il mazzo: per ogni slide il layout, il titolo e
+che cosa sostiene. Si costruisce e si mostra prima di montare il file, perché
+un mazzo si corregge sulla scaletta, non sulle slide.
+_Evitare_: outline, struttura, indice.
+
 **Deroga**:
 Uno scostamento dichiarato da `nucleo/voce-e-lingua.md` che un dominio si
 concede perché il formato lo impone (IMRAD, template di deliverable,

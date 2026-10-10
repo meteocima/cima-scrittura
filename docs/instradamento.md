@@ -15,6 +15,7 @@ dentro le skill ne sono viste, e devono concordare.
 | abstract per conferenza o rivista | paper |
 | abstract di una proposta | proposte |
 | email, lettera, comunicato, post, verbale, testo web | generale |
+| slide, presentazione, talk, deck, mazzo (di qualsiasi dominio) | generale (`generale-presentazione`): costruisce il mazzo con il tema CIMA e prende i criteri di contenuto dalla skill del dominio |
 | "rivedi questo testo" senza contesto | generale, che rimanda se riconosce un paper o una proposta |
 | traduci, translate (qualsiasi testo) | generale (`generale-traduzione`): per abstract, paper, proposte e deliverable traduce lingua e terminologia senza cambiare struttura e contenuto; per adattarli ai limiti del dominio rimanda alla skill di quel dominio |
 
@@ -24,6 +25,8 @@ Due confini che si sbagliano facilmente:
   l'argomento: la risposta agli ESR di una proposta resta in `proposte` anche
   a progetto avviato (`adr/0009`);
 - fra **generale** e **progetti** decide la natura del testo, non il
-  destinatario: al project officer si scrive da entrambi i domini.
+  destinatario: al project officer si scrive da entrambi i domini;
+- le **presentazioni** sono un formato, non un dominio: il mazzo lo fa sempre
+  `generale-presentazione`, il contenuto resta di chi lo possiede.
 
 Prima di un rilascio l'instradamento si prova con i prompt in `prove/`.

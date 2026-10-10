@@ -24,3 +24,5 @@ dice che cosa vale oggi, questi dicono come ci siamo arrivati.
 | [0015](0015-modello-dei-valutatori.md) | Modello dei valutatori (**aperta**) |
 | [0016](0016-un-solo-tronco.md) | Un solo tronco: via il modello hub e dominio |
 | [0017](0017-brief-sciolto.md) | `BRIEF.md` sciolto nei file che hanno la sua materia |
+| [0018](0018-i-file-sono-cittadini-di-prima-classe.md) | Il plugin lavora sui documenti, non solo sul testo |
+| [0019](0019-presentazioni-formato-non-dominio.md) | Le presentazioni sono un formato, non un dominio |

@@ -3,7 +3,7 @@
 > File comune del dominio generale. Fonte unica:
 > `plugin/condivisi/generale/tipologie.md`. La build lo copia in `references/`
 > di ogni skill `generale-*`: modificarlo qui, non rimettere copie nelle
-> cartelle delle skill (vedi `README-dominio.md` in `generale-scrittura`).
+> cartelle delle skill (vedi `docs/scrivere-una-skill.md` nel repository).
 
 Per ogni tipo: struttura, regole specifiche e se in modalità agenti serve
 il revisore separato (`generale-revisore`). Dove il revisore non serve
@@ -19,6 +19,11 @@ basta l'autorevisione con `checklist.md`, salvo richiesta dell'utente.
 | Report interno | no, autorevisione |
 | Testo web pubblico | sì |
 | Post social pubblico | sì |
+
+Le **presentazioni** non sono un tipo di questo file: hanno una skill
+propria, `generale-presentazione`, con il tema CIMA, la griglia di revisione
+e il suo revisore separato. Il mazzo di un talk, di una review o di una
+giornata pubblica va lì, qualunque sia il dominio del contenuto.
 
 Se il testo rientra in un altro dominio (abstract, articolo, cover letter,
 proposta, deliverable, report periodico di progetto) non è un tipo di
