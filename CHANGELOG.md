@@ -15,7 +15,14 @@
 - `plugin/condivisi/<dominio>/`: riferimenti comuni alle skill di un
   dominio, iniettati dalla build (brief v5).
 
+- Dominio progetti: skill `progetti-scrittura`, `progetti-revisione`,
+  `progetti-risposta-review`; agente `progetti-revisore`; file comuni in
+  `plugin/condivisi/progetti/` (brief v6).
+
 ### Modificato
+- `build.py`: sottocartelle ammesse in `plugin/condivisi/<dominio>/`.
+- Protocollo di revisione: ai livelli standard e completo, autorevisione
+  ammessa per testi brevi scritti da soli, mai per testi da pubblicare.
 - `build.py --check` lavora in una cartella temporanea invece che in
   `dist/.check/`.
 

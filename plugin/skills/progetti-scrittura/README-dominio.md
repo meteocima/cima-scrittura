@@ -27,9 +27,9 @@ contenerne copie: la build si ferma.
 | `griglia-revisione.md` | scrittura, revisione, agente |
 | `programma-horizon-europe.md`, `programma-interreg.md`, `programma-life.md`, `programma-ucpm.md` | tutte e tre le skill |
 
-La build copia solo file `.md` al primo livello di `condivisi/progetti/`:
-niente sottocartelle, per questo i profili si chiamano
-`programma-<nome>.md`. Nuovo programma: aggiungere il file e la riga
+La build copia anche le sottocartelle di `condivisi/progetti/` (brief
+v6); i profili restano `programma-<nome>.md` finché la chat di dominio
+non decide di spostarli. Nuovo programma: aggiungere il file e la riga
 nell'elenco dei profili delle tre SKILL.md.
 
 File di una sola skill, restano nella skill: `tipi-documento.md`

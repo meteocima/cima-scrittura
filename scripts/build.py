@@ -8,8 +8,8 @@ Uso:
 Passaggi:
 1. copia plugin/ (senza condivisi/) in dist/cima-scrittura/
 2. inietta nucleo/*.md in ogni skill, in references/nucleo/
-3. inietta plugin/condivisi/<dominio>/*.md in references/ di ogni skill
-   del dominio (dominio = prefisso del nome della skill)
+3. inietta plugin/condivisi/<dominio>/ (anche sottocartelle, solo .md) in
+   references/ di ogni skill del dominio (dominio = prefisso del nome)
 4. valida manifest, frontmatter, nomi, riferimenti, trattino em
 5. crea dist/cima-scrittura.plugin (Cowork) e dist/skills/<nome>.zip (chat)
 """
@@ -218,10 +218,15 @@ def assembla(dest: Path) -> None:
         if not cond.is_dir():
             continue
         refs = skill_dir / "references"
-        for f in sorted(cond.glob("*.md")):
-            if (refs / f.name).exists():
-                errore(f"skills/{skill_dir.name}: references/{f.name} è in condivisi/{dominio}/, togliere la copia dal sorgente")
-            shutil.copy2(f, refs / f.name)
+        for f in sorted(cond.rglob("*.md")):
+            rel = f.relative_to(cond)
+            if rel.parts[0] == "nucleo":
+                errore(f"condivisi/{dominio}/nucleo/: nome riservato al nucleo")
+                continue
+            if (refs / rel).exists():
+                errore(f"skills/{skill_dir.name}: references/{rel.as_posix()} è in condivisi/{dominio}/, togliere la copia dal sorgente")
+            (refs / rel).parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(f, refs / rel)
 
 
 def comprimi(cartella: Path, archivio: Path) -> None:

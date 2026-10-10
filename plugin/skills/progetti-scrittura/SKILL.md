@@ -109,9 +109,13 @@ Criteri: `references/griglia-revisione.md`.
 - **Deliverable, parte tecnica di periodic e final report, technical
   report**: revisione con due profili (project officer e reviewer
   tecnico esterno) prima della consegna.
-- **Executive summary, publishable summary, highlights isolati,
-  note di accompagnamento brevi**: autorevisione con la griglia; due
-  profili se l'utente lo chiede.
+- **Executive summary, highlights isolati, note di accompagnamento
+  brevi**: autorevisione con la griglia; due profili se l'utente lo
+  chiede.
+- **Publishable summary e altri testi destinati alla pubblicazione**
+  (CORDIS, sito del progetto): in modalità agenti almeno il profilo
+  project officer; in chat autorevisione dichiarata e pacchetto
+  revisore.
 
 In modalità agenti lanciare `progetti-revisore` due volte in parallelo,
 nella stessa chiamata, una per profilo. Preparazione e contenuto del

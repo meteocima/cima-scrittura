@@ -45,6 +45,12 @@ modalità agenti (tipicamente quelli pubblici o firmati a nome
 dell'istituzione); per gli altri basta l'autorevisione con checklist,
 salvo richiesta dell'utente.
 
+Ai livelli standard e completo una skill può indicare tipi di testo
+brevi e scritti da soli (per esempio un executive summary) per cui basta
+l'autorevisione con la griglia, salvo richiesta dell'utente. L'eccezione
+non vale per i testi destinati alla pubblicazione: per questi, in
+modalità agenti, almeno un revisore.
+
 | Livello | Uso tipico | Modalità agenti | Modalità chat |
 |---|---|---|---|
 | Leggero | email, testi brevi | 1 revisore per i testi indicati dalla skill e su richiesta; altrimenti autorevisione con checklist | autorevisione con checklist |

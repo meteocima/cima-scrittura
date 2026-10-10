@@ -4,7 +4,7 @@
 Questo file è la fonte delle decisioni condivise. Lo modifica solo la chat
 hub; le chat di dominio propongono modifiche (vedi "Flusso di lavoro").
 
-Versione brief: 5 · Ultimo aggiornamento: 2026-10-10
+Versione brief: 6 · Ultimo aggiornamento: 2026-10-10
 
 ---
 
@@ -89,8 +89,11 @@ stesso dominio (es. `tipologie.md` per scrittura e revisione):
 
 - stanno in `plugin/condivisi/<dominio>/` (`<dominio>` = prefisso senza
   trattino: `generale`, `paper`, `proposte`, `progetti`);
-- `build.py` li copia in `references/` di ogni skill di quel dominio;
-- nel SKILL.md si citano come `references/<file>.md`;
+- `build.py` li copia in `references/` di ogni skill di quel dominio,
+  sottocartelle comprese (es. `condivisi/proposte/programmi/` diventa
+  `references/programmi/`); `nucleo/` è un nome riservato;
+- nel SKILL.md si citano come `references/<file>.md` o
+  `references/<sottocartella>/<file>.md`;
 - il sorgente delle skill non deve contenerne copie: la build si ferma.
 
 ## 4. Convenzioni
@@ -268,6 +271,22 @@ Skill previste (la chat di dominio può ridefinirle):
   officer e reviewer esterni di progetto: aderenza alla DoA, risultati
   dimostrati e non solo dichiarati, scostamenti spiegati, KPI con valore
   misurato.
+- `progetti-risposta-review`: risposta del consorzio a review report,
+  deliverable respinti, richieste di chiarimento di PO, Joint
+  Secretariat, agenzie o monitor: tabella commento, posizione,
+  risposta, modifica; testo di accompagnamento; follow-up.
+
+Riferimenti comuni in `plugin/condivisi/progetti/`: matrice DoA,
+anti-pattern di dominio, griglia di revisione, profili dei programmi
+(Horizon Europe, Interreg, LIFE, UCPM), ciascuno con data di verifica e
+punti da verificare.
+
+Revisione: deliverable, parte tecnica dei report, technical report e
+risposte a review con due profili e sintesi. Executive summary,
+highlights e note brevi scritti da soli: autorevisione con la griglia,
+salvo richiesta. Publishable summary e altri testi destinati alla
+pubblicazione: in modalità agenti almeno il profilo project officer
+(eccezione ammessa da `protocollo-revisione.md`, sezione 2).
 
 Agenti: `progetti-revisore` (parametrizzato per profilo: project officer,
 reviewer tecnico).
@@ -286,6 +305,8 @@ Le descrizioni delle skill si sovrappongono su parole come "scrivi",
 |---|---|
 | proposta, bando, call, topic, Part B, ESR, work package, consorzio (pre-finanziamento) | proposte |
 | deliverable, periodic report, technical report, review di un progetto in corso, Grant Agreement, DoA | progetti |
+| risposta di merito a project officer o reviewer di progetto (review report, deliverable respinto, chiarimenti su un report) | progetti (`progetti-risposta-review`) |
+| email di routine al project officer (date, riunioni, logistica, invio di documenti) | generale |
 | paper, manuscript, articolo, journal, revisori, rebuttal, cover letter | paper |
 | abstract per conferenza o rivista | paper |
 | abstract di una proposta | proposte |
@@ -342,6 +363,11 @@ tuo prefisso. Prima di scrivere le skill proponimi il piano del dominio.
 6. La traduzione di qualsiasi testo va a `generale-traduzione`, che non
    cambia struttura e contenuto dei testi degli altri domini (sezione 6).
    PR #1, deciso il 2026-10-10.
+7. Dominio progetti: aggiunta `progetti-risposta-review`; email di
+   routine al PO a `generale`, risposte di merito a `progetti`;
+   autorevisione per summary brevi scritti da soli, ma revisore per i
+   testi destinati alla pubblicazione. `build.py` accetta sottocartelle
+   in `plugin/condivisi/<dominio>/`. Deciso il 2026-10-10.
 
 ### Aperte
 

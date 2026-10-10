@@ -1,6 +1,6 @@
 ---
 name: generale-scrittura
-description: "Scrive testi del dominio generale per Fondazione CIMA, in italiano e in inglese: email esterne e interne, lettere ufficiali e istituzionali (ministeri, Regioni, enti locali, organizzazioni internazionali), comunicati stampa, verbali anche da trascrizione o appunti, report interni, testi web, post social. Applica il nucleo CIMA: niente dati inventati, segnaposto per ciò che manca, verifica delle fonti, controllo anti-pattern AI. Usare per 'scrivi una email', 'bozza di lettera', 'comunicato stampa', 'fai il verbale', 'post per LinkedIn', 'draft an email', 'write a letter', 'press release', 'meeting minutes', 'social post'. Non usare per abstract, articoli, cover letter e risposte ai revisori (skill paper-), proposte, bandi ed ESR (proposte-), deliverable e report di progetti finanziati (progetti-), rilettura di un testo esistente (generale-revisione), traduzioni (generale-traduzione)."
+description: "Scrive testi del dominio generale per Fondazione CIMA, in italiano e in inglese: email esterne e interne, lettere ufficiali e istituzionali (ministeri, Regioni, enti locali, organizzazioni internazionali), comunicati stampa, verbali anche da trascrizione o appunti, report interni, testi web, post social. Applica il nucleo CIMA: niente dati inventati, segnaposto per ciò che manca, verifica delle fonti, controllo anti-pattern AI. Usare per 'scrivi una email', 'bozza di lettera', 'comunicato stampa', 'fai il verbale', 'post per LinkedIn', 'draft an email', 'write a letter', 'press release', 'meeting minutes', 'social post'. Non usare per abstract, articoli, cover letter e risposte ai revisori (skill paper-), proposte, bandi ed ESR (proposte-), deliverable, report e risposte di merito a review di progetti finanziati (progetti-), rilettura di un testo esistente (generale-revisione), traduzioni (generale-traduzione)."
 ---
 
 # Scrittura generale CIMA
@@ -32,7 +32,8 @@ Riferimenti del dominio:
 | abstract per conferenza o rivista, articolo, cover letter, risposta ai revisori | dominio paper |
 | proposta, bando, Part B, ESR, abstract di una proposta | dominio proposte |
 | deliverable, report periodico, technical report di un progetto finanziato | dominio progetti |
-| email o lettera a un project officer su un progetto in corso | questa skill; il report allegato va a progetti |
+| email di routine a un project officer (date, riunioni, logistica, invio di documenti) | questa skill; il report allegato va a progetti |
+| risposta di merito a project officer o reviewer di progetto (review report, deliverable respinto, chiarimenti) | `progetti-risposta-review` |
 | rileggere un testo già scritto dall'utente | `generale-revisione` |
 | tradurre un testo | `generale-traduzione` |
 
