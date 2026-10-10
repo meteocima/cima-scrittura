@@ -14,7 +14,8 @@ Il brief è stato quindi sciolto, con il criterio di mettere ogni pezzo dove si
 legge nel momento in cui serve: `CLAUDE.md` per ciò che vale a ogni turno,
 `CONTEXT.md` per il vocabolario, `docs/scrivere-una-skill.md` per chi sta
 scrivendo una skill, `docs/instradamento.md` per i confini fra domini,
-`docs/proposte.md` per l'unico dominio non ancora scritto, `docs/adr/` per il
+`docs/proposte.md` per il dominio allora non ancora scritto (cancellato quando
+il dominio è stato costruito), `docs/adr/` per il
 perché.
 
 Conseguenza da tenere a mente: non esiste più un file da "leggere per intero

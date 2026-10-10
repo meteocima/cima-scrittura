@@ -208,10 +208,42 @@ Skill `proposte-coerenza` e agente `proposte-verificatore`.
 |---|---|
 | `giro-0.3.0/13-coerenza` | **1.00** su due esecuzioni, 1,37 dollari in tutto |
 
+## Il dominio prende le sue richieste (issue #20)
+
+Non una skill nuova: il giro che fa esistere il dominio per chi scrive.
+
+| # | Ambiente | Prompt | Esito atteso | Esito reale |
+|---|---|---|---|---|
+| 27 | agenti | "Scrivi il work package 3" | Si attiva una skill (prima non se ne attivava nessuna, `adr/0020`): `progetti-scrittura` rivendica il mezzo ambiguo e fa la domanda sola sul Grant Agreement | **Passa**, due volte su due il 2026-10-10, dal caso `instradamento/01-work-package` |
+| 28 | agenti | "Draft the impact section" | Come sopra | **Passa**, due volte su due, dal caso `instradamento/06-impact-section` |
+| 29 | agenti | Stessa frase, e alla domanda si risponde "stiamo scrivendo una proposta" | `progetti-scrittura` passa la mano a `proposte-scrittura` invece di scrivere con i criteri mancanti | Da fare a mano: serve il secondo turno della conversazione |
+
+### Che cosa e' cambiato nei documenti
+
+- `nucleo/vincoli.md` sezione 4 non nomina piu' `proposte` come dominio non
+  scritto. La regola resta per le skill non installate, che e' il caso vero in
+  chat.
+- `docs/instradamento.md` ha una riga per ciascuna delle sei skill del
+  dominio, e non dice piu' che il dominio non esiste.
+- `progetti-scrittura` passa la mano invece di scrivere senza criteri.
+- `docs/proposte.md` cancellato: da qui in avanti la fonte di verita' sono le
+  skill, come per gli altri tre domini.
+- `CLAUDE.md`: quattro domini scritti, e i conteggi del `--check` aggiornati.
+
 ## Esito
 
-Da riempire a fine giro: data, ambienti provati, che cosa e' stato corretto
-prima di rilasciare.
+**Il giro non e' finito.** Le sei skill e i tre agenti del dominio sono
+scritti e misurati in cieco, ma la 0.3.0 non si rilascia finche' non sono
+state fatte le righe manuali: sono quelle dove conta come il risultato arriva
+davvero a chi legge, e un caso automatico non le vede.
+
+Da fare prima del rilascio:
+
+- le righe manuali di ciascuna sezione qui sopra (2b, 3, 4, 7, 10, 13, 16, 19,
+  20, 22, 23, 25, 26, 29);
+- le righe non eseguite del giro 0.2.0 (issue #6 e #7), che si chiudono dentro
+  questo rilascio;
+- la decisione sulla issue #29, che riguarda il nucleo.
 
 Analisi del bando (#12): chiusa il 2026-10-10. Tre casi automatici verdi, tre
 righe manuali ancora da fare (2b, 3, 4).
@@ -227,6 +259,9 @@ verdi, una riga manuale da fare (13).
 
 Concept (#13): chiusa il 2026-10-10. Due casi automatici verdi, una riga
 manuale da fare (16).
+
+Il dominio prende le sue richieste (#20): chiusa il 2026-10-10. Le due frasi
+ambigue dell'`adr/0020` ora attivano una skill, due volte su due.
 
 Coerenza e limiti (#19): chiusa il 2026-10-10. Un caso automatico verde due
 volte su due, due righe manuali da fare (25, 26).

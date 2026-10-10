@@ -1,5 +1,5 @@
 ---
 type: tool_used
 tool: Skill
-min: 1
+input_match: '"skill"\s*:\s*"(cima-scrittura:)?(progetti-scrittura|proposte-scrittura)"'
 ---

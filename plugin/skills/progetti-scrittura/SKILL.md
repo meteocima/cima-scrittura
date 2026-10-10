@@ -28,8 +28,10 @@ contrario. Fare **una domanda sola**: il Grant Agreement e' gia' firmato,
 oppure stiamo ancora scrivendo una proposta?
 
 - **Firmato**: si prosegue qui.
-- **Proposta**: il dominio e' `proposte`. Se quelle skill non sono
-  disponibili, vale `references/nucleo/vincoli.md` sezione 4: si scrive
+- **Proposta**: passare la mano al dominio `proposte`, che adesso esiste:
+  `proposte-analisi-bando` per i criteri del bando, `proposte-scrittura` per
+  il testo. Se quelle skill non sono disponibili (per esempio in chat con un
+  solo zip caricato), vale `references/nucleo/vincoli.md` sezione 4: si scrive
   comunque, dicendo quali criteri del dominio mancano (griglia del bando,
   pesi, soglie, gergo del valutatore).
 - **Nessuna risposta**: procedere nell'ipotesi del progetto finanziato,
