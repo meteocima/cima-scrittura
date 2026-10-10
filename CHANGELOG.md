@@ -1,5 +1,31 @@
 # Changelog
 
+## [0.3.0] in lavorazione
+
+Il quarto dominio, `proposte`, costruito un ticket alla volta (issue #11).
+Tutte le prove del giro stanno in `prove/0.3.0-dominio-proposte/`.
+
+### Aggiunto
+- Skill `proposte-analisi-bando`: estrae dal testo di un topic la matrice del
+  bando (criteri, pesi, soglie, expected outcomes nelle parole del bando,
+  requisiti obbligatori, struttura del modulo e limiti), con la fonte di ogni
+  voce e segnaposto dove il bando tace (issue #12).
+- `plugin/condivisi/proposte/matrice-bando.md`: forma della matrice e regola
+  che decide i conflitti, cioe' il topic prevale sul profilo del programma.
+- `plugin/condivisi/proposte/programma-horizon-europe.md`: profilo di
+  **valutazione** di Horizon Europe, costruito il 2026-10-10 da work programme
+  2026-2027, modulo di valutazione V4.0 e application form V5.1. Da non
+  confondere con il profilo di **reporting** dello stesso programma in
+  `condivisi/progetti/` (ADR 0020).
+- `prove/domini/proposte.md` e i primi casi eval del dominio:
+  `instradamento/09-analisi-bando` e `giro-0.3.0/01-matrice-chat`, che misura
+  la modalita' chat togliendo `Agent` e `Task` dagli strumenti della sessione
+  figlia.
+
+### Modificato
+- `plugin.json`: versione 0.3.0. Le righe del giro 0.2.0 non ancora eseguite
+  (issue #6 e #7) restano valide e si chiudono dentro questo rilascio.
+
 ## [0.2.0] in lavorazione
 
 ### Aggiunto

@@ -48,7 +48,7 @@ attesi e misura con grader separati. È il modo di sapere se una skill si
 attiva **da sola**: chi esegue le prove a mano ha letto l'esito atteso prima
 di cominciare.
 
-- `instradamento/`: otto frasi, misurano solo quale skill si attiva;
+- `instradamento/`: nove frasi, misurano solo quale skill si attiva;
 - `giro-0.2.0/`: le righe misurabili del giro 0.2.0, una per caso; il suo
   README dice quali righe sono rimaste fuori e perché;
 - `_materiali/`: collegamenti ai file finti delle prove, che lo
