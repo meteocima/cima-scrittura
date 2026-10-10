@@ -1,6 +1,6 @@
-# Dominio progetti: note per chi mantiene le skill
+# Dominio progetti: prove e note
 
-File non incluso nel plugin (escluso da `scripts/build.py`).
+Prompt di prova e note di sviluppo. Fuori dal plugin: non viene distribuito.
 
 ## Skill e agente
 
@@ -15,10 +15,8 @@ File non incluso nel plugin (escluso da `scripts/build.py`).
 
 ## File condivisi tra le skill del dominio
 
-Stanno in `plugin/condivisi/progetti/` (BRIEF §3). `scripts/build.py` li
-copia in `references/` di ogni skill `progetti-*`; nel SKILL.md si
-citano come `references/<file>.md`. Il sorgente delle skill non deve
-contenerne copie: la build si ferma.
+Stanno in `plugin/condivisi/progetti/`. Regole in
+`../scrivere-una-skill.md`, sezione "Riferimenti".
 
 | File | Usato da |
 |---|---|

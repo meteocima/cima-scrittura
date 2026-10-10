@@ -142,7 +142,7 @@ def valida_skill(skill_dir: Path, agenti: set[str] = frozenset()) -> None:
     elif len(desc) > MAX_DESCRIZIONE:
         errore(f"{rel}/SKILL.md: description di {len(desc)} caratteri (max {MAX_DESCRIZIONE})")
     elif "Non usare" not in desc:
-        avviso(f"{rel}/SKILL.md: description senza clausola 'Non usare per…' (vedi BRIEF §6)")
+        avviso(f"{rel}/SKILL.md: description senza clausola 'Non usare per…' (vedi docs/instradamento.md)")
     if "<" in desc or ">" in desc:
         errore(f"{rel}/SKILL.md: description con parentesi angolari")
 
@@ -153,7 +153,7 @@ def valida_skill(skill_dir: Path, agenti: set[str] = frozenset()) -> None:
     if "references/nucleo/vincoli.md" not in corpo:
         avviso(f"{rel}/SKILL.md: non richiama references/nucleo/vincoli.md")
 
-    # Una skill che usa agenti deve funzionare anche in chat (BRIEF §2, §4).
+    # Una skill che usa agenti deve funzionare anche in chat (docs/adr/0006).
     citati = sorted(a for a in agenti if re.search(rf"(?<![\w-]){re.escape(a)}(?![\w-])", corpo))
     if citati and not re.search(r"^##\s+Modalità chat\s*$", corpo, re.MULTILINE):
         errore(f"{rel}/SKILL.md: nomina {', '.join(citati)} ma manca la sezione '## Modalità chat'")
@@ -195,7 +195,7 @@ def controlla_em_dash(base: Path) -> None:
 def assembla(dest: Path) -> None:
     if dest.exists():
         shutil.rmtree(dest)
-    base_ignore = shutil.ignore_patterns(".DS_Store", ".gitkeep", "README-dominio.md")
+    base_ignore = shutil.ignore_patterns(".DS_Store", ".gitkeep")
 
     def ignora(cartella: str, nomi: list[str]) -> set[str]:
         esclusi = set(base_ignore(cartella, nomi))

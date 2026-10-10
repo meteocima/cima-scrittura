@@ -2,11 +2,10 @@
 
 Plugin di scrittura di Fondazione CIMA per Claude (Cowork e chat).
 
-**Stato: in costruzione.** Per ora contiene il nucleo comune e
-l'infrastruttura; le skill dei quattro domini arrivano nelle prossime versioni.
-Fino al rilascio resta in uso `cima-writing-style`.
+**Stato: in costruzione.** Sono pronti i domini generale, paper e progetti;
+manca proposte. Fino al rilascio resta in uso `cima-writing-style`.
 
-## Cosa farà
+## Cosa fa
 
 - **Generale**: email, lettere, comunicati, verbali, report interni, testi web.
 - **Paper**: articoli scientifici, abstract, cover letter, risposta ai
@@ -30,7 +29,7 @@ conversazione nuova.
 
 ## Per chi sviluppa
 
-Leggere `BRIEF.md` prima di tutto. Build e validazione:
+Il punto d'ingresso è `CLAUDE.md`, che rimanda al resto. Build e validazione:
 
 ```
 python3 scripts/build.py --check   # valida

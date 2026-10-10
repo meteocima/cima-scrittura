@@ -1,16 +1,23 @@
 # Riviste di riferimento del dominio paper
 
-Il dominio paper ha bisogno di profili di rivista (struttura, limiti,
-sezioni obbligatorie come disponibilità di codice e dati), costruiti da
-guide for authors correnti verificate con ricerca web, mai a memoria.
-Coprirle tutte non è possibile.
+Il dominio paper ha bisogno di profili di rivista (struttura, limiti, sezioni
+obbligatorie come disponibilità di codice e dati), costruiti da guide for
+authors correnti verificate con ricerca web, mai a memoria. Coprirle tutte non
+è possibile, quindi si scelgono quelle dove CIMA pubblica davvero.
 
-Scelte, insieme all'utente, quelle dove CIMA pubblica davvero: riviste
-del gruppo Elsevier, riviste del gruppo Nature (Nature Portfolio) e
-Geoscientific Model Development (GMD, Copernicus/EGU).
+La scelta iniziale era gruppo Elsevier, gruppo Nature e GMD. Scrivendo il
+dominio si è allargata a sei profili per editore invece che per singola
+rivista, perché le regole si ripetono dentro ogni editore: Elsevier, Nature
+Portfolio, Copernicus/EGU (al posto del solo GMD, e quindi anche HESS, NHESS,
+ESSD), AGU, AMS, RMetS/Wiley. Più i profili di conferenza EGU, AGU, AMS e
+Plinius.
 
-Resta da chiarire nella sessione del dominio paper se estendere il
-profilo GMD alle altre riviste Copernicus/EGU usate da CIMA (HESS,
-NHESS), che condividono gran parte delle regole.
+Due conseguenze registrate insieme ai profili:
 
-Deciso il 2026-10-10.
+- Elsevier e RMetS hanno guide non leggibili dagli strumenti di ricerca, e i
+  loro profili hanno molte voci `[da verificare]` da completare a mano.
+- Copernicus/EGU vieta l'AI generativa per il testo e le interpretazioni. Per
+  quelle riviste le skill di scrittura e di risposta ai revisori si limitano a
+  interventi assistivi, controlli e schemi.
+
+Deciso il 2026-10-10, allargato lo stesso giorno scrivendo il dominio.

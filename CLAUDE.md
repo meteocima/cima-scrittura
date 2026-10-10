@@ -4,18 +4,18 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Cosa è questo repository
 
-Sorgente del plugin Claude `cima-scrittura` (skill e agenti di scrittura
-per Fondazione CIMA, in italiano). Non è un progetto software: il
-"codice" sono file Markdown di istruzioni, più uno script Python che li
-assembla, valida e impacchetta.
+Sorgente del plugin Claude `cima-scrittura`, che fa scrivere a Fondazione CIMA
+i suoi testi in quattro domini: `generale` (email, lettere, comunicati,
+verbali, testi web), `paper` (articoli, abstract, risposta ai revisori),
+`proposte` (proposte di progetto europee) e `progetti` (deliverable e report
+di progetti finanziati).
 
-Tre file si dividono il lavoro, e vanno letti prima di toccare il plugin:
-**`BRIEF.md`** descrive l'architettura corrente ed è la fonte in caso di
-conflitto; **`CONTEXT.md`** è il glossario del repository (dominio,
-nucleo, revisione, modalità, segnaposto: parole che qui hanno un
-significato preciso); **`docs/adr/`** tiene una decisione per file con il
-perché e le alternative scartate. Qui c'è solo ciò che serve per
-orientarsi fra i tre.
+Non è un progetto software: il "codice" sono file Markdown di istruzioni, più
+uno script Python che li assembla, valida e impacchetta. Si scrive quindi per
+due lettori insieme, Claude che eseguirà le istruzioni e la persona di CIMA
+che manterrà il file.
+
+Stato: `generale`, `progetti` e `paper` sono scritti; `proposte` no.
 
 ## Comandi
 
@@ -24,127 +24,97 @@ python3 scripts/build.py --check   # solo validazione, in cartella temporanea
 python3 scripts/build.py           # assembla in dist/, valida, impacchetta
 ```
 
-Non esiste una suite di test: `--check` è il controllo da eseguire dopo
-ogni modifica a `nucleo/`, `plugin/` o `scripts/build.py`. Non c'è modo di
-validare una singola skill; la validazione è sempre su tutto il plugin.
+Non esiste una suite di test: `--check` è il controllo da eseguire dopo ogni
+modifica a `nucleo/`, `plugin/` o `scripts/build.py`, e vale sempre su tutto
+il plugin. Oggi dice: 9 skill, 4 agenti, 0 avvisi.
 
-Output della build (tutto in `dist/`, non versionato):
-`dist/cima-scrittura/` (plugin assemblato), `dist/cima-scrittura.plugin`
-(Cowork), `dist/skills/<nome>.zip` (caricamento di una singola skill in
-chat).
-
-La validazione statica non sostituisce la prova sul campo: prima di un
-rilascio ogni skill va provata in chat senza subagent (deve consegnare il
-risultato completo) e in Cowork (deve usare gli agenti previsti). I prompt
-di prova stanno in `plugin/skills/<skill>/README-dominio.md`.
+Output in `dist/`, non versionato: il plugin assemblato, `cima-scrittura.plugin`
+e uno zip per skill in `dist/skills/`.
 
 ## Architettura
 
-### Composizione a build time: il sorgente non è il plugin
+### Il sorgente non è il plugin
 
-Le skill vengono caricate una per una (in chat), quindi una skill non può
-leggere i file di un'altra. `scripts/build.py` risolve questo copiando i
-file comuni dentro ogni skill:
+Le skill vengono caricate una per una, quindi una skill non può leggere i file
+di un'altra. `scripts/build.py` risolve il problema copiando i file comuni
+dentro ogni skill al momento della build:
 
-1. `nucleo/*.md` → `references/nucleo/` di **ogni** skill;
-2. `plugin/condivisi/<dominio>/**/*.md` → `references/` delle sole skill
-   di quel dominio (dominio = prefisso del nome della skill);
-3. `README-dominio.md` e `.gitkeep` sono esclusi dal pacchetto.
+1. `nucleo/*.md` in `references/nucleo/` di **ogni** skill;
+2. `plugin/condivisi/<dominio>/**/*.md` in `references/` delle sole skill di
+   quel dominio, dove il dominio è il prefisso del nome della skill.
 
-Conseguenze pratiche:
-
-- I percorsi `references/nucleo/vincoli.md` citati nei SKILL.md esistono
-  solo nel plugin costruito. Nel sorgente le skill **non** contengono
-  `references/nucleo/`, e la build fallisce se ce lo trovano.
-- Una regola del nucleo si cambia in `nucleo/`, mai in una copia dentro
-  `dist/`.
-- Un file che serve a più skill dello stesso dominio si mette in
-  `plugin/condivisi/<dominio>/`, non duplicato nelle skill: la build si
-  ferma se trova la copia. `nucleo/` è un nome riservato lì dentro.
-- `dist/` può contenere residui di build precedenti (è ignorato da git):
-  non leggerlo come se fosse il sorgente.
-
-### Domini
-
-Quattro prefissi obbligatori per skill e agenti: `generale-`, `paper-`,
-`proposte-`, `progetti-` (il quinto elemento, `nucleo/`, è comune). Il
-prefisso decide anche quali file condivisi vengono iniettati. La tabella
-di instradamento tra domini, che ogni `description` deve rispettare con
-la sua clausola "Non usare per…", è in `BRIEF.md` §6.
-
-Stato: `generale` e `progetti` sono scritti; `paper` e `proposte`
-mancano. `legacy/cima-writing-style/` è la copia di riferimento del
-plugin che `cima-scrittura` sostituirà, non va modificata.
+Quindi: i percorsi `references/nucleo/…` citati nei SKILL.md esistono solo nel
+plugin costruito; una regola del nucleo si cambia in `nucleo/`, mai in una
+copia; e le duplicazioni visibili in `dist/` non sono un errore da accorpare
+(`docs/adr/0003`). Il sorgente di una skill che contiene una di quelle copie fa
+fallire la build.
 
 ### Due modalità, un solo risultato
 
-Ogni skill deve portare a termine il compito **anche senza subagent**.
-L'ambiente si deduce dagli strumenti disponibili (`Agent`/`Task` presente
-= modalità agenti), mai chiedendolo all'utente; la regola è in
-`nucleo/protocollo-revisione.md` §1 e vale per ogni passaggio delegato a
-un agente, non solo per la revisione. Per questo ogni SKILL.md che nomina
-un agente del plugin ha due sezioni parallele, `## Modalità agenti` e
-`## Modalità chat`: la seconda esegue nel contesto principale lo stesso
-lavoro, con lo stesso formato di output, dichiarando che non è
-indipendente. La build blocca una skill che nomina un agente senza avere
-`## Modalità chat`.
+Ogni skill porta a termine il compito **anche senza subagent**. La modalità si
+deduce dagli strumenti disponibili (`Agent` o `Task` presente = modalità
+agenti), mai chiedendola all'utente. Ogni passaggio che in modalità agenti
+farebbe un agente viene svolto, in modalità chat, nel contesto principale, con
+lo stesso formato di output e dichiarando che non è indipendente. Una skill non
+si ferma e non chiede di cambiare ambiente.
 
-Gli agenti non conoscono i percorsi delle skill: la skill costruisce i
-percorsi assoluti dalla propria cartella base e li passa nel prompt. Il
-prompt contiene solo testo, tipo, destinatario, riferimenti e formato del
-rapporto: mai riassunti della conversazione o intenzioni dell'autore
-(è il punto del protocollo "chi scrive non valuta").
+Gli agenti esistono per una ragione sola: chi scrive un testo lo giudica con
+indulgenza, quindi la revisione che conta avviene in un contesto che vede solo
+il testo e i criteri (`docs/adr/0005`). La skill passa all'agente percorsi e
+griglia, mai la conversazione.
 
-## Convenzioni imposte dalla build
+Sopra tutto sta il vincolo che i testi prodotti non contengono dati inventati:
+dove manca un'informazione va un segnaposto `[…]`. Vale anche per i valutatori
+simulati, che non inventano punteggi senza griglia.
 
-`scripts/build.py` fallisce su: nome non kebab-case o senza prefisso di
-dominio; `name` del frontmatter diverso dalla cartella o dal nome file;
-`description` mancante, oltre 1024 caratteri o con parentesi angolari;
-SKILL.md che cita un file `references/` inesistente; agente senza blocchi
-`<example>` nella description, o con `model`/`color` fuori dai valori
-ammessi; **trattino em (—) in qualsiasi file del plugin o del nucleo**
-(unica esenzione: `anti-pattern-ai.md`, che lo nomina per vietarlo).
-Avvisi (non bloccanti): SKILL.md oltre 3000 parole, description senza
-clausola "Non usare", SKILL.md che non richiama `vincoli.md`.
+## Dove fare cosa
 
-Il divieto del trattino em vale anche nelle istruzioni e nei commenti:
-gli esempi vengono imitati dal modello. Vale per i file del plugin, non
-per questo file o per il brief.
+- **Qui, in Claude Code**: tutto ciò che tocca più di un file o la storia git.
+  Build e validazione, rinomine, coerenza fra skill, il nucleo, i file
+  condivisi, le decisioni. Anche costruire i profili di programma e di rivista,
+  che vuole ricerca web e scrittura di file nello stesso posto.
+- **Nell'app, nel progetto con le chat**: provare le skill come le userà chi
+  scrive a CIMA, con il plugin installato e gli agenti che partono davvero;
+  lavorare con materiali riservati (ESR, proposte, manoscritti) senza che
+  tocchino il repository; limare il contenuto di una skill in conversazione
+  lunga, quando serve il giudizio dell'utente riga per riga. La calibrazione
+  del dominio proposte sugli ESR reali si fa lì.
+- **In una chat singola con lo zip della skill**: solo la prova di accettazione
+  in modalità chat, dove la skill deve consegnare tutto senza agenti.
 
-Altre convenzioni non verificate automaticamente (vedi `BRIEF.md` §4):
-istruzioni in italiano, imperativo, rivolte a Claude; prima sezione
-`## Prima di tutto` identica in tutte le skill che producono o rivedono
-testo; sezione `## Deroghe allo stile di base` per ogni scostamento da
-`voce-e-lingua.md`; segnaposto `[…]` per ogni dato mancante, elencati in
-fondo alla consegna.
+In una riga: qui si costruisce il plugin, nell'app lo si prova e gli si danno
+in pasto i materiali veri.
 
-## Flusso di lavoro
+## Come si lavora
 
-Il repository è diviso per ruolo della sessione di sviluppo ("sessione"
-è una conversazione con Claude su questo repo, da non confondere con la
-"modalità chat" in cui girano le skill):
+Si lavora su `main`. Per una modifica grossa o rischiosa, un branch breve con
+pull request; un solo checkout, niente worktree (`docs/adr/0016`).
 
-- **Sessione hub**: `BRIEF.md`, `CONTEXT.md`, `docs/adr/`, `nucleo/`,
-  `scripts/`, `plugin.json`, `README.md`, integrazione delle PR, test di
-  instradamento, rilascio.
-- **Sessione di dominio**: solo `plugin/skills/<prefisso>-*`,
-  `plugin/agents/<prefisso>-*` e `plugin/condivisi/<dominio>/`, su un
-  branch `dominio/<prefisso>`, con PR verso `main`.
+Chi scrive una skill non cambia il nucleo di sua iniziativa: il nucleo vale per
+tutti i domini, quindi una modifica lì si propone e si decide a parte.
 
-Se una modifica al nucleo o al brief serve mentre si lavora su un
-dominio, non applicarla: proporla nella descrizione della PR o in una
-issue con titolo `[nucleo] …` o `[brief] …`. Una decisione presa diventa
-un file in `docs/adr/` più una riga nell'indice di `BRIEF.md` §8; un
-termine chiarito diventa una voce in `CONTEXT.md`. Il `CHANGELOG.md` si
-aggiorna nella stessa modifica.
+Una decisione presa diventa un file in `docs/adr/` più una riga nel suo
+indice; un termine chiarito diventa una voce in `CONTEXT.md`. Il `CHANGELOG.md`
+si aggiorna nella stessa modifica.
 
-Messaggi di commit in italiano, minuscoli, nella forma
-`<ambito>: <cosa cambia>` (es. `progetti: file comuni in
-plugin/condivisi/progetti (brief v5)`), con il riferimento alla sezione
-del brief quando la modifica ne discende.
+Messaggi di commit in italiano, minuscoli, nella forma `<ambito>: <cosa
+cambia>`.
 
-## Materiali riservati
+ESR, proposte, manoscritti e deliverable reali stanno in `materiali/`, che non
+è versionato, e non entrano mai nel repository né negli esempi delle skill: nel
+plugin vanno solo pattern anonimizzati.
 
-ESR, proposte, manoscritti e deliverable reali stanno in `materiali/`,
-che non è versionato, e non entrano mai nel repository né negli esempi
-delle skill: nel plugin vanno solo pattern anonimizzati.
+## Dove guardare
+
+| Per | Leggi |
+|---|---|
+| il significato preciso di dominio, nucleo, revisione, modalità, segnaposto | `CONTEXT.md` |
+| scrivere o modificare una skill o un agente | `docs/scrivere-una-skill.md` |
+| capire quale skill deve prendersi una richiesta | `docs/instradamento.md` |
+| perché una scelta è stata fatta così | `docs/adr/README.md` |
+| il dominio proposte, non ancora scritto | `docs/proposte.md` |
+| provare un dominio prima di rilasciarlo | `docs/prove/<dominio>.md` |
+
+`CONTEXT.md` è il glossario di chi sviluppa. Non confonderlo con
+`nucleo/terminologia.md`, che è la terminologia dei testi prodotti (allerta,
+early warning system, DEWETRA) e viaggia dentro le skill.

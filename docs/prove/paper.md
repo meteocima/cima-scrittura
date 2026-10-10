@@ -1,6 +1,6 @@
-# Dominio paper: note per chi mantiene il plugin
+# Dominio paper: prove e note
 
-Questo file non entra nel plugin costruito (`build.py` lo esclude).
+Prompt di prova e note di sviluppo. Fuori dal plugin: non viene distribuito.
 
 ## Componenti
 
@@ -19,9 +19,9 @@ Livello di revisione: standard.
 - Editori: Elsevier, Nature Portfolio, Copernicus/EGU, AGU, AMS,
   RMetS/Wiley. Conferenze: EGU, AGU, AMS, Plinius.
 - Costruiti il 2026-10-10 da pagine ufficiali con ricerca web.
-- Stanno in `plugin/condivisi/paper/rivista-<editore>.md` (brief v5,
-  decisione 5): `build.py` li copia in `references/` di tutte e tre le
-  skill `paper-*`. Nessuna copia nel sorgente delle skill.
+- Stanno in `plugin/condivisi/paper/rivista-<editore>.md` (`adr/0004`):
+  `build.py` li copia in `references/` di tutte e tre le skill `paper-*`.
+  Nessuna copia nel sorgente delle skill.
 - `conferenze.md` serve solo a `paper-scrittura` e resta nella skill.
 - Lacune note: le guide delle singole riviste Elsevier (sciencedirect.com)
   e RMetS (rmets.onlinelibrary.wiley.com) non erano leggibili dagli

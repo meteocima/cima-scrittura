@@ -1,6 +1,6 @@
-# Dominio generale: note per chi sviluppa
+# Dominio generale: prove e note
 
-File escluso dalla build (`scripts/build.py` ignora `README-dominio.md`).
+Prompt di prova e note di sviluppo. Fuori dal plugin: non viene distribuito.
 
 ## Skill e agenti
 
@@ -14,13 +14,8 @@ File escluso dalla build (`scripts/build.py` ignora `README-dominio.md`).
 ## File condivisi
 
 `tipologie.md`, `checklist.md` e `destinatari.md` servono a più skill del
-dominio. Stanno in un solo posto, `plugin/condivisi/generale/`, e
-`scripts/build.py` li copia in `references/` di ogni skill `generale-*` al
-momento della build (come fa con `nucleo/`). Nel SKILL.md si citano come
-`references/<file>.md`.
-
-- Modificarli solo in `plugin/condivisi/generale/`.
-- Non rimettere copie nelle cartelle delle skill: la build si ferma.
+dominio e stanno in `plugin/condivisi/generale/`. Regole in
+`../scrivere-una-skill.md`, sezione "Riferimenti".
 
 ## Prompt di prova
 
