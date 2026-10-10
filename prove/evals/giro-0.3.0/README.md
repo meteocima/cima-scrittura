@@ -10,6 +10,8 @@ automatica".
 |---|---|---|---|
 | 2 | `01-matrice-chat` | senza subagent e senza `Write`: `proposte-analisi-bando` si attiva da sola, la matrice arriva **intera nel messaggio**, segue il topic dove scavalca il profilo, nessun numero senza fonte | |
 | 1 | `02-matrice-file` | con `Write`: la matrice finisce in un file e il messaggio ne porta la sintesi, con gli stessi vincoli sulle fonti | Write |
+| 5 | `03-profilo-eic` | riconosce lo strumento EIC e prende dal profilo soglie, pesi e limite di pagine che la call non dice | |
+| 6 | `04-profilo-interreg` | non copia su una call la griglia di un'altra call che sta nel profilo | |
 
 I due casi sono la stessa richiesta con gli strumenti diversi, e hanno esito
 atteso diverso apposta: e' li' che si vede se la skill distingue "non posso

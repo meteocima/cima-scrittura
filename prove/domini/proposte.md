@@ -26,6 +26,8 @@ Stanno in `plugin/condivisi/proposte/`. Regole in
 |---|---|
 | `matrice-bando.md` | `proposte-analisi-bando`, e tutte le skill del dominio quando esisteranno |
 | `programma-horizon-europe.md` | `proposte-analisi-bando` |
+| `programma-eic.md` | `proposte-analisi-bando` |
+| `programma-interreg.md` | `proposte-analisi-bando` |
 
 ## Profili dei programmi
 
@@ -40,8 +42,16 @@ volta l'anno o quando cambia un template.
 | Programma | Stato |
 |---|---|
 | Horizon Europe | fatto il 2026-10-10, su work programme 2026-2027 |
-| EIC, Interreg | issue #15 |
+| EIC | fatto il 2026-10-10, su work programme 2026 (seconda modifica) |
+| Interreg | fatto il 2026-10-10, su manuale e ToRs di Euro-MED |
 | LIFE, UCPM/ECHO | issue #16 |
+
+Due profili si leggono in modo diverso dagli altri, e la skill lo dice:
+nell'**EIC** criteri e soglie cambiano con lo strumento (Pathfinder,
+Transition, Accelerator), e in **Interreg** la griglia non sta nel profilo ne'
+nel manuale del programma, ma nelle Terms of Reference della singola call. Il
+profilo di Interreg contiene la griglia di una call documentata: serve a
+sapere che forma ha, non si copia su un'altra call.
 
 ## Prompt di regressione
 
