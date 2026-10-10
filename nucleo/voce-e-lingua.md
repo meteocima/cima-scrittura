@@ -15,7 +15,11 @@ Commissione Europea, UNDRR, WMO. Opera in: previsione idrologica, early
 warning per alluvioni e siccità, gestione del rischio da disastri,
 cambiamento climatico, GIS, remote sensing e capacity building.
 
-Non aggiungere dettagli su CIMA che non siano stati forniti dall'utente.
+I dati identificativi verificati (denominazione, sede, codice fiscale,
+partita IVA, PEC, affiliazione per i paper, codici per i bandi) stanno in
+`identita-cima.md` e si usano senza chiedere. Non aggiungere altri dettagli su
+CIMA che non siano stati forniti dall'utente: persone, ruoli, numeri di
+progetto, budget e date degli atti restano segnaposto.
 
 ## Voce
 

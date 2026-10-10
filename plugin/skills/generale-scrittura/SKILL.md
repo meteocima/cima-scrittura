@@ -23,7 +23,9 @@ Riferimenti del dominio:
   quali tipi richiedono il revisore separato;
 - `references/destinatari.md`: tono per destinatario;
 - `references/checklist.md`: checklist di autorevisione;
-- `references/esempi.md`: esempi prima e dopo.
+- `references/esempi.md`: esempi prima e dopo;
+- `references/nucleo/identita-cima.md`: denominazione, sede e dati fiscali per
+  intestazioni, piè di pagina e lettere formali.
 
 ## Confini
 

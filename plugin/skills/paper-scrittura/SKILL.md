@@ -12,6 +12,7 @@ Per voce e convenzioni di lingua: `references/nucleo/voce-e-lingua.md`
 e `references/nucleo/terminologia.md`.
 Per la revisione: `references/nucleo/protocollo-revisione.md`.
 Se l'utente fornisce o chiede un file: `references/nucleo/formati-e-file.md`.
+Per l'affiliazione degli autori: `references/nucleo/identita-cima.md`.
 
 ## Deroghe allo stile di base
 
