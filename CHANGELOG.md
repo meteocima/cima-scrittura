@@ -33,6 +33,10 @@ Tutte le prove del giro stanno in `prove/0.3.0-dominio-proposte/`.
   voce del consorzio, gergo del programma). Con lei
   `plugin/condivisi/proposte/anti-pattern-proposte.md`, i difetti che un
   valutatore nota per primi (issue #14).
+- Skill `proposte-concept`: i quattro blocchi dell'idea (problema, approccio,
+  consorzio, impatto) prima di scrivere la proposta, con la tabella di
+  copertura dei criteri del bando e l'elenco di che cosa manca per diventare
+  una proposta (issue #13).
 - `prove/domini/proposte.md` e i primi casi eval del dominio:
   `instradamento/09-analisi-bando` e `giro-0.3.0/01-matrice-chat`, che misura
   la modalita' chat togliendo `Agent` e `Task` dagli strumenti della sessione

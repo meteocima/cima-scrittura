@@ -16,6 +16,7 @@ automatica".
 | 9 | `06-profilo-ucpm` | punteggi legati alle caselle numerate della Part B, doppia soglia | |
 | 11 | `07-impact-chat` | sezione Impact senza dati: tutto a segnaposto, KPI con baseline, outcome alla lettera | |
 | 12 | `08-impact-modulo` | il testo torna dentro il file del modulo, con le sezioni non richieste intatte | Write |
+| 14 | `09-concept-chat` | quattro blocchi, partner come ruoli a segnaposto, tabella di copertura, che cosa manca | |
 
 I due casi sono la stessa richiesta con gli strumenti diversi, e hanno esito
 atteso diverso apposta: e' li' che si vede se la skill distingue "non posso
