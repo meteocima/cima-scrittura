@@ -10,6 +10,16 @@ Le prove sui file usano i materiali in `materiali/`, che sono finti.
 
 ## Prove
 
+### Prova zero: il plugin c'è davvero
+
+Da fare per prima, in ogni ambiente, prima di qualunque altra riga. Se non
+passa, il resto del giro non misura niente: misura Claude senza il plugin.
+
+| # | Ambiente | Prompt | Esito atteso | Esito reale |
+|---|---|---|---|---|
+| 0a | agenti | "Quali skill di cima-scrittura hai attive, e quali agenti?" | Dieci skill e cinque agenti, con i nomi giusti. Se la risposta è vaga o parla di file letti dal repository invece che di skill caricate, il plugin non c'e' | |
+| 0b | agenti | "Scrivi una email al Centro funzionale della Liguria per chiedere i dati pluviometrici di ottobre" | Si attiva `generale-scrittura` **da sola**, senza che nessuno la nomini. Se si attiva `cima-writing-style`, il vecchio plugin è ancora abilitato e va disattivato prima di proseguire | |
+
 ### File in ingresso e in uscita
 
 | # | Ambiente | Prompt | Esito atteso | Esito reale |
