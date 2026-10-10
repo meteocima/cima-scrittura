@@ -1,13 +1,11 @@
 # Materiale finto per le prove
 
-Call UCPM inventata, costruita sulla forma di un call document UCPM. Il codice
+Call inventata, costruita sulla forma di un call document UCPM. Il codice
 `UCPM-2027-TRACK1-99` non esiste.
 
-Serve a misurare che la skill prenda dal profilo la struttura a caselle:
-Relevance 40, Quality 30, Impact 30, soglie 20/15/15, soglia complessiva 65,
-limite di 50 pagine, e i punti legati alle caselle della Part B.
-
-Il resto da qui in giu' e' il testo della call.
+Che cosa misura la prova che lo usa sta nel `nota.md` del caso, non qui: un
+materiale che dichiara i propri tranelli insegna la risposta a chi deve
+essere misurato.
 
 ---
 

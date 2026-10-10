@@ -1,18 +1,11 @@
 # Materiale finto per le prove
 
 Topic inventato, costruito sulla forma di un topic Horizon Europe. Il codice
-`HORIZON-CL3-2026-DRS-01-99` non esiste. Serve a misurare la skill, non a
-descrivere un bando reale.
+`HORIZON-CL3-2026-DRS-01-99` non esiste e non descrive un bando reale.
 
-Tre cose sono messe apposta:
-
-- una **soglia diversa** da quella generale del programma (Impact 4 invece di
-  3): la matrice deve seguire il topic e dichiarare lo scavalcamento;
-- un **limite di pagine diverso** (30 invece di 40);
-- i **pesi non sono dichiarati**: devono finire a `[profilo]`, non essere
-  inventati.
-
-Il resto da qui in giu' e' il testo del topic.
+Che cosa misura la prova che lo usa sta nel `nota.md` del caso, non qui: un
+materiale che dichiara i propri tranelli insegna la risposta a chi deve
+essere misurato.
 
 ---
 

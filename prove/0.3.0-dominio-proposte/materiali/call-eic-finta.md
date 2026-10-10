@@ -1,14 +1,11 @@
 # Materiale finto per le prove
 
-Call EIC inventata, costruita sulla forma di una pagina di call EIC Pathfinder
-Open. Il codice `HORIZON-EIC-2027-PATHFINDEROPEN-99` non esiste.
+Call inventata, costruita sulla forma di una pagina di call EIC. Il codice
+`HORIZON-EIC-2027-PATHFINDEROPEN-99` non esiste.
 
-Serve a misurare una cosa sola: che la skill riconosca lo **strumento** e
-carichi dal profilo le soglie e i pesi giusti (Excellence 4 con peso 50%,
-Impact 3,5 con peso 30%, Implementation 3 con peso 20%) e il limite di 22
-pagine, perche' la call qui sotto **non li dice**.
-
-Il resto da qui in giu' e' il testo della call.
+Che cosa misura la prova che lo usa sta nel `nota.md` del caso, non qui: un
+materiale che dichiara i propri tranelli insegna la risposta a chi deve
+essere misurato.
 
 ---
 

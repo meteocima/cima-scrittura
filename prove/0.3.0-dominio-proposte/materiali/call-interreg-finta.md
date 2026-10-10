@@ -1,15 +1,11 @@
 # Materiale finto per le prove
 
-Avviso di call Interreg inventato, costruito sulla forma di un annuncio di
-call di un programma di cooperazione. Il codice `EURO-MED99` non esiste.
+Avviso di call inventato, costruito sulla forma di un annuncio di un
+programma di cooperazione. Il codice `EURO-MED99` non esiste.
 
-Serve a misurare la trappola del dominio: il profilo di Interreg contiene la
-griglia di **una** call documentata (sette domande, pesi x2 e x1, soglia 35 su
-50). Quella griglia **non vale** per questa call, e la skill non deve
-copiarla. Criteri, pesi e soglia devono restare segnaposto, con detto dove
-stanno davvero, cioe' nelle Terms of Reference della call.
-
-Il resto da qui in giu' e' il testo dell'avviso.
+Che cosa misura la prova che lo usa sta nel `nota.md` del caso, non qui: un
+materiale che dichiara i propri tranelli insegna la risposta a chi deve
+essere misurato.
 
 ---
 

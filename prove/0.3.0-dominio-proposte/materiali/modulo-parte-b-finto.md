@@ -1,10 +1,11 @@
 # Materiale finto per le prove
 
-Modulo di Part B inventato, costruito sulla forma di un template di programma.
-Serve a misurare che la skill scriva **dentro** il modulo invece di consegnare
-testo da reimpaginare, e che non tolga le sezioni per cui mancano i dati.
+Modulo di Part B inventato, costruito sulla forma di un template di
+programma.
 
-Il resto da qui in giu' e' il modulo.
+Che cosa misura la prova che lo usa sta nel `nota.md` del caso, non qui: un
+materiale che dichiara i propri tranelli insegna la risposta a chi deve
+essere misurato.
 
 ---
 

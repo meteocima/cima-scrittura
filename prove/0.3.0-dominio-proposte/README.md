@@ -4,10 +4,16 @@ Il quarto dominio, costruito un ticket alla volta (issue #11). Questa cartella
 raccoglie le prove di tutto il giro: ogni ticket aggiunge le proprie righe
 qui, invece di aprire una cartella propria.
 
-I materiali in `materiali/` sono finti. Il topic di prova e' costruito con tre
-divergenze volute rispetto al profilo del programma (soglia di Impact a 4,
-limite di 30 pagine, pesi non dichiarati), per misurare la regola che tiene
-insieme il dominio: il testo del bando prevale sul profilo.
+I materiali in `materiali/` sono finti, e **non dichiarano piu' i propri
+tranelli**: che cosa misura ciascun caso sta nel suo `nota.md`, che la
+sessione misurata non vede. Fino al 2026-10-10 lo dichiaravano, e una sessione
+misurata ha fatto notare che cosi' trovare i difetti non dimostrava niente.
+
+**Avvertenza sui numeri delle sezioni #12, #15, #16, #14 e #13.** Quelle
+misure sono state prese con i materiali che dichiaravano i tranelli: valgono
+meno di quanto sembrano. La suite e' stata rieseguita da capo con i materiali
+puliti il 2026-10-10, e gli esiti della riesecuzione sono nella sezione
+"Riesecuzione con i materiali puliti" in fondo.
 
 ## Analisi del bando (issue #12)
 
@@ -127,6 +133,49 @@ Skill `proposte-concept`.
 | `instradamento/10-concept` | **1.00**, 0,15 dollari |
 | `giro-0.3.0/09-concept-chat` | **1.00**, 0,73 dollari |
 
+## Valutazione simulata (issue #17)
+
+Skill `proposte-revisione`, agenti `proposte-valutatore` e
+`proposte-rapporteur`, file condivisi `griglia-valutazione.md` e
+`profili-valutatori.md`.
+
+| # | Ambiente | Prompt | Esito atteso | Esito reale |
+|---|---|---|---|---|
+| 17 | agenti | "Fammi una valutazione simulata di questa proposta" + `materiali/proposta-finta.md` e `materiali/topic-finto.md` | Tre `proposte-valutatore` lanciati in parallelo e poi il `proposte-rapporteur`. Punteggi con la scala, verdetto sulle soglie con la soglia di Impact a 4 presa dal topic, divergenze senza media, correzioni per impatto | **Passa**, misurato in cieco il 2026-10-10 dal caso `giro-0.3.0/10-valutazione-agenti` (1.00). Verificato nella traccia anche il contenuto dei prompt ai valutatori: percorsi, profilo e griglia, nessun riassunto della conversazione, nessuna intenzione di chi ha scritto, nessun punteggio atteso |
+| 18 | senza file | Stesso prompt, senza poter salvare file | Consegna completa nel messaggio, dichiarazione veritiera di quanto e' indipendente, stessi punteggi e soglie | **Passa in parte.** Difetti trovati e punteggi: verdi, tre volte su tre. Consegna: instabile, perche' in due esecuzioni su tre la sessione ha lanciato comunque i valutatori e poi ha **offerto** i tre rapporti invece di consegnarli. Corretta la skill; la domanda piu' grossa, se il nucleo debba ammettere gli agenti senza file, e' la issue #29 |
+| 19 | agenti | Valutazione di una proposta senza fornire il bando | Nessun punteggio: la consegna dice che senza griglia reale non si danno numeri, ed elenca che cosa servirebbe | Da fare a mano |
+| 20 | agenti | Valutazione di una proposta fatta quasi tutta di segnaposto | Nessun punteggio, e i problemi che gia' si vedono segnalati lo stesso | Da fare a mano |
+
+### Misurato in automatico
+
+| Caso | Esito del 2026-10-10 |
+|---|---|
+| `giro-0.3.0/10-valutazione-agenti` | **1.00**, 2,69 dollari |
+| `giro-0.3.0/11-valutazione-senza-file` | **0,75**, 2,86 dollari: verde su difetti e punteggi, instabile sulla consegna |
+
+## Riesecuzione con i materiali puliti
+
+Il 2026-10-10, tolte dai materiali le righe che dichiaravano i tranelli, la
+suite del giro e' stata rieseguita da capo (undici casi, `--runs 1`, 11,09
+dollari). Gli esiti sono scesi in quattro casi.
+
+| Caso | Con i tranelli dichiarati | Materiali puliti |
+|---|---|---|
+| `01-matrice-senza-file` | 1.00 | 0,75, poi 1.00 alla riesecuzione |
+| `02-matrice-file` | 1.00 | 1.00 |
+| `03-profilo-eic` | 1.00 | 1.00 |
+| `04-profilo-interreg` | 1.00 | 1.00 |
+| `05-profilo-life` | 1.00 | 0,50, poi 1.00 due volte su due |
+| `06-profilo-ucpm` | 1.00 | 1.00 |
+| `07-impact-senza-file` | 1.00 | 1.00 |
+| `08-impact-modulo` | 1.00 | 1.00 |
+| `09-concept-senza-file` | 1.00 | 1.00 |
+
+Le due righe scese e poi risalite dicono una cosa che vale per tutta la
+suite: **un'esecuzione sola non e' una misura**. Dove il verdetto conta,
+servono almeno due esecuzioni, e il default di `claude plugin eval` e' tre
+apposta.
+
 ## Esito
 
 Da riempire a fine giro: data, ambienti provati, che cosa e' stato corretto
@@ -146,3 +195,7 @@ verdi, una riga manuale da fare (13).
 
 Concept (#13): chiusa il 2026-10-10. Due casi automatici verdi, una riga
 manuale da fare (16).
+
+Valutazione simulata (#17): chiusa il 2026-10-10. Il caso con i file e' verde,
+quello senza file e' verde su difetti e punteggi e instabile sulla consegna
+(issue #29). Due righe manuali da fare (19, 20).
