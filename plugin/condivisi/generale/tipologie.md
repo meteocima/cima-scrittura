@@ -1,8 +1,9 @@
 # Tipologie di testo del dominio generale
 
-> File comune del dominio generale. Copie identiche in
-> `generale-scrittura`, `generale-revisione`. Modificare tutte le copie
-> insieme (vedi `README-dominio.md` in `generale-scrittura`).
+> File comune del dominio generale. Fonte unica:
+> `plugin/condivisi/generale/tipologie.md`. La build lo copia in `references/`
+> di ogni skill `generale-*`: modificarlo qui, non rimettere copie nelle
+> cartelle delle skill (vedi `README-dominio.md` in `generale-scrittura`).
 
 Per ogni tipo: struttura, regole specifiche e se in modalità agenti serve
 il revisore separato (`generale-revisore`). Dove il revisore non serve

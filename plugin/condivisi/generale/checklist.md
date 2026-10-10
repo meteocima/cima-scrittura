@@ -1,8 +1,9 @@
 # Checklist di revisione del dominio generale
 
-> File comune del dominio generale. Copie identiche in
-> `generale-scrittura`, `generale-revisione`. Modificare tutte le copie
-> insieme (vedi `README-dominio.md` in `generale-scrittura`).
+> File comune del dominio generale. Fonte unica:
+> `plugin/condivisi/generale/checklist.md`. La build lo copia in `references/`
+> di ogni skill `generale-*`: modificarlo qui, non rimettere copie nelle
+> cartelle delle skill (vedi `README-dominio.md` in `generale-scrittura`).
 
 Usata in tre casi: autorevisione prima della consegna, revisione di un
 testo dell'utente, revisione separata da parte di `generale-revisore`.

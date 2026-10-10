@@ -1,9 +1,9 @@
 # Tono per destinatario
 
-> File comune del dominio generale. Copie identiche in
-> `generale-scrittura`, `generale-revisione`, `generale-traduzione`.
-> Modificare tutte le copie
-> insieme (vedi `README-dominio.md` in `generale-scrittura`).
+> File comune del dominio generale. Fonte unica:
+> `plugin/condivisi/generale/destinatari.md`. La build lo copia in `references/`
+> di ogni skill `generale-*`: modificarlo qui, non rimettere copie nelle
+> cartelle delle skill (vedi `README-dominio.md` in `generale-scrittura`).
 > Origine: cima-writing-style v0.1.0, `references/audience-tones.md`.
 
 La voce di CIMA resta la stessa (`references/nucleo/voce-e-lingua.md`).

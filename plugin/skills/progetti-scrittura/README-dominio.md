@@ -28,7 +28,7 @@ contenerne copie: la build si ferma.
 | `programma-horizon-europe.md`, `programma-interreg.md`, `programma-life.md`, `programma-ucpm.md` | tutte e tre le skill |
 
 La build copia anche le sottocartelle di `condivisi/progetti/` (brief
-v6); i profili restano `programma-<nome>.md` finché la chat di dominio
+v6); i profili restano `programma-<nome>.md` finché la sessione di dominio
 non decide di spostarli. Nuovo programma: aggiungere il file e la riga
 nell'elenco dei profili delle tre SKILL.md.
 
