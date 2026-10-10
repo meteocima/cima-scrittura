@@ -4,7 +4,7 @@
 Questo file è la fonte delle decisioni condivise. Lo modifica solo la chat
 hub; le chat di dominio propongono modifiche (vedi "Flusso di lavoro").
 
-Versione brief: 4 · Ultimo aggiornamento: 2026-10-10
+Versione brief: 5 · Ultimo aggiornamento: 2026-10-10
 
 ---
 
@@ -64,6 +64,7 @@ cima-scrittura/
 │   └── protocollo-revisione.md
 ├── plugin/                  # sorgente del plugin (senza nucleo)
 │   ├── .claude-plugin/plugin.json
+│   ├── condivisi/<dominio>/ # riferimenti comuni alle skill di un dominio
 │   ├── skills/<prefisso-nome>/SKILL.md (+ references/)
 │   └── agents/<prefisso-nome>.md
 ├── scripts/build.py         # assembla, valida, impacchetta
@@ -82,6 +83,15 @@ dentro ogni skill, in `references/nucleo/`, al momento della build.
 - Nel SKILL.md si fa riferimento ai file come `references/nucleo/vincoli.md`
   ecc.: i percorsi sono validi nel plugin costruito.
 - Chi vuole cambiare una regola del nucleo modifica `nucleo/`, mai la copia.
+
+Lo stesso meccanismo vale per i riferimenti comuni a più skill dello
+stesso dominio (es. `tipologie.md` per scrittura e revisione):
+
+- stanno in `plugin/condivisi/<dominio>/` (`<dominio>` = prefisso senza
+  trattino: `generale`, `paper`, `proposte`, `progetti`);
+- `build.py` li copia in `references/` di ogni skill di quel dominio;
+- nel SKILL.md si citano come `references/<file>.md`;
+- il sorgente delle skill non deve contenerne copie: la build si ferma.
 
 ## 4. Convenzioni
 
@@ -162,13 +172,22 @@ good-bad-examples). Skill previste:
   destinatario del legacy. Deliverable e report di progetto vanno a
   `progetti`.
 - `generale-revisione`: rilettura di testi dell'utente con checklist
-  anti-pattern e tono.
+  anti-pattern e tono. È l'ingresso per "rivedi questo testo" senza
+  contesto.
+- `generale-traduzione`: traduzione e adattamento IT/EN di qualsiasi
+  testo (vedi §6).
+
+Riferimenti comuni in `plugin/condivisi/generale/`: tipologie,
+destinatari, checklist.
 
 Revisione in modalità agenti: `generale-revisore` (1 revisore, solo
-`Read`, `Glob`, `Grep`, `Write` per il rapporto) per comunicati stampa,
-lettere ufficiali e istituzionali, testi web e social pubblici, e per
-qualsiasi testo quando l'utente lo chiede. Email e verbali: autorevisione
-con checklist.
+`Read`, `Glob`, `Grep`, `Write` per il rapporto). In `generale-scrittura`
+è obbligatorio per comunicati stampa, lettere ufficiali e istituzionali,
+testi web e social pubblici, e si usa per qualsiasi testo quando l'utente
+lo chiede; email e verbali: autorevisione con checklist. In
+`generale-revisione` si usa solo su richiesta, perché il testo non è
+stato scritto in quella conversazione e la revisione nel contesto
+principale non ha il pregiudizio dell'autore.
 
 Agenti: `generale-revisore`.
 
@@ -272,6 +291,7 @@ Le descrizioni delle skill si sovrappongono su parole come "scrivi",
 | abstract di una proposta | proposte |
 | email, lettera, comunicato, post, verbale, testo web | generale |
 | "rivedi questo testo" senza contesto | generale, che rimanda se riconosce un paper o una proposta |
+| traduci, translate (qualsiasi testo) | generale (`generale-traduzione`): per abstract, paper, proposte e deliverable traduce lingua e terminologia senza cambiare struttura e contenuto; per adattarli ai limiti del dominio rimanda alla skill di quel dominio |
 
 Ogni descrizione include una clausola "Non usare per…" coerente con questa
 tabella. La chat hub verifica l'instradamento con prompt di prova prima
@@ -281,8 +301,8 @@ del rilascio.
 
 - **Chat hub** (questa): BRIEF.md, `nucleo/`, `scripts/`, `plugin.json`,
   README, integrazione, test di instradamento, rilascio.
-- **Chat di dominio**: solo `plugin/skills/<prefisso>-*` e
-  `plugin/agents/<prefisso>-*`.
+- **Chat di dominio**: solo `plugin/skills/<prefisso>-*`,
+  `plugin/agents/<prefisso>-*` e `plugin/condivisi/<dominio>/`.
 - Ogni chat di dominio lavora su un branch `dominio/<prefisso>` e apre una
   pull request verso `main`. La chat hub integra.
 - Modifiche al nucleo o al brief proposte da una chat di dominio: aprire
@@ -316,6 +336,12 @@ tuo prefisso. Prima di scrivere le skill proponimi il piano del dominio.
    istituzionali e su richiesta; email e verbali con autorevisione
    (sezione 5.1). Riga "Leggero" di `nucleo/protocollo-revisione.md`
    aggiornata di conseguenza. Deciso il 2026-10-10.
+5. Riferimenti comuni di dominio in `plugin/condivisi/<dominio>/`,
+   iniettati da `build.py` come il nucleo (sezione 3). Proposto dalla
+   chat del dominio generale (PR #1), deciso il 2026-10-10.
+6. La traduzione di qualsiasi testo va a `generale-traduzione`, che non
+   cambia struttura e contenuto dei testi degli altri domini (sezione 6).
+   PR #1, deciso il 2026-10-10.
 
 ### Aperte
 
@@ -332,14 +358,16 @@ tuo prefisso. Prima di scrivere le skill proponimi il piano del dominio.
 
 ```
 python3 scripts/build.py           # assembla in dist/, valida, crea il .plugin
-python3 scripts/build.py --check   # solo validazione
+python3 scripts/build.py --check   # solo validazione, in una cartella temporanea
 ```
 
 La build fallisce se: manca `plugin.json` o un campo obbligatorio; una
 skill non ha `name`/`description` validi; un SKILL.md cita un file in
 `references/` che non esiste; un file del plugin contiene il trattino em;
 un nome non rispetta prefisso e kebab-case; un SKILL.md nomina un agente
-del plugin senza avere la sezione "## Modalità chat".
+del plugin senza avere la sezione "## Modalità chat"; `plugin/condivisi/`
+contiene una cartella che non è un dominio; il sorgente di una skill
+contiene una copia di un file di `plugin/condivisi/<dominio>/`.
 
 Prima di ogni rilascio, ogni skill si prova in due ambienti: chat senza
 subagent (deve consegnare il risultato completo) e Cowork (deve usare gli
