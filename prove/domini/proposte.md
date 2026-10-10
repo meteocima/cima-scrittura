@@ -8,7 +8,9 @@ con lui: oggi c'e' solo la prima fetta.
 ## Skill e agenti
 
 - `proposte-analisi-bando`: estrae la matrice del bando dal testo del topic.
-- Previsti e non ancora scritti: `proposte-concept`, `proposte-scrittura`,
+- `proposte-scrittura`: scrive il testo della proposta dentro il modulo del
+  programma, ancorato alla matrice.
+- Previsti e non ancora scritti: `proposte-concept`,
   `proposte-revisione`, `proposte-coerenza`, `proposte-risposta-esr`; agenti
   `proposte-valutatore`, `proposte-rapporteur`, `proposte-verificatore`.
 
@@ -30,6 +32,7 @@ Stanno in `plugin/condivisi/proposte/`. Regole in
 | `programma-interreg.md` | `proposte-analisi-bando` |
 | `programma-life.md` | `proposte-analisi-bando` |
 | `programma-ucpm.md` | `proposte-analisi-bando` |
+| `anti-pattern-proposte.md` | `proposte-scrittura`, e le skill di revisione quando esisteranno |
 
 ## Profili dei programmi
 
