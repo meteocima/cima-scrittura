@@ -17,13 +17,10 @@ con lui: oggi c'e' solo la prima fetta.
   `proposte-rapporteur`, in `plugin/agents/`.
 - `proposte-risposta-esr`: i rilievi dell'ESR uno per uno, con la posizione e
   la modifica, per rifare la proposta.
-- Previsto e non ancora scritto: `proposte-coerenza`, con l'agente
-  `proposte-verificatore`.
+- `proposte-coerenza`: incoerenze fra sezioni e sforamento dei limiti, senza
+  punteggi, con l'agente `proposte-verificatore`.
 
-Finche' non esistono, le skill che li nominano nei confini valgono come
-indicazione di dove andra' la richiesta, e vale
-`nucleo/vincoli.md` sezione 4: si consegna comunque, dicendo quali criteri
-mancano.
+Il dominio e' completo: sei skill e tre agenti.
 
 ## File condivisi tra le skill del dominio
 
@@ -41,6 +38,9 @@ Stanno in `plugin/condivisi/proposte/`. Regole in
 | `anti-pattern-proposte.md` | `proposte-scrittura`, `proposte-revisione`, agenti (percorso passato nel prompt) |
 | `griglia-valutazione.md` | `proposte-revisione`, agenti |
 | `profili-valutatori.md` | `proposte-revisione` |
+
+`formato-risposta-esr.md` sta dentro `proposte-risposta-esr`, che e' l'unica
+skill a usarlo.
 
 ## Profili dei programmi
 

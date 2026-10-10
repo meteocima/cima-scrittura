@@ -48,6 +48,10 @@ Tutte le prove del giro stanno in `prove/0.3.0-dominio-proposte/`.
   cio' che e' gia' fatto da cio' che e' solo deciso. Dice che a un ESR non si
   replica e che l'unica strada formale, l'evaluation review, riguarda solo gli
   aspetti procedurali (issue #18).
+- Skill `proposte-coerenza` e agente `proposte-verificatore`: controllo
+  formale prima della consegna, con le incoerenze fra sezioni riportate in
+  coppia (tutti e due i passaggi citati) e il conteggio dei limiti contro il
+  bando, senza punteggi e senza giudizi di merito (issue #19).
 - `prove/domini/proposte.md` e i primi casi eval del dominio:
   `instradamento/09-analisi-bando` e `giro-0.3.0/01-matrice-chat`, che misura
   la modalita' chat togliendo `Agent` e `Task` dagli strumenti della sessione
