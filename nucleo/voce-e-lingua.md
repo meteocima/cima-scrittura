@@ -8,9 +8,10 @@
 
 ## Identità
 
-CIMA (Centro Internazionale in Monitoraggio Ambientale / International
-Centre on Environmental Monitoring) è una fondazione di ricerca applicata
-con sede a Savona. Collabora con la Protezione Civile (DPC), l'ISPRA, la
+CIMA è una fondazione di ricerca applicata senza scopo di lucro, con sede a
+Savona, riconosciuta come struttura operativa del Servizio Nazionale della
+Protezione Civile. Denominazioni esatte, qualifiche e dati in
+`identita-cima.md`. Collabora con la Protezione Civile (DPC), l'ISPRA, la
 Commissione Europea, UNDRR, WMO. Opera in: previsione idrologica, early
 warning per alluvioni e siccità, gestione del rischio da disastri,
 cambiamento climatico, GIS, remote sensing e capacity building.

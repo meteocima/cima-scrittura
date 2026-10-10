@@ -21,7 +21,7 @@ quello indicato nella colonna "Preferito".
 | modello idrologico | modello matematico idrologico | |
 | bacino idrografico | bacino imbrifero | entrambi accettabili; preferire "idrografico" |
 | Protezione Civile | PC, protezione civile | maiuscolo, per esteso nei testi formali |
-| Fondazione CIMA | CIMA, fondazione | forma estesa al primo utilizzo |
+| Fondazione CIMA | CIMA, fondazione | forma estesa al primo utilizzo; in inglese "CIMA Research Foundation". La ragione sociale non si traduce mai: vedi `identita-cima.md` |
 | telerilevamento | remote sensing | preferire italiano nei testi IT |
 | sistema informativo geografico (GIS) | geographic information system | acronimo internazionale accettabile |
 | scenario | scenari (pl.) | evitare "scenari futuri ipotetici" (ridondante) |
@@ -53,7 +53,7 @@ quello indicato nella colonna "Preferito".
 
 | Acronimo | Forma estesa | Lingua |
 |----------|-------------|--------|
-| CIMA | Centro Internazionale in Monitoraggio Ambientale / International Centre on Environmental Monitoring | IT / EN |
+| CIMA | Centro Internazionale in Monitoraggio Ambientale / International Centre for Environmental Monitoring | IT / EN |
 | DPC | Dipartimento della Protezione Civile | IT |
 | ISPRA | Istituto Superiore per la Protezione e la Ricerca Ambientale | IT |
 | EC | European Commission | EN |
