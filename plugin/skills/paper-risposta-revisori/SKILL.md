@@ -26,6 +26,17 @@ sezione 2): in modalità agenti almeno un revisore separato sulla forma e sulla
 completezza delle risposte, in modalità chat autovalutazione dichiarata e
 pacchetto revisore.
 
+## Confini
+
+| Richiesta | Chi la prende |
+|---|---|
+| risposta ai commenti di revisori ed editor di una rivista | questa skill |
+| peer review simulata, prima di sottomettere | `paper-revisione` |
+| riscrivere le sezioni che i revisori hanno criticato | `paper-scrittura` |
+| risposta ai commenti di una review di progetto o di un project officer | `progetti-risposta-review` |
+| risposta agli ESR di una proposta | dominio proposte |
+| le slide che accompagnano la revisione | `generale-presentazione` |
+
 ## Deroghe allo stile di base
 
 - Lettera in inglese (o nella lingua della rivista), con "we".

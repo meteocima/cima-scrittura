@@ -77,7 +77,8 @@ Lo scopo va descritto per com'è stato davvero: se il plugin ha scritto
 bozze di sezioni, dirlo.
 
 Riviste Copernicus: la scrittura di testo e interpretazioni con AI
-generativa non è ammessa (SKILL.md, sezione 3); l'uso assistivo su
+generativa non è ammessa (il testo e la data di verifica stanno in
+`references/rivista-copernicus.md`); l'uso assistivo su
 lingua e leggibilità non si dichiara. Ogni altro uso (es. figure o
 schemi generati) va dichiarato in Methods o Acknowledgements:
 

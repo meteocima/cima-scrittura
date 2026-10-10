@@ -14,6 +14,25 @@ Per la revisione: `references/nucleo/protocollo-revisione.md`.
 Se l'utente fornisce o chiede un file: `references/nucleo/formati-e-file.md`.
 Per l'affiliazione degli autori: `references/nucleo/identita-cima.md`.
 
+## Confini
+
+Questa skill scrive il testo dell'articolo. Non fa le altre cose che
+gravitano attorno a un manoscritto.
+
+| Richiesta | Chi la prende |
+|---|---|
+| titolo, abstract, sezioni IMRAD, cover letter, dichiarazioni | questa skill |
+| peer review simulata prima della sottomissione | `paper-revisione` |
+| risposta ai commenti di revisori ed editor | `paper-risposta-revisori` |
+| le slide del talk che nasce da questo articolo | `generale-presentazione`, che prende da qui i criteri di contenuto |
+| tradurre l'articolo o l'abstract | `generale-traduzione`, che non ne cambia struttura |
+| deliverable e report di progetto, anche sugli stessi risultati | dominio progetti |
+| proposta di progetto, anche sulla stessa idea | dominio proposte |
+
+Se la richiesta appartiene a un'altra skill, dirlo in una riga e indicarla.
+Se quella skill non è disponibile vale `references/nucleo/vincoli.md`,
+sezione 4: si scrive comunque, dichiarando quali criteri mancano.
+
 ## Deroghe allo stile di base
 
 Rispetto a `references/nucleo/voce-e-lingua.md`:

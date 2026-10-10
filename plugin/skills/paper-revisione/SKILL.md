@@ -15,6 +15,17 @@ Se l'utente fornisce o chiede un file: `references/nucleo/formati-e-file.md`.
 
 Livello di revisione del dominio: **standard** (2–3 revisori + sintesi).
 
+## Confini
+
+| Richiesta | Chi la prende |
+|---|---|
+| peer review simulata di un manoscritto prima della sottomissione | questa skill |
+| scrivere o riscrivere parti dell'articolo | `paper-scrittura` |
+| rispondere ai commenti ricevuti davvero | `paper-risposta-revisori` |
+| rivedere le slide di un talk | `generale-presentazione`, che ha la sua griglia |
+| revisione di un deliverable o di un report di progetto | `progetti-revisione` |
+| referaggio di un manoscritto altrui ricevuto da una rivista | nessuna: vedi il limite d'uso qui sopra |
+
 ## Deroghe allo stile di base
 
 - I rapporti dei revisori seguono le convenzioni della peer review:
@@ -74,7 +85,7 @@ Profili in `references/profili-revisori.md`:
   Earth's Future) o su richiesta dell'utente.
 - **Editor**: sempre; sintesi, conformità, decisione.
 
-Griglia comune: `references/griglia-revisione.md`.
+Griglia comune: `references/griglia-peer-review.md`.
 Formati dei rapporti: `references/formato-rapporto.md`.
 
 ## Modalità agenti
@@ -89,10 +100,11 @@ in `references/nucleo/protocollo-revisione.md`, sezione 1).
 2. Lanciare **in parallelo** (nella stessa chiamata) un agente
    `paper-revisore` per ciascun revisore scelto. Il prompt contiene solo:
    - percorso del manoscritto e dei materiali (non la cover letter);
-   - percorsi assoluti di `references/griglia-revisione.md`,
+   - percorsi assoluti di `references/griglia-peer-review.md`,
      `references/formato-rapporto.md`, del profilo della rivista
-     (`references/rivista-*.md`) e di `references/nucleo/anti-pattern-ai.md`
-     e `references/nucleo/verifica-fonti.md` (la skill conosce la propria
+     (`references/rivista-*.md`) e di `references/nucleo/anti-pattern-ai.md`,
+     `references/nucleo/verifica-fonti.md` e
+     `references/nucleo/protocollo-revisione.md` (la skill conosce la propria
      cartella base: costruire i percorsi da lì);
    - il profilo del revisore, copiato da `profili-revisori.md`, con il
      campo di dominio;
@@ -107,7 +119,7 @@ in `references/nucleo/protocollo-revisione.md`, sezione 1).
 3. Quando i rapporti sono pronti, lanciare l'agente `paper-editor` con:
    percorsi dei rapporti, del manoscritto (per la conformità e per
    controllare le citazioni dei revisori), dell'eventuale cover letter,
-   del profilo della rivista, di `griglia-revisione.md` e
+   del profilo della rivista, di `griglia-peer-review.md` e
    `formato-rapporto.md`; nome della rivista e tipo di articolo; lingua
    della decisione; percorso di uscita
    `revisione-paper/decisione-editor.md`.

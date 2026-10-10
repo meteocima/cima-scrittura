@@ -65,7 +65,8 @@ nel prompt. Aggiunge indipendenza, non funzioni.
 **Revisione**:
 Leggere un testo già scritto e produrre un **rapporto** di problemi
 secondo una checklist o una griglia. Non comprende la riscrittura.
-_Evitare_: controllo, correzione, review (in italiano).
+_Evitare_: controllo, correzione, "review" da solo in italiano. "Peer
+review" fa eccezione, perché è un termine fisso: vedi sotto.
 
 **Autorevisione**:
 Revisione svolta dallo stesso contesto che ha scritto il testo. Sempre
@@ -109,6 +110,15 @@ testo.
 In modalità chat, il blocco pronto da copiare in una conversazione nuova
 per ottenere comunque una revisione separata. Sostituto dell'agente, non
 scorciatoia: si offre, non si impone.
+
+**Peer review**:
+Il processo reale con cui una rivista fa valutare un manoscritto da altri
+ricercatori. Termine fisso del mestiere, che resta in inglese anche dentro un
+testo italiano: "revisione paritaria" non lo dice nessuno. Quello che fa
+`paper-revisione` è una **peer review simulata**, e si chiama così per intero,
+perché il simulato è la parte che conta.
+_Evitare_: revisione paritaria, mock review (fuori dalle frasi d'innesco, dove
+invece serve perché è quello che la gente digita).
 
 **Review**:
 In inglese e solo nel dominio progetti, la revisione **reale** della

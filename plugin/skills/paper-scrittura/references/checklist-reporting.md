@@ -12,6 +12,15 @@ Due livelli:
   controlla. Non sono requisiti formali: se mancano, segnalarlo come
   rischio in revisione, non come violazione.
 
+Gravità, per leggere le due colonne allo stesso modo delle altre checklist
+del plugin: le voci del primo livello sono **bloccanti**, perché la rivista
+rifiuta il manoscritto senza; quelle del secondo sono **importanti**, perché
+un revisore le nota e ne scrive, ma non fermano la sottomissione.
+
+"Checklist di reporting" è il nome che il mestiere dà a questi elenchi
+(CONSORT, PRISMA e simili): si tiene quello, anche se il file non ha una
+gravità scritta voce per voce.
+
 Usare la checklist nei Methods e nel controllo finale. Per ogni voce
 assente scrivere un segnaposto, non un valore.
 

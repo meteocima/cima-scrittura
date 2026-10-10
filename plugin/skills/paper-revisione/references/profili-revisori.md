@@ -2,7 +2,7 @@
 
 Ogni profilo si copia nel prompt dell'agente `paper-revisore` (o si
 applica in modalità chat), con il campo di dominio indicato. Tutti
-seguono `griglia-revisione.md` e scrivono nel formato di
+seguono `griglia-peer-review.md` e scrivono nel formato di
 `formato-rapporto.md`.
 
 ## Revisore A: metodologico

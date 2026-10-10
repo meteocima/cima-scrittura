@@ -34,7 +34,8 @@ serve agli autori per correggere il testo.
 1. Leggi tutti i rapporti per intero.
 2. **Punti condivisi**: problemi sollevati da più revisori, anche con
    parole diverse, sullo stesso passaggio o aspetto. Priorità alta.
-3. **Divergenze**: differenze di più di 1 punto sullo stesso criterio o
+3. **Divergenze**: secondo la regola del nucleo (`protocollo-revisione.md`,
+   sezione 3, "Sintesi"), cioè differenze oltre la soglia o
    giudizi opposti sullo stesso passaggio. Riporta entrambe le posizioni
    con le citazioni. Non fare la media e non scegliere chi ha ragione.
 4. **Conformità**: confronta il manoscritto con la "Checklist di
