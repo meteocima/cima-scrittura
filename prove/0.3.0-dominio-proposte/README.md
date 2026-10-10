@@ -73,6 +73,26 @@ sta nel profilo ma nelle **Terms of Reference della call**.
 | `giro-0.3.0/03-profilo-eic` | **1.00**, 0,69 dollari |
 | `giro-0.3.0/04-profilo-interreg` | **1.00**, 0,46 dollari |
 
+## Profili LIFE e UCPM/ECHO (issue #16)
+
+File condivisi `programma-life.md` e `programma-ucpm.md`. Sono i due programmi
+piu' lontani dal modello Horizon: LIFE valuta su **quattro** criteri da 20
+punti con il peso su Impact che entra nella soglia, UCPM lega ogni
+sotto-criterio a una **casella numerata** della Part B con i suoi punti.
+
+| # | Ambiente | Prompt | Esito atteso | Esito reale |
+|---|---|---|---|---|
+| 8 | chat | "Analizza questa call" + `materiali/call-life-finta.md`, che non dice criteri ne' soglie | Quattro criteri 0-20, soglia 10 per criterio e 55 complessiva, peso 1,5 su Impact con la soglia calcolata dopo la pesatura, limite di 120 pagine | **Passa**, misurato in cieco il 2026-10-10 dal caso `giro-0.3.0/05-profilo-life` (1.00) |
+| 9 | chat | "Analizza questa call" + `materiali/call-ucpm-finta.md` | Relevance 40, Quality 30, Impact 30 su 100, soglie 20/15/15 piu' la complessiva 65 come doppia condizione, sotto-criteri legati alle caselle della Part B, limite di 50 pagine | **Passa**, misurato in cieco il 2026-10-10 dal caso `giro-0.3.0/06-profilo-ucpm` (1.00) |
+| 10 | agenti | "Analizza questa call" + una call LIFE in due fasi | Riconosce che alla prima fase si invia una concept note e che alcune sezioni non si compilano, invece di chiedere la proposta intera | Da fare a mano |
+
+### Misurato in automatico
+
+| Caso | Esito del 2026-10-10 |
+|---|---|
+| `giro-0.3.0/05-profilo-life` | **1.00**, 0,41 dollari |
+| `giro-0.3.0/06-profilo-ucpm` | **1.00**, 0,55 dollari |
+
 ## Esito
 
 Da riempire a fine giro: data, ambienti provati, che cosa e' stato corretto
@@ -83,3 +103,6 @@ righe manuali ancora da fare (2b, 3, 4).
 
 Profili EIC e Interreg (#15): chiusa il 2026-10-10. Due casi automatici verdi,
 una riga manuale da fare (7).
+
+Profili LIFE e UCPM/ECHO (#16): chiusa il 2026-10-10. Due casi automatici
+verdi, una riga manuale da fare (10).
