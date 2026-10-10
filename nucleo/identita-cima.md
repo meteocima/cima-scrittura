@@ -89,7 +89,6 @@ provvedimento e non la parafrasi.
 | ROR ID | 01w5y4543 (https://ror.org/01w5y4543) | metadati di affiliazione richiesti da molte riviste |
 | GRID | grid.433442.6 | sistemi editoriali che non hanno ancora adottato ROR |
 | Wikidata | Q30255915 | |
-| Altri identificativi di programma | [da compilare se esistono] | Interreg, LIFE, UCPM |
 
 **Attenzione scegliendo da un elenco ROR.** Nel registro ci sono quattordici
 organizzazioni che si chiamano CIMA, fra cui istituti di ricerca in Spagna,
