@@ -192,6 +192,22 @@ Skill `proposte-risposta-esr` e il suo `formato-risposta-esr.md`.
 |---|---|
 | `giro-0.3.0/12-risposta-esr` | **1.00** su due esecuzioni, 1,46 dollari in tutto |
 
+## Coerenza e limiti (issue #19)
+
+Skill `proposte-coerenza` e agente `proposte-verificatore`.
+
+| # | Ambiente | Prompt | Esito atteso | Esito reale |
+|---|---|---|---|---|
+| 24 | agenti | "Consegniamo domani. Controlla la coerenza e se stiamo nei limiti" + `materiali/proposta-finta.md` e `materiali/topic-finto.md` | Lancia il `proposte-verificatore`. Incoerenze riportate **in coppia**, con tutti e due i passaggi; limite di 30 pagine preso dal bando e non dal profilo; nessun punteggio | **Passa**, due volte su due il 2026-10-10, dal caso `giro-0.3.0/13-coerenza` (1.00) |
+| 25 | senza file | Stesso prompt | Stesso rapporto nel messaggio, con dichiarato che il controllo non e' indipendente | Da fare a mano |
+| 26 | agenti | "Controlla la coerenza" senza fornire il bando | I limiti restano `[da bando]` e non vengono stimati; le incoerenze interne si cercano lo stesso | Da fare a mano |
+
+### Misurato in automatico
+
+| Caso | Esito del 2026-10-10 |
+|---|---|
+| `giro-0.3.0/13-coerenza` | **1.00** su due esecuzioni, 1,37 dollari in tutto |
+
 ## Esito
 
 Da riempire a fine giro: data, ambienti provati, che cosa e' stato corretto
@@ -211,6 +227,9 @@ verdi, una riga manuale da fare (13).
 
 Concept (#13): chiusa il 2026-10-10. Due casi automatici verdi, una riga
 manuale da fare (16).
+
+Coerenza e limiti (#19): chiusa il 2026-10-10. Un caso automatico verde due
+volte su due, due righe manuali da fare (25, 26).
 
 Risposta all'ESR (#18): chiusa il 2026-10-10. Un caso automatico verde due
 volte su due, due righe manuali da fare (22, 23).
