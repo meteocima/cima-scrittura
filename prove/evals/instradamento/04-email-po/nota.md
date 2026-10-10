@@ -1,0 +1,6 @@
+# 04-email-po
+
+email di routine al PO: generale, non progetti
+
+Questo caso misura **quale** skill si attiva, non la qualita' del testo:
+il verdetto si legge nella traccia, non nel punteggio.
