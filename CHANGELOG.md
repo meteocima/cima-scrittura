@@ -14,3 +14,6 @@
 ### Deciso
 - Riviste di riferimento del dominio paper: gruppo Elsevier, gruppo
   Nature, GMD.
+- `generale-revisore` solo per testi pubblici o istituzionali e su
+  richiesta; protocollo di revisione aggiornato per il livello leggero
+  (brief v3).

@@ -4,7 +4,7 @@
 Questo file è la fonte delle decisioni condivise. Lo modifica solo la chat
 hub; le chat di dominio propongono modifiche (vedi "Flusso di lavoro").
 
-Versione brief: 2 · Ultimo aggiornamento: 2026-10-10
+Versione brief: 3 · Ultimo aggiornamento: 2026-10-10
 
 ---
 
@@ -150,9 +150,15 @@ good-bad-examples). Skill previste:
   destinatario del legacy. Deliverable e report di progetto vanno a
   `progetti`.
 - `generale-revisione`: rilettura di testi dell'utente con checklist
-  anti-pattern e tono; in modalità agenti 1 revisore.
+  anti-pattern e tono.
 
-Agenti: `generale-revisore` da decidere (sezione 8, punto 3).
+Revisione in modalità agenti: `generale-revisore` (1 revisore, solo
+`Read`, `Glob`, `Grep`, `Write` per il rapporto) per comunicati stampa,
+lettere ufficiali e istituzionali, testi web e social pubblici, e per
+qualsiasi testo quando l'utente lo chiede. Email e verbali: autorevisione
+con checklist.
+
+Agenti: `generale-revisore`.
 
 ### 5.2 Paper (livello: standard)
 
@@ -294,6 +300,10 @@ tuo prefisso. Prima di scrivere le skill proponimi il piano del dominio.
    l'organizzazione CIMA (gli agenti funzionano solo in Cowork):
    confermato dall'utente il 2026-10-10. Da verificare in pratica al
    primo rilascio.
+4. `generale-revisore` si fa, ma si usa solo per testi pubblici o
+   istituzionali e su richiesta; email e verbali con autorevisione
+   (sezione 5.1). Riga "Leggero" di `nucleo/protocollo-revisione.md`
+   aggiornata di conseguenza. Deciso il 2026-10-10.
 
 ### Aperte
 
@@ -305,13 +315,6 @@ tuo prefisso. Prima di scrivere le skill proponimi il piano del dominio.
    disponibilità dipende dal piano dell'organizzazione. Decidere con il
    test di accettazione delle proposte: stessa proposta valutata con
    `inherit` e con un modello diverso, confronto con l'ESR reale.
-2. **`generale-revisore` come agente.** In discussione nella chat hub.
-   Con i deliverable spostati in `progetti`, a `generale` restano testi
-   brevi, per i quali un subagent aggiunge attesa. Ipotesi: revisione
-   con subagent solo per testi pubblici o ufficiali (comunicati, lettere
-   istituzionali, testi web) o su richiesta; autorevisione con checklist
-   per email e verbali. Se adottata, va aggiornata la riga "Leggero" in
-   `nucleo/protocollo-revisione.md`.
 
 ## 9. Build e test
 

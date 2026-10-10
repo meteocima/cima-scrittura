@@ -28,11 +28,15 @@ modalità chat e dirlo in una riga.
 
 ## 2. Livelli di revisione
 
-Ogni skill di dominio dichiara il proprio livello.
+Ogni skill di dominio dichiara il proprio livello. Al livello leggero la
+skill elenca anche i tipi di testo che richiedono il revisore separato in
+modalità agenti (tipicamente quelli pubblici o firmati a nome
+dell'istituzione); per gli altri basta l'autorevisione con checklist,
+salvo richiesta dell'utente.
 
 | Livello | Uso tipico | Modalità agenti | Modalità chat |
 |---|---|---|---|
-| Leggero | email, testi brevi | 1 revisore | autorevisione con checklist |
+| Leggero | email, testi brevi | 1 revisore per i testi indicati dalla skill e su richiesta; altrimenti autorevisione con checklist | autorevisione con checklist |
 | Standard | paper, report | 2–3 revisori + sintesi | autorevisione dichiarata + pacchetto revisore |
 | Completo | proposte di progetto | 3 valutatori + rapporteur | autorevisione dichiarata + pacchetto revisore |
 
