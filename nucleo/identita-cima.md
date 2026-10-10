@@ -3,10 +3,10 @@
 > File del nucleo comune. Fonte unica: `nucleo/identita-cima.md` nel
 > repository `cima-scrittura`. Non modificare la copia dentro una skill.
 >
-> **Data di verifica: 2026-10-10.** Fonti: dati forniti dall'utente e sito
-> ufficiale www.cimafoundation.org (pagine principale e "chi siamo"). Se la
-> data ha più di 12 mesi, ricontrollare prima di usarli in un atto formale e
-> aggiornare questa riga.
+> **Data di verifica: 2026-10-10.** Fonti: dati forniti dall'utente, sito
+> ufficiale www.cimafoundation.org e registro ROR. Le voci ricavate dal sito
+> sono state confermate dall'utente. Se la data ha più di 12 mesi,
+> ricontrollare prima di usarli in un atto formale e aggiornare questa riga.
 
 Questi dati sono **verificati**, quindi fanno eccezione alla regola che vieta
 di scrivere su CIMA ciò che l'utente non ha fornito (`voce-e-lingua.md`,
@@ -78,17 +78,24 @@ Soci fondatori: Dipartimento della Protezione Civile, Università di Genova,
 Regione Liguria, Provincia di Savona. Aggiunti in seguito: ARPAL nel 2019,
 Regione Autonoma Valle d'Aosta nel 2024.
 
-Queste voci vengono dal sito istituzionale. Per un atto formale che le cita
-come base giuridica, confermarle sullo statuto o sul provvedimento, e dirlo in
-una riga se non è stato possibile.
+Per un atto che le citi come base giuridica, riportare gli estremi del
+provvedimento e non la parafrasi.
 
 ## Codici per bandi e progetti
 
 | Voce | Valore | Dove serve |
 |---|---|---|
 | PIC (Participant Identification Code) | 997710476 | Funding & Tenders Portal, proposte e Grant Agreement |
-| ROR ID | [da compilare] | metadati di affiliazione richiesti da molte riviste |
+| ROR ID | 01w5y4543 (https://ror.org/01w5y4543) | metadati di affiliazione richiesti da molte riviste |
+| GRID | grid.433442.6 | sistemi editoriali che non hanno ancora adottato ROR |
+| Wikidata | Q30255915 | |
 | Altri identificativi di programma | [da compilare se esistono] | Interreg, LIFE, UCPM |
+
+**Attenzione scegliendo da un elenco ROR.** Nel registro ci sono quattordici
+organizzazioni che si chiamano CIMA, fra cui istituti di ricerca in Spagna,
+Portogallo e Perù e un ordine professionale britannico. La nostra è l'unica a
+Savona, compare come "CIMA Research Foundation" e porta
+"Centro Internazionale in Monitoraggio Ambientale" come alias italiano.
 
 ## Affiliazione nei paper
 
@@ -99,7 +106,11 @@ rivista, che a volte impongono un formato proprio.
 |---|---|
 | Affiliazione, inglese | CIMA Research Foundation, Savona, Italy |
 | Affiliazione, italiano | Fondazione CIMA, Savona, Italia |
-| Doppia affiliazione ricorrente | [da compilare se esiste, es. con Università di Genova] |
+
+Non esiste una doppia affiliazione istituzionale. Se in un articolo compare
+anche l'Università di Genova, è l'affiliazione di un coautore che appartiene
+all'ateneo, non una seconda affiliazione di CIMA: va scritta sotto quel
+coautore e non aggiunta agli autori della fondazione.
 
 L'ordine e l'abbinamento fra autori e affiliazioni li fornisce sempre
 l'utente: qui sta solo la forma della stringa.
