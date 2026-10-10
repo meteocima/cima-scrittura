@@ -53,3 +53,16 @@ Più le prove di regressione in `../domini/`, per i domini toccati.
 
 Da riempire quando le prove vengono eseguite: data, ambienti provati, che cosa
 è stato corretto prima di rilasciare.
+
+### Trovato prima di cominciare
+
+**I materiali non erano nel repository.** La riga `materiali/` del
+`.gitignore` non aveva la barra iniziale, quindi valeva a ogni livello e si è
+presa anche `prove/<versione>/materiali/`. La `v0.2.0-rc1` è stata marcata
+senza i file da cui dipendono sei delle sue prove, e il commit che diceva di
+averli aggiunti ne aveva aggiunto solo il README. Trovato dalla sessione che
+doveva eseguire le prove, non da chi le aveva scritte.
+
+Corretto con `/materiali/`, e `build.py --check` ora avvisa quando un file
+sotto `prove/` è ignorato da git: un materiale che git non porta con sé non
+arriva a chi deve provare.

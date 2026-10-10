@@ -19,6 +19,7 @@ from __future__ import annotations
 import json
 import re
 import shutil
+import subprocess
 import sys
 import tempfile
 import zipfile
@@ -133,6 +134,25 @@ def valida_prove(versione: str) -> None:
         return
     if not any(d.is_dir() and d.name.startswith(versione) for d in PROVE.iterdir()):
         avviso(f"prove/: nessuna cartella per la versione {versione} (vedi prove/README.md)")
+    prove_ignorate()
+
+
+def prove_ignorate() -> None:
+    """Un materiale di prova che git ignora non arriva a chi deve provare."""
+    file = [p for p in PROVE.rglob("*") if p.is_file()]
+    if not file:
+        return
+    try:
+        esito = subprocess.run(
+            ["git", "check-ignore", "--stdin"],
+            input="\n".join(str(p) for p in file),
+            capture_output=True, text=True, cwd=ROOT, timeout=30,
+        )
+    except (OSError, subprocess.SubprocessError):
+        return  # senza git il controllo si salta, non fallisce
+    for riga in esito.stdout.splitlines():
+        if riga.strip():
+            avviso(f"{riga.strip()}: ignorato da git, quindi non arriva a chi deve provare")
 
 
 def nomi_agenti(base: Path) -> set[str]:

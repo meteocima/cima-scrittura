@@ -1,5 +1,5 @@
 dist/
-materiali/
+/materiali/
 __pycache__/
 .DS_Store
 template_cima/
