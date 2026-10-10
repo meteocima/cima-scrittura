@@ -1,0 +1,9 @@
+{
+  "name": "cima-writing-style",
+  "version": "0.1.0",
+  "description": "Stile di scrittura condiviso CIMA — italiano e inglese, voce scientifica e professionale per comunicazioni interne ed esterne.",
+  "author": {
+    "name": "CimaMeteoIdro"
+  },
+  "keywords": ["writing", "style", "italiano", "english", "scientific", "CIMA"]
+}
