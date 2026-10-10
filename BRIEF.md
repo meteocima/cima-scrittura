@@ -4,7 +4,7 @@
 Questo file è la fonte delle decisioni condivise. Lo modifica solo la chat
 hub; le chat di dominio propongono modifiche (vedi "Flusso di lavoro").
 
-Versione brief: 3 · Ultimo aggiornamento: 2026-10-10
+Versione brief: 4 · Ultimo aggiornamento: 2026-10-10
 
 ---
 
@@ -34,11 +34,17 @@ attivazioni doppie.
    (`nucleo/`). Le skill non li riscrivono: li leggono.
 2. **Chi scrive non valuta.** Ogni dominio ha una revisione in contesto
    separato secondo `nucleo/protocollo-revisione.md`.
-3. **Funziona ovunque, meglio in Cowork.** Le skill funzionano in chat; gli
-   agenti aggiungono indipendenza in Cowork. Nessuna skill deve
-   dipendere da un agente per funzionare.
+3. **Il risultato arriva sempre, meglio in Cowork.** In chat, senza
+   agenti, ogni skill porta a termine l'intero compito: ogni passaggio
+   che in Cowork farebbe un agente (revisione, sintesi del rapporteur,
+   verifica di coerenza, decisione dell'editor) viene eseguito nel
+   contesto principale. Gli agenti aggiungono indipendenza di giudizio,
+   non funzioni. Una skill non si ferma, non consegna a metà e non
+   chiede all'utente di passare a Cowork.
 4. **Ambiente dedotto, non chiesto.** Strumento subagent disponibile =
-   modalità agenti; altrimenti modalità chat.
+   modalità agenti; altrimenti modalità chat. La regola di rilevamento è
+   in `nucleo/protocollo-revisione.md`, sezione 1, e vale per ogni
+   passaggio affidato a un agente, non solo per la revisione.
 5. **Niente invenzioni, mai.** Vale anche per i valutatori simulati: non
    inventano punteggi "realistici" senza griglia.
 
@@ -109,6 +115,12 @@ dentro ogni skill, in `references/nucleo/`, al momento della build.
 
 - Ogni skill dichiara le eventuali **deroghe** a `voce-e-lingua.md` in una
   sezione "Deroghe allo stile di base".
+- Ogni skill che nomina un agente del plugin ha una sezione
+  **"## Modalità chat"** che dice, passaggio per passaggio, come la skill
+  svolge da sola il lavoro di quell'agente (per la revisione: sezione 4
+  del protocollo; per sintesi e verifiche: stesse regole e stesso
+  formato di output, nel contesto principale, dichiarandolo in una
+  riga). `build.py` blocca la build se la sezione manca.
 - Mai usare il trattino em (—) nei file del plugin, nemmeno nelle
   istruzioni: gli esempi vengono imitati.
 
@@ -326,7 +338,12 @@ python3 scripts/build.py --check   # solo validazione
 La build fallisce se: manca `plugin.json` o un campo obbligatorio; una
 skill non ha `name`/`description` validi; un SKILL.md cita un file in
 `references/` che non esiste; un file del plugin contiene il trattino em;
-un nome non rispetta prefisso e kebab-case.
+un nome non rispetta prefisso e kebab-case; un SKILL.md nomina un agente
+del plugin senza avere la sezione "## Modalità chat".
+
+Prima di ogni rilascio, ogni skill si prova in due ambienti: chat senza
+subagent (deve consegnare il risultato completo) e Cowork (deve usare gli
+agenti previsti).
 
 Output: `dist/cima-scrittura/` (plugin assemblato),
 `dist/cima-scrittura.plugin` (per Cowork), `dist/skills/<nome>.zip` (per il

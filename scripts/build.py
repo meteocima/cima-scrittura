@@ -99,7 +99,12 @@ def valida_manifest(base: Path) -> None:
         errore("plugin.json: version deve essere semver (es. 0.1.0)")
 
 
-def valida_skill(skill_dir: Path) -> None:
+def nomi_agenti(base: Path) -> set[str]:
+    cartella = base / "agents"
+    return {p.stem for p in cartella.glob("*.md")} if cartella.is_dir() else set()
+
+
+def valida_skill(skill_dir: Path, agenti: set[str] = frozenset()) -> None:
     nome = skill_dir.name
     rel = f"skills/{nome}"
     if not KEBAB.match(nome):
@@ -132,6 +137,11 @@ def valida_skill(skill_dir: Path) -> None:
         avviso(f"{rel}/SKILL.md: {parole} parole (consigliato < 3000)")
     if "references/nucleo/vincoli.md" not in corpo:
         avviso(f"{rel}/SKILL.md: non richiama references/nucleo/vincoli.md")
+
+    # Una skill che usa agenti deve funzionare anche in chat (BRIEF §2, §4).
+    citati = sorted(a for a in agenti if re.search(rf"(?<![\w-]){re.escape(a)}(?![\w-])", corpo))
+    if citati and not re.search(r"^##\s+Modalità chat\s*$", corpo, re.MULTILINE):
+        errore(f"{rel}/SKILL.md: nomina {', '.join(citati)} ma manca la sezione '## Modalità chat'")
 
     # Riferimenti a file references/ citati nel testo devono esistere.
     for ref in sorted(set(re.findall(r"references/[\w./-]+\.md", corpo))):
@@ -212,8 +222,9 @@ def main() -> int:
     agenti = sorted((lavoro / "agents").glob("*.md")) if (lavoro / "agents").is_dir() else []
     if not skills:
         avviso("nessuna skill nel plugin (normale finché i domini non sono pronti)")
+    nomi = nomi_agenti(lavoro)
     for s in skills:
-        valida_skill(s)
+        valida_skill(s, nomi)
     for a in agenti:
         valida_agente(a)
     controlla_em_dash(lavoro)

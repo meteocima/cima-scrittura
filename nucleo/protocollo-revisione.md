@@ -26,6 +26,17 @@ disponibili.
 In caso di dubbio (strumento presente ma il lancio fallisce), passare alla
 modalità chat e dirlo in una riga.
 
+La regola vale per **ogni passaggio** che una skill affida a un agente
+(revisione, sintesi, verifica di coerenza, decisione dell'editor), non
+solo per la revisione. In modalità chat:
+
+- eseguire quei passaggi nel contesto principale, uno dopo l'altro, con
+  le stesse regole e lo stesso formato di output dell'agente;
+- dichiarare in una riga quali passaggi non sono indipendenti;
+- consegnare comunque il risultato completo: non fermarsi, non chiedere
+  all'utente di passare a Cowork. Si può citare Cowork una sola volta,
+  in fondo, come modo per avere una revisione indipendente.
+
 ## 2. Livelli di revisione
 
 Ogni skill di dominio dichiara il proprio livello. Al livello leggero la

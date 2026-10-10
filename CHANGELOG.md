@@ -17,3 +17,6 @@
 - `generale-revisore` solo per testi pubblici o istituzionali e su
   richiesta; protocollo di revisione aggiornato per il livello leggero
   (brief v3).
+- Ogni skill deve consegnare il risultato completo anche in chat, senza
+  agenti: regola nel brief (v4) e nel protocollo di revisione; la build
+  blocca le skill che nominano un agente senza sezione "Modalità chat".
