@@ -1,0 +1,31 @@
+FLOODSENSE - Periodic review report (RP1)
+
+Project: FLOODSENSE, GA [numero]
+Review date: [data]
+Reviewers: Reviewer 1, Reviewer 2
+Project Officer: [nome]
+
+
+Overall assessment
+The project has made progress, but the evidence provided for several claimed results is insufficient. The
+consortium is requested to address the comments below within 30 days.
+
+
+Comments requiring action
+C1 (D3.2, Section 4). Results are described in qualitative terms only. No KPI baseline or measured value is
+reported. Please provide quantitative evidence against the KPIs defined in the DoA (Annex 1, Table 3.2).
+
+C2 (D3.2, Section 5). The report states there are no significant deviations. However, MS4 was reported as
+achieved in month 12 while D3.2 is submitted in month 20. Please clarify and update the deviation section.
+
+C3 (D3.2, Annex). The data and code availability annex required by the programme is missing. Please add it.
+
+C4 (general). Dissemination activities listed in the periodic report are limited to conference participation. Please
+describe progress against the dissemination KPIs.
+
+
+Recommendations
+R1. Align the reporting of task progress with the task structure of the DoA.
+
+R2. Provide a risk update for the remaining periods.
+
