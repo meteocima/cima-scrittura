@@ -4,20 +4,24 @@
 Questo file è la fonte delle decisioni condivise. Lo modifica solo la chat
 hub; le chat di dominio propongono modifiche (vedi "Flusso di lavoro").
 
-Versione brief: 1 · Ultimo aggiornamento: 2026-10-10
+Versione brief: 2 · Ultimo aggiornamento: 2026-10-10
 
 ---
 
 ## 1. Obiettivo
 
 Un solo plugin di scrittura per Fondazione CIMA, usabile in Cowork e in
-chat, che copre tre domini:
+chat, che copre quattro domini:
 
 | Dominio | Prefisso | Copre |
 |---|---|---|
-| Generale | `generale-` | email, lettere, comunicati stampa, verbali, report interni, testi per web e social, deliverable e report periodici di progetti già finanziati |
+| Generale | `generale-` | email, lettere, comunicati stampa, verbali, report interni, testi per web e social |
 | Paper | `paper-` | articoli scientifici, abstract per conferenze, cover letter, risposta ai revisori, revisione pre-sottomissione |
 | Proposte | `proposte-` | proposte di progetto (Horizon Europe, EIC, Interreg, LIFE, UCPM/ECHO, altri): analisi del bando, concept, scrittura, valutazione simulata, coerenza, risposta agli ESR |
+| Progetti | `progetti-` | progetti già finanziati: deliverable, report periodici (parte tecnica), technical report, risposte a project officer e reviewer di progetto |
+
+Proposte e Progetti sono le due fasi dello stesso ciclo: prima e dopo la
+firma del Grant Agreement.
 
 Il plugin sostituisce `cima-writing-style` v0.1.0 (copia in `legacy/`).
 Quando il nuovo plugin è pronto, il vecchio va disinstallato per evitare
@@ -141,13 +145,14 @@ proprio prefisso; vanno rispettati livello di revisione e confini.
 Base di partenza: `legacy/cima-writing-style/` (SKILL.md, audience-tones,
 good-bad-examples). Skill previste:
 
-- `generale-scrittura`: email, lettere, comunicati, verbali, report,
-  deliverable e report periodici UE (post-finanziamento), testi web.
-  Riprende tipologie e toni per destinatario del legacy.
+- `generale-scrittura`: email, lettere, comunicati, verbali, report
+  interni, testi web e social. Riprende tipologie e toni per
+  destinatario del legacy. Deliverable e report di progetto vanno a
+  `progetti`.
 - `generale-revisione`: rilettura di testi dell'utente con checklist
   anti-pattern e tono; in modalità agenti 1 revisore.
 
-Agenti: `generale-revisore` (opzionale, valutare se serve davvero).
+Agenti: `generale-revisore` da decidere (sezione 8, punto 3).
 
 ### 5.2 Paper (livello: standard)
 
@@ -162,8 +167,16 @@ Skill previste:
 
 Agenti: `paper-revisore` (parametrizzato per profilo), `paper-editor`
 (sintesi e decisione simulata: accept / minor / major / reject).
-Riferimenti da costruire: linee guida delle riviste più usate da CIMA
-(da chiedere all'utente quali), checklist di reporting pertinenti.
+Riviste di riferimento (decise con l'utente): riviste del gruppo
+Elsevier, riviste del gruppo Nature (Nature Portfolio) e Geoscientific
+Model Development (GMD, Copernicus/EGU). Un profilo per editore o
+rivista in `references/riviste/<nome>.md` (struttura, limiti, sezioni
+obbligatorie come disponibilità di codice e dati, data di verifica),
+costruito da guide for authors correnti verificate con ricerca web, mai a
+memoria. Da chiarire nella chat di dominio: se estendere GMD alle altre
+riviste Copernicus/EGU usate da CIMA (es. HESS, NHESS), che condividono
+gran parte delle regole. Riferimenti da costruire anche: checklist di
+reporting pertinenti.
 
 ### 5.3 Proposte (livello: completo)
 
@@ -201,6 +214,32 @@ Agenti: `proposte-valutatore` (parametrizzato per profilo esperto),
 Test di accettazione: valutazione cieca di una proposta CIMA già valutata,
 confronto tra punteggio simulato e ESR reale.
 
+### 5.4 Progetti (livello: standard)
+
+Dominio aggiunto con la versione 2 del brief (decisione 1). Copre i
+testi dei progetti già finanziati, scritti per la Commissione, le
+agenzie o il consorzio. Riferimento principale di ogni testo: il
+Grant Agreement e la descrizione dell'azione (DoA / Annex 1), che
+l'utente fornisce o carica.
+
+Skill previste (la chat di dominio può ridefinirle):
+
+- `progetti-scrittura`: deliverable, parte tecnica dei report periodici,
+  technical report, executive summary. Ogni affermazione su attività e
+  risultati va ricondotta a task, deliverable e milestone della DoA.
+- `progetti-revisione`: revisione simulata dal punto di vista di project
+  officer e reviewer esterni di progetto: aderenza alla DoA, risultati
+  dimostrati e non solo dichiarati, scostamenti spiegati, KPI con valore
+  misurato.
+
+Agenti: `progetti-revisore` (parametrizzato per profilo: project officer,
+reviewer tecnico).
+Deroghe probabili: struttura imposta dal template del deliverable;
+"the consortium" / "we" invece di "CIMA" quando il testo è del consorzio.
+Confine con `proposte`: la risposta agli ESR di una proposta resta in
+`proposte`; i commenti di una review di progetto in corso vanno a
+`progetti`.
+
 ## 6. Confini tra domini (instradamento)
 
 Le descrizioni delle skill si sovrappongono su parole come "scrivi",
@@ -209,7 +248,7 @@ Le descrizioni delle skill si sovrappongono su parole come "scrivi",
 | Richiesta | Va a |
 |---|---|
 | proposta, bando, call, topic, Part B, ESR, work package, consorzio (pre-finanziamento) | proposte |
-| deliverable, periodic report, technical report di un progetto in corso | generale |
+| deliverable, periodic report, technical report, review di un progetto in corso, Grant Agreement, DoA | progetti |
 | paper, manuscript, articolo, journal, revisori, rebuttal, cover letter | paper |
 | abstract per conferenza o rivista | paper |
 | abstract di una proposta | proposte |
@@ -237,22 +276,42 @@ del rilascio.
 ### Prompt di avvio per una chat di dominio
 
 ```
-Lavoriamo al dominio <generale|paper|proposte> del plugin cima-scrittura
+Lavoriamo al dominio <generale|paper|proposte|progetti> del plugin cima-scrittura
 (repo meteocima/cima-scrittura). Leggi per intero BRIEF.md e i file in
 nucleo/, poi crea il branch dominio/<prefisso>. Lavora solo nei file del
 tuo prefisso. Prima di scrivere le skill proponimi il piano del dominio.
 ```
 
-## 8. Decisioni aperte
+## 8. Decisioni
 
-1. Deliverable e report periodici: restano in `generale` o diventano un
-   dominio `progetti` (post-finanziamento)? Default attuale: `generale`.
-2. Modello dei valutatori: `inherit` o diverso dallo scrittore? Decidere
-   dopo il test di accettazione delle proposte.
-3. `generale-revisore` come agente: serve o basta l'autorevisione?
-4. Riviste di riferimento per il dominio paper: elenco da chiedere.
-5. Verificare che le skill del plugin compaiano anche in chat per
-   l'organizzazione CIMA (gli agenti funzionano solo in Cowork).
+### Prese
+
+1. Deliverable e report periodici diventano il dominio `progetti`
+   (sezione 5.4). Deciso il 2026-10-10.
+2. Riviste di riferimento per il dominio paper: gruppo Elsevier, gruppo
+   Nature, GMD (sezione 5.2). Deciso il 2026-10-10.
+3. Le skill del plugin devono comparire anche in chat per
+   l'organizzazione CIMA (gli agenti funzionano solo in Cowork):
+   confermato dall'utente il 2026-10-10. Da verificare in pratica al
+   primo rilascio.
+
+### Aperte
+
+1. **Modello dei valutatori.** Tecnicamente possibile: il campo `model`
+   degli agenti accetta `inherit`, `sonnet`, `opus`, `haiku` (già
+   validato da `build.py`). Limiti: vale solo in modalità agenti; i
+   modelli sono della stessa famiglia, quindi la diversità di giudizio è
+   minore di quella data da contesto separato e profili diversi; la
+   disponibilità dipende dal piano dell'organizzazione. Decidere con il
+   test di accettazione delle proposte: stessa proposta valutata con
+   `inherit` e con un modello diverso, confronto con l'ESR reale.
+2. **`generale-revisore` come agente.** In discussione nella chat hub.
+   Con i deliverable spostati in `progetti`, a `generale` restano testi
+   brevi, per i quali un subagent aggiunge attesa. Ipotesi: revisione
+   con subagent solo per testi pubblici o ufficiali (comunicati, lettere
+   istituzionali, testi web) o su richiesta; autorevisione con checklist
+   per email e verbali. Se adottata, va aggiornata la riga "Leggero" in
+   `nucleo/protocollo-revisione.md`.
 
 ## 9. Build e test
 

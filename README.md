@@ -3,17 +3,20 @@
 Plugin di scrittura di Fondazione CIMA per Claude (Cowork e chat).
 
 **Stato: in costruzione.** Per ora contiene il nucleo comune e
-l'infrastruttura; le skill dei tre domini arrivano nelle prossime versioni.
+l'infrastruttura; le skill dei quattro domini arrivano nelle prossime versioni.
 Fino al rilascio resta in uso `cima-writing-style`.
 
 ## Cosa farà
 
-- **Generale**: email, lettere, comunicati, verbali, report e deliverable.
+- **Generale**: email, lettere, comunicati, verbali, report interni, testi web.
 - **Paper**: articoli scientifici, abstract, cover letter, risposta ai
   revisori, peer review simulata prima della sottomissione.
 - **Proposte**: analisi del bando, concept, scrittura della proposta,
   valutazione simulata con tre valutatori e rapporteur, controllo di
   coerenza, risposta agli ESR.
+- **Progetti**: deliverable, report periodici e technical report di
+  progetti già finanziati, revisione dal punto di vista di project
+  officer e reviewer.
 
 Tutti i domini condividono le stesse regole: niente dati inventati
 (segnaposto `[…]` dove manca un'informazione), verifica di ogni fonte

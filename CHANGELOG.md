@@ -8,3 +8,9 @@
   terminologia, protocollo di revisione.
 - Script di build e validazione (`scripts/build.py`).
 - Copia di riferimento di `cima-writing-style` v0.1.0 in `legacy/`.
+- Quarto dominio `progetti` (deliverable e report di progetti finanziati),
+  separato da `generale` (brief v2).
+
+### Deciso
+- Riviste di riferimento del dominio paper: gruppo Elsevier, gruppo
+  Nature, GMD.

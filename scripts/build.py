@@ -27,7 +27,7 @@ SRC = ROOT / "plugin"
 DIST = ROOT / "dist"
 PLUGIN_NAME = "cima-scrittura"
 
-PREFISSI = ("generale-", "paper-", "proposte-")
+PREFISSI = ("generale-", "paper-", "proposte-", "progetti-")
 KEBAB = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 EM_DASH = "—"
 # File in cui il trattino em compare solo per nominarlo come vietato.
