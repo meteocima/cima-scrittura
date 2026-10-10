@@ -38,7 +38,7 @@ Le prove sui file usano i materiali in `materiali/`, che sono finti.
 | 12 | agenti | "Prepara la presentazione per la giornata con la Regione" | Mazzo istituzionale, quindi parte `generale-revisore-presentazione`; il rapporto arriva all'utente | |
 | 13 | chat | Stesso prompt della 12 | Autorevisione dichiarata con la griglia, più il pacchetto revisore; il mazzo arriva comunque | |
 | 14 | agenti | "Fai le slide del talk EGU dal nostro paper" | `generale-presentazione` per il mazzo, con i criteri di contenuto presi da `paper`; dieci minuti, non quaranta slide | |
-| 15 | agenti | "Traduci in inglese queste slide" + un `.pptx` | Va a `generale-traduzione`, che traduce dentro il `.pptx` senza rifarne la struttura (ADR 0012) | |
+| 15 | agenti | "Traduci in inglese queste slide" + il mazzo prodotto dalla prova 10 | Va a `generale-traduzione`, che traduce dentro il `.pptx` senza rifarne la struttura (ADR 0012) | |
 
 ### Regressione sui due ambienti
 
