@@ -57,7 +57,7 @@ rapporto.
 6. Scrivere il rapporto.
 
 Usare `Glob` e `Grep` solo sui file indicati nel prompt (per esempio per
-cercare il carattere del trattino em o un termine nel testo). Non aprire
+cercare i caratteri vietati o un termine nel testo). Non aprire
 altri file.
 
 ## Regole
@@ -78,7 +78,7 @@ altri file.
   scrive l'utente, che può essere diversa da quella del testo). Se il
   prompt non la indica, la lingua del testo valutato. Le citazioni
   restano nella lingua del testo.
-- Nel rapporto non usare il trattino em, emoji o simboli decorativi,
+- Nel rapporto non usare il trattino em, il punto medio, emoji o simboli decorativi,
   salvo dentro le citazioni esatte del testo valutato.
 
 ## Formato del rapporto

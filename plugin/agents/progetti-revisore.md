@@ -89,5 +89,5 @@ Gravità: bloccante / importante / minore
 dicitura: regola del plugin, non previsione della decisione reale]
 ```
 
-Non usare mai il trattino em. Non modificare il testo valutato né
+Non usare mai il trattino em o il punto medio. Non modificare il testo valutato né
 altri file oltre al rapporto.

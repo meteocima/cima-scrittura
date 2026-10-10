@@ -15,6 +15,10 @@ trovato va riscritto, non solo attenuato.
 - **Trattino em (—)**: vietato in qualsiasi posizione e lingua. Sostituire
   con virgola, punto e virgola, due punti o parentesi. Il trattino en (–)
   è ammesso solo negli intervalli numerici (2015–2030, pp. 12–18).
+- **Punto medio (·) come separatore**: vietato ovunque, in ogni lingua.
+  Separare con virgola, barra o a capo. Vale anche nelle righe di
+  intestazione, nelle firme e sulle slide, e anche quando un template lo
+  suggerisce nel proprio segnaposto.
 - **Grassetto diffuso**: al massimo un'espressione in grassetto per
   paragrafo, e solo se il lettore deve ritrovarla. Mai frasi intere.
 - **Titoli in Title Case in inglese** ("Our Approach To Flood Risk"):
@@ -96,7 +100,7 @@ aggiungono una relazione logica che senza di loro si perde.
 
 ## Procedura di controllo
 
-1. Cercare il carattere "—" nel testo e sostituire ogni occorrenza.
+1. Cercare i caratteri "—" e "·" nel testo e sostituire ogni occorrenza.
 2. Scorrere le liste di lessico sopra (nella lingua del testo).
 3. Rileggere inizio e fine del testo: sono i punti dove i pattern si
    concentrano.

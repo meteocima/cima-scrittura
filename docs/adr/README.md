@@ -20,7 +20,7 @@ dice che cosa vale oggi, questi dicono come ci siamo arrivati.
 | [0011](0011-una-riscrittura-e-scrittura.md) | Una riscrittura è scrittura |
 | [0012](0012-traduzione-a-generale-traduzione.md) | La traduzione di qualsiasi testo va a `generale-traduzione` |
 | [0013](0013-riviste-di-riferimento-paper.md) | Riviste di riferimento del dominio paper |
-| [0014](0014-divieto-del-trattino-em.md) | Il trattino em è un errore di build |
+| [0014](0014-caratteri-vietati.md) | Trattino em e punto medio sono errori di build |
 | [0015](0015-modello-dei-valutatori.md) | Modello dei valutatori (**aperta**) |
 | [0016](0016-un-solo-tronco.md) | Un solo tronco: via il modello hub e dominio |
 | [0017](0017-brief-sciolto.md) | `BRIEF.md` sciolto nei file che hanno la sua materia |

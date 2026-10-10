@@ -66,7 +66,7 @@ Riferimenti del dominio:
 ## Anti-pattern dell'originale
 
 Il testo da tradurre è dell'utente. Correggere in silenzio solo la
-tipografia della lingua di arrivo (trattino em, virgolette, spazi,
+tipografia della lingua di arrivo (trattino em, punto medio, virgolette, spazi,
 maiuscole dei titoli). Gli altri anti-pattern dell'originale (superlativi,
 lessico vuoto, aperture di rito) si traducono fedelmente e si segnalano
 nelle note con la citazione, salvo che l'utente abbia chiesto anche di

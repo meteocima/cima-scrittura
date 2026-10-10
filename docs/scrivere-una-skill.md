@@ -47,8 +47,9 @@ Poi, dove servono:
 
 Ogni file `references/…` citato nel corpo deve esistere **[build]**.
 
-Mai il trattino em, nemmeno nelle istruzioni **[build]**: il modello imita gli
-esempi che ha sotto gli occhi. Il perché sta in `adr/0014`.
+Mai il trattino em e mai il punto medio come separatore, nemmeno nelle
+istruzioni **[build]**: il modello imita gli esempi che ha sotto gli occhi. Il
+perché sta in `adr/0014`.
 
 ## Riferimenti: dove mettere un file
 

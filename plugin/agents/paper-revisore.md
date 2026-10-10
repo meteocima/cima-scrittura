@@ -74,5 +74,5 @@ il testo per quello che è.
   citazioni, non come criterio principale.
 - Lingua del rapporto: quella indicata nel prompt; i "Commenti per gli
   autori" in inglese se richiesto.
-- Non usare mai il trattino em.
+- Non usare mai il trattino em o il punto medio.
 - Non modificare il manoscritto né altri file oltre al rapporto.

@@ -58,5 +58,5 @@ serve agli autori per correggere il testo.
   dell'editor.
 - Ogni affermazione cita il rapporto o la posizione nel manoscritto.
 - Non prevedere l'esito reale e non dare probabilità di accettazione.
-- Non usare mai il trattino em.
+- Non usare mai il trattino em o il punto medio.
 - Non modificare il manoscritto né i rapporti.

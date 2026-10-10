@@ -8,7 +8,7 @@ del formato comune si toglie.
 
 ```
 # Rapporto del revisore [A/B/C]: [profilo, campo]
-Manoscritto: [titolo] · Rivista: [rivista], [tipo di articolo]
+Manoscritto: [titolo], Rivista: [rivista], [tipo di articolo]
 
 ## Sintesi
 [2–4 frasi: di cosa tratta il lavoro, giudizio complessivo, problema
@@ -57,7 +57,7 @@ punteggi dei revisori affiancati.
 
 ```
 # Decisione dell'editor (simulata)
-Manoscritto: [titolo] · Rivista: [rivista]
+Manoscritto: [titolo], Rivista: [rivista]
 
 ## Sintesi
 [decisione e motivazione in 2–4 frasi, legata ai rapporti]

@@ -10,7 +10,7 @@ Passaggi:
 2. inietta nucleo/*.md in ogni skill, in references/nucleo/
 3. inietta plugin/condivisi/<dominio>/ (anche sottocartelle, solo .md) in
    references/ di ogni skill del dominio (dominio = prefisso del nome)
-4. valida manifest, frontmatter, nomi, riferimenti, trattino em
+4. valida manifest, frontmatter, nomi, riferimenti, caratteri vietati
 5. crea dist/cima-scrittura.plugin (Cowork) e dist/skills/<nome>.zip (chat)
 """
 
@@ -34,9 +34,10 @@ PLUGIN_NAME = "cima-scrittura"
 
 PREFISSI = ("generale-", "paper-", "proposte-", "progetti-")
 KEBAB = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
-EM_DASH = "—"
-# File in cui il trattino em compare solo per nominarlo come vietato.
-EM_DASH_ESENTI = {"anti-pattern-ai.md"}
+# Caratteri vietati nei testi del plugin: il modello imita gli esempi che legge.
+VIETATI = {"—": "trattino em", "·": "punto medio"}
+# File in cui compaiono solo per nominarli come vietati.
+VIETATI_ESENTI = {"anti-pattern-ai.md"}
 MAX_DESCRIZIONE = 1024
 COLORI_AGENTE = {"blue", "cyan", "green", "yellow", "magenta", "red"}
 MODELLI_AGENTE = {"inherit", "sonnet", "opus", "haiku"}
@@ -84,8 +85,12 @@ def valida_nucleo() -> None:
         errore("manca la cartella nucleo/")
         return
     for f in sorted(NUCLEO.glob("*.md")):
-        if f.name not in EM_DASH_ESENTI and EM_DASH in f.read_text(encoding="utf-8"):
-            errore(f"trattino em in nucleo/{f.name}")
+        if f.name in VIETATI_ESENTI:
+            continue
+        testo = f.read_text(encoding="utf-8")
+        for c, nome in VIETATI.items():
+            if c in testo:
+                errore(f"{nome} in nucleo/{f.name}")
 
 
 def valida_condivisi() -> None:
@@ -196,13 +201,14 @@ def valida_agente(path: Path) -> None:
         errore(f"{rel}: color deve essere uno tra {sorted(COLORI_AGENTE)}")
 
 
-def controlla_em_dash(base: Path) -> None:
+def controlla_caratteri_vietati(base: Path) -> None:
     for f in base.rglob("*.md"):
-        if f.name in EM_DASH_ESENTI:
+        if f.name in VIETATI_ESENTI:
             continue
         for n, riga in enumerate(f.read_text(encoding="utf-8").splitlines(), 1):
-            if EM_DASH in riga:
-                errore(f"{f.relative_to(base)}:{n}: trattino em")
+            for c, nome in VIETATI.items():
+                if c in riga:
+                    errore(f"{f.relative_to(base)}:{n}: {nome}")
 
 
 def assembla(dest: Path) -> None:
@@ -281,7 +287,7 @@ def main() -> int:
         valida_skill(s, nomi)
     for a in agenti:
         valida_agente(a)
-    controlla_em_dash(lavoro)
+    controlla_caratteri_vietati(lavoro)
 
     for a in avvisi:
         print(f"AVVISO  {a}")
