@@ -8,9 +8,10 @@ con lui: oggi c'e' solo la prima fetta.
 ## Skill e agenti
 
 - `proposte-analisi-bando`: estrae la matrice del bando dal testo del topic.
+- `proposte-concept`: i quattro blocchi dell'idea, prima della proposta.
 - `proposte-scrittura`: scrive il testo della proposta dentro il modulo del
   programma, ancorato alla matrice.
-- Previsti e non ancora scritti: `proposte-concept`,
+- Previsti e non ancora scritti:
   `proposte-revisione`, `proposte-coerenza`, `proposte-risposta-esr`; agenti
   `proposte-valutatore`, `proposte-rapporteur`, `proposte-verificatore`.
 
@@ -73,6 +74,8 @@ Da rifare quando si tocca il dominio. Dicono quale skill deve attivarsi.
 |---|---|---|
 | 1 | "Analizza questo topic" + file del topic | `proposte-analisi-bando` |
 | 2 | "Su che cosa saremo valutati con questo bando?" | `proposte-analisi-bando` |
+| 2b | "Mi serve un concept da mandare ai partner" | `proposte-concept` |
+| 2c | "Scrivi la sezione Impact della proposta" | `proposte-scrittura` |
 | 3 | "Quali sono i criteri di valutazione di questa call?" | `proposte-analisi-bando` |
 | 4 | "What does this topic require from the consortium?" | `proposte-analisi-bando` |
 | 5 | "Scrivi il work package 3" | `progetti-scrittura`, che fa la domanda sul Grant Agreement e passa la mano se siamo prima (issue #20) |

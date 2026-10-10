@@ -110,6 +110,23 @@ Skill `proposte-scrittura` e file condiviso `anti-pattern-proposte.md`.
 | `giro-0.3.0/07-impact-chat` | **1.00**, 0,61 dollari |
 | `giro-0.3.0/08-impact-modulo` | **1.00**, 0,61 dollari |
 
+## Concept (issue #13)
+
+Skill `proposte-concept`.
+
+| # | Ambiente | Prompt | Esito atteso | Esito reale |
+|---|---|---|---|---|
+| 14 | chat | Un'idea in due righe piu' `materiali/topic-finto.md`, senza partner ne' numeri | Concept con i quattro blocchi (problema, approccio, consorzio, impatto), partner mancanti come ruoli a segnaposto, tabella di copertura dei criteri del bando, e in fondo che cosa manca per diventare una proposta | **Passa**, misurato in cieco il 2026-10-10 dal caso `giro-0.3.0/09-concept-chat` (1.00) |
+| 15 | agenti | "Prima di buttarci, mi serve un concept da mandare ai partner per questo bando" | Si attiva `proposte-concept`, non `proposte-scrittura` | **Passa**, misurato dal caso `instradamento/10-concept` (1.00) |
+| 16 | agenti | "Scrivi la concept note per la prima fase di questa call in due fasi" | Passa la mano a `proposte-scrittura`: quella concept note e' un testo che il programma valuta con la sua griglia, non uno strumento di lavoro del consorzio | Da fare a mano |
+
+### Misurato in automatico
+
+| Caso | Esito del 2026-10-10 |
+|---|---|
+| `instradamento/10-concept` | **1.00**, 0,15 dollari |
+| `giro-0.3.0/09-concept-chat` | **1.00**, 0,73 dollari |
+
 ## Esito
 
 Da riempire a fine giro: data, ambienti provati, che cosa e' stato corretto
@@ -126,3 +143,6 @@ verdi, una riga manuale da fare (10).
 
 Scrittura della proposta (#14): chiusa il 2026-10-10. Due casi automatici
 verdi, una riga manuale da fare (13).
+
+Concept (#13): chiusa il 2026-10-10. Due casi automatici verdi, una riga
+manuale da fare (16).
