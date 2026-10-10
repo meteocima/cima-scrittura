@@ -15,6 +15,7 @@ Prima di citare fonti: `references/nucleo/verifica-fonti.md`.
 Per voce e convenzioni di lingua: `references/nucleo/voce-e-lingua.md`
 e `references/nucleo/terminologia.md`.
 Per la revisione: `references/nucleo/protocollo-revisione.md`.
+Se l'utente fornisce o chiede un file: `references/nucleo/formati-e-file.md`.
 
 Riferimenti del dominio:
 
@@ -162,6 +163,23 @@ testo.
 
 Dopo il rapporto, se presenti: fonti con esito della verifica;
 assunzioni su tipo e destinatario.
+
+## Consegna
+
+Dipende dal tipo di intervento.
+
+- **Rapporto**: nel messaggio. Se il testo era un `.docx`, si può consegnare
+  anche dentro il documento, con modifiche tracciate e commenti
+  (`references/nucleo/formati-e-file.md`, sezione 7).
+- **Correzione**: il testo corretto nello stesso formato in cui è arrivato,
+  più l'elenco delle modifiche.
+- **Riscrittura**: la nuova versione nello stesso formato in cui è arrivata,
+  con le stesse regole di consegna di `generale-scrittura`, revisione separata
+  compresa per i tipi pubblici.
+
+Dove si posa il file lo dice `formati-e-file.md`, sezione 4. Dopo il testo, in
+quest'ordine e solo se presenti: segnaposto inseriti, fonti, esito della
+revisione, assunzioni.
 
 ## Deroghe allo stile di base
 

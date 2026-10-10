@@ -82,6 +82,11 @@ simulati, che non inventano punteggi senza griglia.
 - **In una chat singola con lo zip della skill**: solo la prova di accettazione
   in modalità chat, dove la skill deve consegnare tutto senza agenti.
 
+Ogni aggiornamento si prova nei due ambienti prima di uscire, con la sua
+cartella in `prove/`: versione nuova in `plugin.json`, voce nel `CHANGELOG`,
+cartella `prove/<versione>-<slug>/` con le prove e i loro esiti. La build
+avvisa quando la versione non ha la sua cartella.
+
 In una riga: qui si costruisce il plugin, nell'app lo si prova e gli si danno
 in pasto i materiali veri.
 

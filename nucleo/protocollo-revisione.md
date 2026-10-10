@@ -51,6 +51,13 @@ l'autorevisione con la griglia, salvo richiesta dell'utente. L'eccezione
 non vale per i testi destinati alla pubblicazione: per questi, in
 modalità agenti, almeno un revisore.
 
+Le due modalità consegnano lo stesso prodotto con una **garanzia diversa**.
+In modalità agenti il giudizio viene da un contesto che non ha visto nascere
+il testo; in modalità chat viene dallo stesso contesto che lo ha scritto, che
+lo dichiara. Non è una differenza da nascondere: la skill la dichiara in una
+riga e, per i testi che contano, offre il pacchetto revisore. Chi sceglie
+dove lavorare sta scegliendo anche quanto vale la revisione che riceve.
+
 | Livello | Uso tipico | Modalità agenti | Modalità chat |
 |---|---|---|---|
 | Leggero | email, testi brevi | 1 revisore per i testi indicati dalla skill e su richiesta; altrimenti autorevisione con checklist | autorevisione con checklist |
@@ -61,8 +68,12 @@ modalità agenti, almeno un revisore.
 
 ### Preparazione
 
-1. Salvare il testo da valutare in un file (es. `revisione/bozza.md` o il
-   .docx originale) nella cartella di lavoro.
+1. Salvare il testo da valutare in un file nella cartella di lavoro. Se il
+   testo arriva in un formato che il revisore non può aprire da solo (Word,
+   PowerPoint, PDF), ricavarne una versione leggibile e passare quella: il
+   revisore ha strumenti minimi apposta, e non deve poter toccare il
+   documento. Per un mazzo di slide passare anche una griglia di anteprime:
+   densità e leggibilita' dal solo testo non si vedono.
 2. Salvare in file anche i materiali di riferimento: bando, linee guida
    della rivista, griglia di valutazione.
 3. Lanciare i revisori **in parallelo** (tutti nella stessa chiamata),
@@ -169,3 +180,14 @@ Gravità: bloccante / importante / minore
 
 Le skill di dominio possono aggiungere sezioni (es. commenti in stile ESR
 per le proposte) ma non toglierne.
+
+### Rapporto dentro il documento
+
+Quando il testo è arrivato come `.docx`, il rapporto può essere riportato
+**dentro il documento**, con modifiche tracciate e commenti ancorati ai punti
+citati, più la sintesi nel messaggio. Regole e vincoli in
+`formati-e-file.md`, sezione 7.
+
+Lo fa la skill, non il revisore: il revisore consegna il rapporto nel formato
+qui sopra, la skill lo riporta nel documento. Cosi' chi valuta non ha mai gli
+strumenti per modificare il testo valutato.

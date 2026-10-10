@@ -21,11 +21,24 @@ Tutti i domini condividono le stesse regole: niente dati inventati
 (segnaposto `[…]` dove manca un'informazione), verifica di ogni fonte
 citata, controllo degli anti-pattern della scrittura generata.
 
-In Cowork la revisione viene fatta da agenti separati che non vedono la
-conversazione di scrittura, così il giudizio non è condizionato dalle
-intenzioni dell'autore. In chat la revisione è dichiarata come non
-indipendente e il plugin prepara un testo da incollare in una
-conversazione nuova.
+Il plugin funziona in due ambienti, e sceglie da solo come comportarsi
+guardando gli strumenti che ha, senza chiedere niente.
+
+- Dove può lanciare agenti separati (Cowork, Claude Code), la revisione la fa
+  un contesto che non ha visto nascere il testo: il giudizio non è
+  condizionato dalle intenzioni di chi ha scritto.
+- In chat, dove gli agenti non ci sono, ogni passaggio viene svolto lo stesso
+  e il risultato arriva completo. La revisione però viene dallo stesso
+  contesto che ha scritto, e il plugin lo dichiara: per i testi che contano
+  prepara un blocco da incollare in una conversazione nuova, per avere
+  comunque un parere indipendente.
+
+Stesso prodotto, quindi, con una garanzia diversa. Ogni aggiornamento del
+plugin si prova in tutti e due gli ambienti prima di uscire (`prove/`).
+
+Il plugin lavora sui documenti nel formato in cui arrivano: legge un Word, un
+PowerPoint o un PDF e restituisce lo stesso formato, rispetta i template
+imposti e può riconsegnare un testo rivisto con le modifiche tracciate.
 
 ## Per chi sviluppa
 

@@ -11,6 +11,7 @@ Prima di citare fonti: `references/nucleo/verifica-fonti.md`.
 Per voce e convenzioni di lingua: `references/nucleo/voce-e-lingua.md`
 e `references/nucleo/terminologia.md`.
 Per la revisione: `references/nucleo/protocollo-revisione.md`.
+Se l'utente fornisce o chiede un file: `references/nucleo/formati-e-file.md`.
 
 Poi leggere `references/anti-pattern-progetti.md`.
 
@@ -117,7 +118,9 @@ Criteri: `references/griglia-revisione.md`.
   project officer; in chat autorevisione dichiarata e pacchetto
   revisore.
 
-In modalità agenti lanciare `progetti-revisore` due volte in parallelo,
+## Modalità agenti
+
+Lanciare `progetti-revisore` due volte in parallelo,
 nella stessa chiamata, una per profilo. Preparazione e contenuto del
 prompt come in `references/nucleo/protocollo-revisione.md`, sezione 3:
 
@@ -154,7 +157,7 @@ completo.
 4. Applicare le correzioni e consegnare il testo rivisto.
 5. In fondo, una sola volta: il pacchetto revisore (protocollo,
    sezione 4b) da incollare in una conversazione nuova, con griglia,
-   profilo, formato e testo. Si può citare Cowork come modo per avere
+   profilo, formato e testo. Si può citare Cowork una sola volta, come modo per avere
    una revisione indipendente.
 
 Dichiarare in una riga che revisione e sintesi non sono indipendenti.

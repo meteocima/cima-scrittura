@@ -1,6 +1,6 @@
 ---
 name: paper-revisione
-description: Peer review simulata di un manoscritto scientifico degli autori CIMA prima della sottomissione - due o tre revisori con profili diversi (metodologico, di dominio, applicativo) e un editor che sintetizza, controlla la conformità alla rivista e decide (accept, minor, major, reject). In Cowork lancia revisori indipendenti in parallelo; in chat svolge tutti i passaggi. Triggers - "revisione del paper", "peer review simulata", "cosa direbbero i revisori", "pre-submission review", "mock review", "review my manuscript". Non usare per - referaggio di manoscritti altrui ricevuti come revisore (vietato o limitato dalle policy delle riviste), risposta ai commenti ricevuti (paper-risposta-revisori), scrittura di sezioni (paper-scrittura), proposte di progetto (proposte-*), deliverable e report (progetti-*), testi generici e traduzioni (generale-*).
+description: Peer review simulata di un manoscritto scientifico degli autori CIMA prima della sottomissione - due o tre revisori con profili diversi (metodologico, di dominio, applicativo) e un editor che sintetizza, controlla la conformità alla rivista e decide (accept, minor, major, reject). Dove l'ambiente lo permette lancia revisori indipendenti in parallelo; altrimenti svolge tutti i passaggi nel contesto principale. Triggers - "revisione del paper", "peer review simulata", "cosa direbbero i revisori", "pre-submission review", "mock review", "review my manuscript". Non usare per - referaggio di manoscritti altrui ricevuti come revisore (vietato o limitato dalle policy delle riviste), risposta ai commenti ricevuti (paper-risposta-revisori), scrittura di sezioni (paper-scrittura), proposte di progetto (proposte-*), deliverable e report (progetti-*), testi generici e traduzioni (generale-*).
 ---
 
 # Peer review simulata prima della sottomissione
@@ -11,6 +11,7 @@ Prima di citare fonti: `references/nucleo/verifica-fonti.md`.
 Per voce e convenzioni di lingua: `references/nucleo/voce-e-lingua.md`
 e `references/nucleo/terminologia.md`.
 Per la revisione: `references/nucleo/protocollo-revisione.md`.
+Se l'utente fornisce o chiede un file: `references/nucleo/formati-e-file.md`.
 
 Livello di revisione del dominio: **standard** (2–3 revisori + sintesi).
 
@@ -76,7 +77,7 @@ Profili in `references/profili-revisori.md`:
 Griglia comune: `references/griglia-revisione.md`.
 Formati dei rapporti: `references/formato-rapporto.md`.
 
-## 4. Modalità agenti
+## Modalità agenti
 
 Si usa quando è disponibile lo strumento per lanciare subagent (regola
 in `references/nucleo/protocollo-revisione.md`, sezione 1).
@@ -150,7 +151,7 @@ regole e gli stessi formati. Dichiararlo in una riga all'inizio.
    completo del manoscritto, senza cover letter. Spiegare
    in una riga perché: una conversazione nuova non conosce le intenzioni
    degli autori.
-6. In fondo, una sola riga: in Cowork i revisori lavorano in contesti
+6. In fondo, una sola riga: in un ambiente con subagent i revisori lavorano in contesti
    indipendenti.
 
 ## Consegna
@@ -159,7 +160,11 @@ regole e gli stessi formati. Dichiararlo in una riga all'inizio.
 - Lista di correzioni ordinata per impatto sulla decisione.
 - Divergenze tra revisori, con entrambe le posizioni.
 - Conformità alla rivista: voci mancanti e voci non controllate.
-- Rapporti completi (file in Cowork, messaggi in chat).
+- Rapporti completi (file in modalità agenti, messaggi in chat).
+- Se il manoscritto è arrivato come `.docx`, i problemi possono essere
+  riportati dentro il documento con commenti e modifiche tracciate
+  (`references/nucleo/formati-e-file.md`, sezione 7), restando entro il limite
+  d'uso dichiarato sopra.
 - Riferimenti citati dai revisori e non verificati, se presenti.
 
 La decisione è una simulazione: non prevede l'esito reale e va

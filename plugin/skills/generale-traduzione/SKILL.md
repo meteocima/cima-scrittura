@@ -16,6 +16,7 @@ Prima di citare fonti: `references/nucleo/verifica-fonti.md`.
 Per voce e convenzioni di lingua: `references/nucleo/voce-e-lingua.md`
 e `references/nucleo/terminologia.md`.
 Per la revisione: `references/nucleo/protocollo-revisione.md`.
+Se l'utente fornisce o chiede un file: `references/nucleo/formati-e-file.md`.
 
 Riferimenti del dominio:
 
@@ -88,8 +89,10 @@ nelle note che la persona deve approvarla.
 
 ## Consegna
 
-1. Il testo tradotto, pronto da copiare (in un file nella cartella di
-   lavoro se lungo e in modalità agenti; nel messaggio in chat).
+1. Il testo tradotto, **nello stesso formato in cui è arrivato**
+   (`references/nucleo/formati-e-file.md`): un Word torna Word, un mazzo di
+   slide torna mazzo, con struttura e impaginazione intatte. Un testo
+   incollato torna nel messaggio, pronto da copiare.
 2. **Note di traduzione**, solo se ce ne sono:
    - scelte terminologiche non ovvie, con il termine originale;
    - passaggi ambigui nell'originale e come sono stati resi;

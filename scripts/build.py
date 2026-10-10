@@ -41,6 +41,9 @@ VIETATI_ESENTI = {"anti-pattern-ai.md"}
 MAX_DESCRIZIONE = 1024
 COLORI_AGENTE = {"blue", "cyan", "green", "yellow", "magenta", "red"}
 MODELLI_AGENTE = {"inherit", "sonnet", "opus", "haiku"}
+# Nomi di prodotto: la description e' cio' che legge l'utente, e gli ambienti
+# sono esempi di una modalita', non la modalita' (CONTEXT.md).
+PRODOTTI = ("Cowork", "Claude Code", "claude.ai")
 
 errori: list[str] = []
 avvisi: list[str] = []
@@ -163,6 +166,9 @@ def valida_skill(skill_dir: Path, agenti: set[str] = frozenset()) -> None:
         avviso(f"{rel}/SKILL.md: description senza clausola 'Non usare per…' (vedi docs/instradamento.md)")
     if "<" in desc or ">" in desc:
         errore(f"{rel}/SKILL.md: description con parentesi angolari")
+    for prodotto in PRODOTTI:
+        if prodotto in desc:
+            avviso(f"{rel}/SKILL.md: description nomina '{prodotto}'; usare 'modalita' agenti' o 'modalita' chat'")
 
     corpo = sk.read_text(encoding="utf-8")
     parole = len(corpo.split())
@@ -173,8 +179,9 @@ def valida_skill(skill_dir: Path, agenti: set[str] = frozenset()) -> None:
 
     # Una skill che usa agenti deve funzionare anche in chat (docs/adr/0006).
     citati = sorted(a for a in agenti if re.search(rf"(?<![\w-]){re.escape(a)}(?![\w-])", corpo))
-    if citati and not re.search(r"^##\s+Modalità chat\s*$", corpo, re.MULTILINE):
-        errore(f"{rel}/SKILL.md: nomina {', '.join(citati)} ma manca la sezione '## Modalità chat'")
+    for titolo in ("Modalità agenti", "Modalità chat"):
+        if citati and not re.search(rf"^##\s+{titolo}\s*$", corpo, re.MULTILINE):
+            errore(f"{rel}/SKILL.md: nomina {', '.join(citati)} ma manca la sezione '## {titolo}'")
 
     # Riferimenti a file references/ citati nel testo devono esistere.
     for ref in sorted(set(re.findall(r"references/[\w./-]+\.md", corpo))):

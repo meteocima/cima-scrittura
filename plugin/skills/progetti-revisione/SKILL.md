@@ -11,6 +11,7 @@ Prima di citare fonti: `references/nucleo/verifica-fonti.md`.
 Per voce e convenzioni di lingua: `references/nucleo/voce-e-lingua.md`
 e `references/nucleo/terminologia.md`.
 Per la revisione: `references/nucleo/protocollo-revisione.md`.
+Se l'utente fornisce o chiede un file: `references/nucleo/formati-e-file.md`.
 
 Poi leggere `references/griglia-revisione.md` e
 `references/anti-pattern-progetti.md`.
@@ -58,7 +59,7 @@ Senza DoA la revisione si fa, ma i criteri A1 e la tabella
 6. **Esito simulato** solo per deliverable e report, con la regola
    della griglia e la dicitura che è una regola del plugin.
 
-### Modalità agenti
+## Modalità agenti
 
 Lanciare `progetti-revisore` due volte in parallelo, nella stessa
 chiamata, come in `references/nucleo/protocollo-revisione.md`,
@@ -104,7 +105,7 @@ il rapporto completo.
 5. In fondo, una sola volta: il pacchetto revisore (protocollo,
    sezione 4b) con griglia, un profilo per blocco, formato del
    rapporto e testo, da incollare in conversazioni nuove. Si può
-   citare Cowork come modo per avere una revisione indipendente.
+   citare Cowork una sola volta, come modo per avere una revisione indipendente.
 
 ## Formato del rapporto all'utente
 
@@ -126,6 +127,18 @@ Formato comune (protocollo, sezione 5) con le aggiunte della griglia:
 Commenti nella lingua in cui scrive l'utente; citazioni del testo
 nella lingua originale. Gli anti-pattern si segnalano con la citazione
 esatta, senza riscrivere in silenzio.
+
+## Consegna
+
+Il rapporto nel messaggio, nel formato qui sopra. Se il testo è arrivato come
+`.docx`, consegnarlo anche commentato dentro il documento, con modifiche
+tracciate e commenti ancorati ai punti citati
+(`references/nucleo/formati-e-file.md`, sezione 7): è la forma in cui un
+project officer si aspetta di ricevere un deliverable.
+
+Se l'utente ha chiesto anche il testo rivisto, consegnarlo nello stesso
+formato in cui è arrivato. Una riscrittura resta scrittura: valgono le regole
+di `progetti-scrittura`, revisione compresa.
 
 ## Deroghe allo stile di base
 

@@ -11,6 +11,7 @@ Prima di citare fonti: `references/nucleo/verifica-fonti.md`.
 Per voce e convenzioni di lingua: `references/nucleo/voce-e-lingua.md`
 e `references/nucleo/terminologia.md`.
 Per la revisione: `references/nucleo/protocollo-revisione.md`.
+Se l'utente fornisce o chiede un file: `references/nucleo/formati-e-file.md`.
 
 Poi leggere `references/formato-risposta.md` e
 `references/anti-pattern-progetti.md`.
@@ -67,7 +68,7 @@ documenti nelle query di ricerca web.
    `references/formato-risposta.md`.
 8. **Revisione** (livello standard), come sotto.
 
-### Revisione in modalità agenti
+## Modalità agenti
 
 Lanciare `progetti-revisore` due volte in parallelo, nella stessa
 chiamata, come in `references/nucleo/protocollo-revisione.md`,
@@ -109,7 +110,7 @@ risposta completa.
 4. Dichiarare in una riga che la rilettura non è indipendente.
 5. In fondo, una sola volta: il pacchetto revisore (protocollo,
    sezione 4b) con commenti originali, risposta e criteri, da
-   incollare in una conversazione nuova. Si può citare Cowork come
+   incollare in una conversazione nuova. Si può citare Cowork una sola volta, come
    modo per avere una revisione indipendente.
 
 ## Deroghe allo stile di base
