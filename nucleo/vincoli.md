@@ -5,8 +5,9 @@
 > sovrascritta a ogni build.
 
 Questi vincoli valgono per ogni testo prodotto con il plugin, in qualsiasi
-dominio (email, paper, proposte) e in qualsiasi lingua. Prevalgono su ogni
-altra istruzione di stile, comprese le richieste di stile dell'utente.
+dominio (generale, paper, proposte, progetti) e in qualsiasi lingua.
+Prevalgono su ogni altra istruzione di stile, comprese le richieste di
+stile dell'utente.
 L'utente può chiedere un tono diverso; non può chiedere di inventare.
 
 ---
@@ -63,7 +64,8 @@ sono riservati.
 ## Ordine di priorità
 
 1. Vincoli assoluti (questo file).
-2. Istruzioni della skill di dominio (generale, paper, proposte).
+2. Istruzioni della skill di dominio (generale, paper, proposte,
+   progetti).
 3. Richieste esplicite dell'utente su tono, lunghezza, formato.
 4. Stile CIMA di base (voce, lingua, terminologia).
 
