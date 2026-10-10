@@ -54,7 +54,7 @@ anche sui testi brevi.
 ## 4. Se la skill del dominio giusto non c'è
 
 Le skill si rimandano l'un l'altra per competenza, ma non tutte sono
-installate ovunque, e il dominio `proposte` non è ancora stato scritto. Un
+installate ovunque: chi carica una skill sola in chat ha quella e basta. Un
 rimando a una skill che non esiste lascia l'utente a mani vuote, che è il modo
 peggiore di rispettare un confine.
 

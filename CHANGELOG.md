@@ -58,6 +58,13 @@ Tutte le prove del giro stanno in `prove/0.3.0-dominio-proposte/`.
   figlia.
 
 ### Modificato
+- Il dominio `proposte` prende le sue richieste (issue #20): `instradamento.md`
+  ha una riga per ciascuna delle sei skill, `progetti-scrittura` passa la mano
+  invece di scrivere senza i criteri del bando, `nucleo/vincoli.md` sezione 4
+  non nomina piu' il dominio fra quelli non scritti, e `docs/proposte.md` e'
+  cancellato: la fonte di verita' sono le skill. Le due frasi ambigue
+  dell'ADR 0020 ("scrivi il work package 3", "draft the impact section") ora
+  attivano una skill, misurato due volte su due.
 - `plugin.json`: versione 0.3.0. Le righe del giro 0.2.0 non ancora eseguite
   (issue #6 e #7) restano valide e si chiudono dentro questo rilascio.
 

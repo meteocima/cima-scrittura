@@ -15,8 +15,9 @@ uno script Python che li assembla, valida e impacchetta. Si scrive quindi per
 due lettori insieme, Claude che eseguirà le istruzioni e la persona di CIMA
 che manterrà il file.
 
-Stato: `generale`, `progetti` e `paper` sono scritti; `proposte` è in
-costruzione, un ticket alla volta (issue #11): oggi c'è `proposte-analisi-bando`.
+Stato: tutti e quattro i domini sono scritti. Restano fuori dal plugin due
+lavori che vogliono materiali veri e si fanno nell'app: la calibrazione sugli
+ESR reali e il test di accettazione in cieco.
 
 ## Comandi
 
@@ -27,7 +28,7 @@ python3 scripts/build.py           # assembla in dist/, valida, impacchetta
 
 Non esiste una suite di test unitari: `--check` è il controllo da eseguire
 dopo ogni modifica a `nucleo/`, `plugin/` o `scripts/build.py`, e vale sempre
-su tutto il plugin. Oggi dice: 11 skill, 5 agenti, 0 avvisi.
+su tutto il plugin. Oggi dice: 16 skill, 8 agenti, 0 avvisi.
 
 Il comportamento delle skill si misura con `claude plugin eval` sui casi in
 `prove/evals/`: costa soldi veri, quindi si lancia quando si chiude un
@@ -122,7 +123,6 @@ plugin vanno solo pattern anonimizzati.
 | scrivere o modificare una skill o un agente | `docs/scrivere-una-skill.md` |
 | capire quale skill deve prendersi una richiesta | `docs/instradamento.md` |
 | perché una scelta è stata fatta così | `docs/adr/README.md` |
-| il dominio proposte, e le sue parti non ancora scritte | `docs/proposte.md` |
 | provare un aggiornamento prima di rilasciarlo | `prove/README.md` |
 
 `CONTEXT.md` è il glossario di chi sviluppa. Non confonderlo con
