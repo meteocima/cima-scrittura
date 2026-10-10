@@ -113,7 +113,7 @@ plugin vanno solo pattern anonimizzati.
 | capire quale skill deve prendersi una richiesta | `docs/instradamento.md` |
 | perché una scelta è stata fatta così | `docs/adr/README.md` |
 | il dominio proposte, non ancora scritto | `docs/proposte.md` |
-| provare un dominio prima di rilasciarlo | `docs/prove/<dominio>.md` |
+| provare un aggiornamento prima di rilasciarlo | `prove/README.md` |
 
 `CONTEXT.md` è il glossario di chi sviluppa. Non confonderlo con
 `nucleo/terminologia.md`, che è la terminologia dei testi prodotti (allerta,

@@ -90,6 +90,6 @@ Frontmatter: `name`, `description` con blocchi `<example>` **[build]**,
 ## Prima di considerarla finita
 
 1. `python3 scripts/build.py --check`.
-2. I prompt di prova in `docs/prove/<dominio>.md`, nei due ambienti:
+2. I prompt di prova in `prove/domini/<dominio>.md`, nei due ambienti:
    chat senza subagent (deve consegnare tutto) e con gli agenti (deve
    lanciarli).

@@ -29,6 +29,7 @@ NUCLEO = ROOT / "nucleo"
 SRC = ROOT / "plugin"
 CONDIVISI = SRC / "condivisi"
 DIST = ROOT / "dist"
+PROVE = ROOT / "prove"
 PLUGIN_NAME = "cima-scrittura"
 
 PREFISSI = ("generale-", "paper-", "proposte-", "progetti-")
@@ -110,8 +111,20 @@ def valida_manifest(base: Path) -> None:
         return
     if dati.get("name") != PLUGIN_NAME:
         errore(f"plugin.json: name deve essere '{PLUGIN_NAME}'")
-    if not re.match(r"^\d+\.\d+\.\d+$", str(dati.get("version", ""))):
+    versione = str(dati.get("version", ""))
+    if not re.match(r"^\d+\.\d+\.\d+$", versione):
         errore("plugin.json: version deve essere semver (es. 0.1.0)")
+    else:
+        valida_prove(versione)
+
+
+def valida_prove(versione: str) -> None:
+    """Ogni versione ha la sua cartella di prove (prove/README.md)."""
+    if not PROVE.is_dir():
+        avviso("manca la cartella prove/")
+        return
+    if not any(d.is_dir() and d.name.startswith(versione) for d in PROVE.iterdir()):
+        avviso(f"prove/: nessuna cartella per la versione {versione} (vedi prove/README.md)")
 
 
 def nomi_agenti(base: Path) -> set[str]:
