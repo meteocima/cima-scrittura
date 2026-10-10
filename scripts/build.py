@@ -3,13 +3,15 @@
 
 Uso:
     python3 scripts/build.py           # build completa in dist/
-    python3 scripts/build.py --check   # solo validazione, nessun file scritto
+    python3 scripts/build.py --check   # solo validazione, in una cartella temporanea
 
 Passaggi:
-1. copia plugin/ in dist/cima-scrittura/
+1. copia plugin/ (senza condivisi/) in dist/cima-scrittura/
 2. inietta nucleo/*.md in ogni skill, in references/nucleo/
-3. valida manifest, frontmatter, nomi, riferimenti, trattino em
-4. crea dist/cima-scrittura.plugin (Cowork) e dist/skills/<nome>.zip (chat)
+3. inietta plugin/condivisi/<dominio>/*.md in references/ di ogni skill
+   del dominio (dominio = prefisso del nome della skill)
+4. valida manifest, frontmatter, nomi, riferimenti, trattino em
+5. crea dist/cima-scrittura.plugin (Cowork) e dist/skills/<nome>.zip (chat)
 """
 
 from __future__ import annotations
@@ -18,12 +20,14 @@ import json
 import re
 import shutil
 import sys
+import tempfile
 import zipfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 NUCLEO = ROOT / "nucleo"
 SRC = ROOT / "plugin"
+CONDIVISI = SRC / "condivisi"
 DIST = ROOT / "dist"
 PLUGIN_NAME = "cima-scrittura"
 
@@ -81,6 +85,17 @@ def valida_nucleo() -> None:
     for f in sorted(NUCLEO.glob("*.md")):
         if f.name not in EM_DASH_ESENTI and EM_DASH in f.read_text(encoding="utf-8"):
             errore(f"trattino em in nucleo/{f.name}")
+
+
+def valida_condivisi() -> None:
+    if not CONDIVISI.is_dir():
+        return
+    domini = {p.rstrip("-") for p in PREFISSI}
+    for d in sorted(CONDIVISI.iterdir()):
+        if not d.is_dir():
+            errore(f"condivisi/{d.name}: atteso solo cartelle di dominio")
+        elif d.name not in domini:
+            errore(f"condivisi/{d.name}: dominio sconosciuto (ammessi: {', '.join(sorted(domini))})")
 
 
 def valida_manifest(base: Path) -> None:
@@ -180,7 +195,15 @@ def controlla_em_dash(base: Path) -> None:
 def assembla(dest: Path) -> None:
     if dest.exists():
         shutil.rmtree(dest)
-    shutil.copytree(SRC, dest, ignore=shutil.ignore_patterns(".DS_Store", ".gitkeep", "README-dominio.md"))
+    base_ignore = shutil.ignore_patterns(".DS_Store", ".gitkeep", "README-dominio.md")
+
+    def ignora(cartella: str, nomi: list[str]) -> set[str]:
+        esclusi = set(base_ignore(cartella, nomi))
+        if Path(cartella) == SRC:
+            esclusi.add("condivisi")
+        return esclusi
+
+    shutil.copytree(SRC, dest, ignore=ignora)
     for skill_dir in sorted((dest / "skills").glob("*/")):
         target = skill_dir / "references" / "nucleo"
         if target.exists():
@@ -189,6 +212,16 @@ def assembla(dest: Path) -> None:
         target.mkdir(parents=True)
         for f in sorted(NUCLEO.glob("*.md")):
             shutil.copy2(f, target / f.name)
+
+        dominio = skill_dir.name.split("-", 1)[0]
+        cond = CONDIVISI / dominio
+        if not cond.is_dir():
+            continue
+        refs = skill_dir / "references"
+        for f in sorted(cond.glob("*.md")):
+            if (refs / f.name).exists():
+                errore(f"skills/{skill_dir.name}: references/{f.name} è in condivisi/{dominio}/, togliere la copia dal sorgente")
+            shutil.copy2(f, refs / f.name)
 
 
 def comprimi(cartella: Path, archivio: Path) -> None:
@@ -211,10 +244,13 @@ def comprimi_skill(skill_dir: Path, archivio: Path) -> None:
 def main() -> int:
     solo_check = "--check" in sys.argv
     valida_nucleo()
+    valida_condivisi()
 
+    tmp = None
     lavoro = DIST / PLUGIN_NAME
     if solo_check:
-        lavoro = DIST / ".check" / PLUGIN_NAME
+        tmp = Path(tempfile.mkdtemp(prefix="cima-scrittura-check-"))
+        lavoro = tmp / PLUGIN_NAME
     assembla(lavoro)
 
     valida_manifest(lavoro)
@@ -234,8 +270,8 @@ def main() -> int:
     for e in errori:
         print(f"ERRORE  {e}")
 
-    if solo_check:
-        shutil.rmtree(DIST / ".check", ignore_errors=True)
+    if tmp is not None:
+        shutil.rmtree(tmp, ignore_errors=True)
     if errori:
         print(f"\nBuild fallita: {len(errori)} errori, {len(avvisi)} avvisi.")
         return 1

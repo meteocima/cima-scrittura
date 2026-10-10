@@ -11,37 +11,16 @@ File escluso dalla build (`scripts/build.py` ignora `README-dominio.md`).
 | `generale-traduzione` | traduce e adatta IT/EN |
 | `generale-revisore` (agente) | revisore separato: testi pubblici in `generale-scrittura`, su richiesta in `generale-revisione` |
 
-## File duplicati
+## File condivisi
 
-In chat una skill non legge i file di un'altra, quindi questi file sono
-copiati. Le copie devono restare identiche:
+`tipologie.md`, `checklist.md` e `destinatari.md` servono a più skill del
+dominio. Stanno in un solo posto, `plugin/condivisi/generale/`, e
+`scripts/build.py` li copia in `references/` di ogni skill `generale-*` al
+momento della build (come fa con `nucleo/`). Nel SKILL.md si citano come
+`references/<file>.md`.
 
-| File | Copie in |
-|---|---|
-| `references/tipologie.md` | generale-scrittura, generale-revisione |
-| `references/checklist.md` | generale-scrittura, generale-revisione |
-| `references/destinatari.md` | generale-scrittura, generale-revisione, generale-traduzione |
-
-Fonte da modificare: la copia in `generale-scrittura`. Poi:
-
-```
-cd plugin/skills
-for f in tipologie checklist; do cp generale-scrittura/references/$f.md generale-revisione/references/; done
-for s in generale-revisione generale-traduzione; do cp generale-scrittura/references/destinatari.md $s/references/; done
-```
-
-Controllo:
-
-```
-cd plugin/skills
-for f in tipologie checklist destinatari; do for s in generale-revisione generale-traduzione; do
-  [ -f $s/references/$f.md ] && diff -q generale-scrittura/references/$f.md $s/references/$f.md; done; done
-```
-
-Proposta all'hub: `build.py` copia `plugin/condivisi/[dominio]/*.md` in
-`references/` di ogni skill del dominio (come fa con `nucleo/`) e
-controlla che il sorgente non contenga copie. Così le duplicazioni
-spariscono.
+- Modificarli solo in `plugin/condivisi/generale/`.
+- Non rimettere copie nelle cartelle delle skill: la build si ferma.
 
 ## Prompt di prova
 

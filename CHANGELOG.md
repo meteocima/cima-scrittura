@@ -10,6 +10,14 @@
 - Copia di riferimento di `cima-writing-style` v0.1.0 in `legacy/`.
 - Quarto dominio `progetti` (deliverable e report di progetti finanziati),
   separato da `generale` (brief v2).
+- Dominio generale (PR #1): skill `generale-scrittura`,
+  `generale-revisione`, `generale-traduzione`; agente `generale-revisore`.
+- `plugin/condivisi/<dominio>/`: riferimenti comuni alle skill di un
+  dominio, iniettati dalla build (brief v5).
+
+### Modificato
+- `build.py --check` lavora in una cartella temporanea invece che in
+  `dist/.check/`.
 
 ### Deciso
 - Riviste di riferimento del dominio paper: gruppo Elsevier, gruppo
@@ -20,3 +28,4 @@
 - Ogni skill deve consegnare il risultato completo anche in chat, senza
   agenti: regola nel brief (v4) e nel protocollo di revisione; la build
   blocca le skill che nominano un agente senza sezione "Modalità chat".
+- La traduzione di qualsiasi testo va a `generale-traduzione` (brief v5).
