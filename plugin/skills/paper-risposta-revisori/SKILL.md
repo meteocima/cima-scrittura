@@ -70,10 +70,10 @@ non prenderle.
 
 ## 2. Policy della rivista sull'AI generativa
 
-Per le riviste Copernicus / EGU (GMD, HESS, NHESS, ESSD, ACP, WCD) la
-policy, verificata il 2026-10-10, vieta l'AI generativa "for text or
-interpretations" e ammette l'uso assistivo (leggibilità, grammatica,
-ortografia). Per queste riviste: produrre la scomposizione, il piano
+Per le riviste Copernicus / EGU (GMD, HESS, NHESS, ESSD, ACP, WCD) vale la
+policy sull'AI generativa, il cui testo esatto e la cui data di verifica
+stanno in `references/rivista-copernicus.md`: leggerla di lì, non fidarsi di
+una parafrasi. Per queste riviste: produrre la scomposizione, il piano
 delle modifiche, lo schema della lettera e il controllo di coerenza;
 sulle risposte scritte dagli autori intervenire solo su lingua e
 leggibilità. Dirlo all'utente all'inizio, in due righe. Per gli altri

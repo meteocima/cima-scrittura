@@ -119,13 +119,11 @@ Ogni editore ha regole diverse e la responsabilità della dichiarazione è
 degli autori. Prima di produrre testo:
 
 - **Riviste Copernicus / EGU** (GMD, HESS, NHESS, ESSD, ACP, WCD; non le
-  conferenze, per le quali vale `references/conferenze.md`): la policy,
-  verificata il 2026-10-10 sulle pagine di tutte e sei le riviste, vieta
-  l'AI generativa "for text or interpretations"; ammette senza
-  dichiarazione l'uso assistivo (struttura delle frasi, leggibilità,
-  punteggiatura, grammatica, ortografia). Ogni uso oltre questo va
-  dichiarato in Methods o Acknowledgements (strumento, scopo,
-  estensione): nel dubbio, proporre la dichiarazione. Quindi per queste riviste
+  conferenze, per le quali vale `references/conferenze.md`): la policy, con
+  il testo esatto e la data di verifica, sta in
+  `references/rivista-copernicus.md`. Non ricopiarla qui. Ogni uso oltre
+  quello assistivo va dichiarato in Methods o Acknowledgements (strumento,
+  scopo, estensione): nel dubbio, proporre la dichiarazione. Quindi per queste riviste
   **non scrivere testo nuovo né interpretazioni**: lavorare solo su testo
   scritto dagli autori (leggibilità, lingua, coerenza), fare controlli di
   struttura, limiti e conformità, preparare schemi e checklist che gli

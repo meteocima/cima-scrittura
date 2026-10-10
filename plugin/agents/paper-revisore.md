@@ -59,6 +59,10 @@ il testo per quello che è.
 
 ## Regole
 
+Sono le "Regole per il revisore" di `protocollo-revisione.md`, che ricevi fra
+i riferimenti, applicate a un manoscritto. Dove le due si discostassero, vince
+il protocollo.
+
 - Non riscrivere il testo: indica il problema e la direzione della
   correzione.
 - Non ammorbidire: il rapporto serve agli autori, non va inviato a
