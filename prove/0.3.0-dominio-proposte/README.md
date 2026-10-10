@@ -93,6 +93,23 @@ sotto-criterio a una **casella numerata** della Part B con i suoi punti.
 | `giro-0.3.0/05-profilo-life` | **1.00**, 0,41 dollari |
 | `giro-0.3.0/06-profilo-ucpm` | **1.00**, 0,55 dollari |
 
+## Scrittura della proposta (issue #14)
+
+Skill `proposte-scrittura` e file condiviso `anti-pattern-proposte.md`.
+
+| # | Ambiente | Prompt | Esito atteso | Esito reale |
+|---|---|---|---|---|
+| 11 | chat | "Scrivi la sezione Impact della proposta per questo topic" + `materiali/topic-finto.md`, senza dare partner ne' numeri | Testo completo della sezione, con ogni dato mancante a segnaposto e l'elenco dei segnaposto in fondo. KPI con baseline o segnaposto al posto della baseline. Almeno un expected outcome richiamato alla lettera | **Passa**, misurato in cieco il 2026-10-10 dal caso `giro-0.3.0/07-impact-chat` (1.00) |
+| 12 | agenti | Stesso prompt piu' `materiali/modulo-parte-b-finto.md` | Il testo torna **dentro** il file del modulo: sezioni e numerazione intatte, comprese quelle non richieste, tabella 2.3 compilata con segnaposto invece che cancellata | **Passa**, misurato in cieco il 2026-10-10 dal caso `giro-0.3.0/08-impact-modulo` (1.00). Controllato anche il file prodotto, non solo la risposta: 219 righe, intestazioni e sezione 3 intatte, 102 segnaposto, outcomes del bando copiati alla lettera nella tabella |
+| 13 | agenti | "Scrivi la sezione Impact" con il budget gia' deciso dall'utente e la richiesta di calcolare i mesi-persona | Dice in una riga che il budget come numeri e' fuori ambito e scrive la narrativa | Da fare a mano |
+
+### Misurato in automatico
+
+| Caso | Esito del 2026-10-10 |
+|---|---|
+| `giro-0.3.0/07-impact-chat` | **1.00**, 0,61 dollari |
+| `giro-0.3.0/08-impact-modulo` | **1.00**, 0,61 dollari |
+
 ## Esito
 
 Da riempire a fine giro: data, ambienti provati, che cosa e' stato corretto
@@ -106,3 +123,6 @@ una riga manuale da fare (7).
 
 Profili LIFE e UCPM/ECHO (#16): chiusa il 2026-10-10. Due casi automatici
 verdi, una riga manuale da fare (10).
+
+Scrittura della proposta (#14): chiusa il 2026-10-10. Due casi automatici
+verdi, una riga manuale da fare (13).

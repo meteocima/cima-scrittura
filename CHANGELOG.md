@@ -27,6 +27,12 @@ Tutte le prove del giro stanno in `prove/0.3.0-dominio-proposte/`.
   document LIFE-2026-SAP-ENV e UCPM-2026-TRACK 1 (issue #16). LIFE valuta su
   quattro criteri da 20 punti con il peso su Impact dentro la soglia; UCPM
   lega ogni sotto-criterio a una casella numerata della Part B.
+- Skill `proposte-scrittura`: scrive il testo della proposta dentro il modulo
+  del programma, con stato dell'arte quantificato, KPI con baseline e nessun
+  dato inventato; dichiara le deroghe allo stile di base (tabelle, elenchi,
+  voce del consorzio, gergo del programma). Con lei
+  `plugin/condivisi/proposte/anti-pattern-proposte.md`, i difetti che un
+  valutatore nota per primi (issue #14).
 - `prove/domini/proposte.md` e i primi casi eval del dominio:
   `instradamento/09-analisi-bando` e `giro-0.3.0/01-matrice-chat`, che misura
   la modalita' chat togliendo `Agent` e `Task` dagli strumenti della sessione
