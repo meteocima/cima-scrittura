@@ -123,3 +123,20 @@ plugin vanno solo pattern anonimizzati.
 `CONTEXT.md` è il glossario di chi sviluppa. Non confonderlo con
 `nucleo/terminologia.md`, che è la terminologia dei testi prodotti (allerta,
 early warning system, DEWETRA) e viaggia dentro le skill.
+
+## Agent skills
+
+### Issue tracker
+
+Le issue stanno su GitHub, in `meteocima/cima-scrittura`, e si gestiscono con
+`gh`. Vedi `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Le cinque etichette canoniche con i nomi di default. Vedi
+`docs/agents/triage-labels.md`.
+
+### Domain docs
+
+Contesto unico: `CONTEXT.md` e `docs/adr/` alla radice. Vedi
+`docs/agents/domain.md`.
