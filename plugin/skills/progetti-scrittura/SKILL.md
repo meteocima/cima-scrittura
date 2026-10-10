@@ -1,6 +1,6 @@
 ---
 name: progetti-scrittura
-description: "Scrive i testi tecnici dei progetti già finanziati (Horizon Europe, Interreg, LIFE, UCPM/ECHO e altri): deliverable, parte tecnica di periodic e final report, technical report, executive e publishable summary, DMP. Costruisce una matrice di tracciabilità dalla DoA (Annex 1 del GA) e lega ogni affermazione a task, deliverable e milestone. Usare per: 'scrivi il deliverable', 'bozza del periodic report', 'executive summary del D3.2', 'write the deliverable', 'draft the periodic report Part B', 'technical report'. Non usare per: proposte, bandi, risposta agli ESR (proposte-*); articoli scientifici, anche dai risultati del progetto (paper-*); email di routine al project officer, verbali, comunicati, traduzione di un deliverable (generale-*); revisione di un testo di progetto già scritto (progetti-revisione); risposta ai commenti di una review di progetto (progetti-risposta-review)."
+description: "Scrive i testi tecnici dei progetti già finanziati (Horizon Europe, Interreg, LIFE, UCPM/ECHO e altri): deliverable, parte tecnica di periodic e final report, technical report, executive e publishable summary, DMP. Costruisce la matrice di tracciabilità dalla DoA e lega ogni affermazione a task, deliverable e milestone. Usare per: 'scrivi il deliverable', 'bozza del periodic report', 'executive summary del D3.2', 'write the deliverable', 'draft the periodic report Part B', 'technical report'. Prende anche le richieste che non dicono la fase ('scrivi il work package 3', 'draft the impact section') e scioglie il dubbio con una domanda. Non usare per: proposte, bandi, risposta agli ESR (proposte-*); articoli scientifici, anche dai risultati del progetto (paper-*); email di routine al project officer, verbali, comunicati, traduzione di un deliverable (generale-*); revisione di un testo di progetto già scritto (progetti-revisione); risposta ai commenti di una review di progetto (progetti-risposta-review)."
 ---
 
 # Scrittura di testi di progetto
@@ -15,6 +15,28 @@ Se l'utente fornisce o chiede un file: `references/nucleo/formati-e-file.md`.
 Per PIC, denominazione e dati del beneficiario: `references/nucleo/identita-cima.md`.
 
 Poi leggere `references/anti-pattern-progetti.md`.
+
+## Prima o dopo la firma
+
+Alcune richieste non dicono in che fase siamo: "scrivi il work package 3",
+"draft the impact section", "mi serve la sezione sull'impatto". Work package,
+impatto, obiettivi e KPI esistono sia in una proposta sia in un progetto
+finanziato, e il testo da scrivere e' diverso.
+
+Non lasciarle cadere nel vuoto: sono di questa skill finche' non si scopre il
+contrario. Fare **una domanda sola**: il Grant Agreement e' gia' firmato,
+oppure stiamo ancora scrivendo una proposta?
+
+- **Firmato**: si prosegue qui.
+- **Proposta**: il dominio e' `proposte`. Se quelle skill non sono
+  disponibili, vale `references/nucleo/vincoli.md` sezione 4: si scrive
+  comunque, dicendo quali criteri del dominio mancano (griglia del bando,
+  pesi, soglie, gergo del valutatore).
+- **Nessuna risposta**: procedere nell'ipotesi del progetto finanziato,
+  dichiararlo fra le assunzioni e mettere `[da DoA]` dove servirebbe il Grant
+  Agreement. Meglio un testo con i segnaposto giusti che nessun testo.
+
+Quando la richiesta e' gia' chiara, questa domanda non si fa.
 
 ## Ambito
 

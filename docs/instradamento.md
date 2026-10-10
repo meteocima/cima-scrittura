@@ -17,6 +17,7 @@ dentro le skill ne sono viste, e devono concordare.
 | email, lettera, comunicato, post, verbale, testo web | generale |
 | slide, presentazione, talk, deck, mazzo (di qualsiasi dominio) | generale (`generale-presentazione`): costruisce il mazzo con il tema CIMA e prende i criteri di contenuto dalla skill del dominio |
 | "rivedi questo testo" senza contesto | generale, che rimanda se riconosce un paper o una proposta |
+| richiesta che non dice la fase ("scrivi il work package 3", "draft the impact section") | `progetti-scrittura`, che fa una domanda sola sul Grant Agreement e passa la mano a proposte se siamo prima |
 | traduci, translate (qualsiasi testo) | generale (`generale-traduzione`): per abstract, paper, proposte e deliverable traduce lingua e terminologia senza cambiare struttura e contenuto; per adattarli ai limiti del dominio rimanda alla skill di quel dominio |
 
 Due confini che si sbagliano facilmente:
