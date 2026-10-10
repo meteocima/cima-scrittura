@@ -15,6 +15,9 @@ trovato va riscritto, non solo attenuato.
 - **Trattino em (—)**: vietato in qualsiasi posizione e lingua. Sostituire
   con virgola, punto e virgola, due punti o parentesi. Il trattino en (–)
   è ammesso solo negli intervalli numerici (2015–2030, pp. 12–18).
+  Vietato anche come **riempitivo di cella vuota** in una tabella, dove non
+  sembra punteggiatura: lasciare la cella vuota oppure scrivere "n.a.". È il
+  modo in cui il trattino rientra nei rapporti di revisione.
 - **Punto medio (·) come separatore**: vietato ovunque, in ogni lingua.
   Separare con virgola, barra o a capo. Vale anche nelle righe di
   intestazione, nelle firme e sulle slide, e anche quando un template lo
