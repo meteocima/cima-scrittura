@@ -48,10 +48,10 @@ documenti nelle query di ricerca web.
 1. **Inquadrare**: tipo di input (vedi `references/formato-risposta.md`),
    programma, scadenza. Leggere il profilo del programma per regole su
    observations, termini e follow-up:
-   - Horizon Europe: `references/programmi/horizon-europe.md`
-   - Interreg: `references/programmi/interreg.md`
-   - LIFE: `references/programmi/life.md`
-   - UCPM / DG ECHO: `references/programmi/ucpm.md`
+   - Horizon Europe: `references/programma-horizon-europe.md`
+   - Interreg: `references/programma-interreg.md`
+   - LIFE: `references/programma-life.md`
+   - UCPM / DG ECHO: `references/programma-ucpm.md`
 2. **Matrice**: costruire o riprendere la matrice DoA
    (`references/matrice-doa.md`) per le parti toccate dai commenti.
 3. **Scomporre** i commenti (passo 1 del formato).

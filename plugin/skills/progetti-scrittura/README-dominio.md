@@ -15,33 +15,25 @@ File non incluso nel plugin (escluso da `scripts/build.py`).
 
 ## File condivisi tra le skill del dominio
 
-In chat ogni skill vede solo la propria cartella, e `build.py` copia
-solo `nucleo/`. Per questo alcuni file sono duplicati. La fonte unica è
-`progetti-scrittura/references/`; le copie vanno tenute identiche.
+Stanno in `plugin/condivisi/progetti/` (BRIEF §3). `scripts/build.py` li
+copia in `references/` di ogni skill `progetti-*`; nel SKILL.md si
+citano come `references/<file>.md`. Il sorgente delle skill non deve
+contenerne copie: la build si ferma.
 
-| File | scrittura | revisione | risposta-review |
-|---|---|---|---|
-| `matrice-doa.md` | fonte | copia | copia |
-| `anti-pattern-progetti.md` | fonte | copia | copia |
-| `griglia-revisione.md` | fonte | copia | |
-| `programmi/*.md` | fonte | copia | copia |
-| `tipi-documento.md` | solo qui | | |
-| `formato-risposta.md` | | | solo in risposta-review |
+| File | Usato da |
+|---|---|
+| `matrice-doa.md` | tutte e tre le skill |
+| `anti-pattern-progetti.md` | tutte e tre le skill, agente (percorso passato nel prompt) |
+| `griglia-revisione.md` | scrittura, revisione, agente |
+| `programma-horizon-europe.md`, `programma-interreg.md`, `programma-life.md`, `programma-ucpm.md` | tutte e tre le skill |
 
-Dopo ogni modifica, dalla radice del repository:
+La build copia solo file `.md` al primo livello di `condivisi/progetti/`:
+niente sottocartelle, per questo i profili si chiamano
+`programma-<nome>.md`. Nuovo programma: aggiungere il file e la riga
+nell'elenco dei profili delle tre SKILL.md.
 
-```
-S=plugin/skills/progetti-scrittura/references
-for d in progetti-revisione progetti-risposta-review; do
-  cp $S/matrice-doa.md $S/anti-pattern-progetti.md plugin/skills/$d/references/
-  cp $S/programmi/*.md plugin/skills/$d/references/programmi/
-done
-cp $S/griglia-revisione.md plugin/skills/progetti-revisione/references/
-```
-
-Controllo: `diff -r` tra fonte e copie non deve dare output per i file
-elencati. Proposta alla chat hub: cartella `plugin/condivisi/<prefisso>/`
-copiata dalla build nelle skill del prefisso, per eliminare le copie.
+File di una sola skill, restano nella skill: `tipi-documento.md`
+(scrittura), `formato-risposta.md` (risposta-review).
 
 ## Profili dei programmi
 

@@ -41,10 +41,10 @@ Senza DoA la revisione si fa, ma i criteri A1 e la tabella
 
 1. **Inquadrare**: tipo di testo, programma, periodo. Leggere il
    profilo del programma:
-   - Horizon Europe: `references/programmi/horizon-europe.md`
-   - Interreg: `references/programmi/interreg.md`
-   - LIFE: `references/programmi/life.md`
-   - UCPM / DG ECHO: `references/programmi/ucpm.md`
+   - Horizon Europe: `references/programma-horizon-europe.md`
+   - Interreg: `references/programma-interreg.md`
+   - LIFE: `references/programma-life.md`
+   - UCPM / DG ECHO: `references/programma-ucpm.md`
 2. **Matrice**: costruire o riprendere la matrice DoA secondo
    `references/matrice-doa.md`, limitata a ciò che il testo copre.
 3. **Completezza formale**: confrontare il testo con il template

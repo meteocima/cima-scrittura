@@ -48,7 +48,7 @@ metadati, conservazione, responsabile. Dati mancanti: segnaposto.
 
 ## Periodic report, parte tecnica
 
-Seguire la Part B del programma (vedi `programmi/<programma>.md`).
+Seguire la Part B del programma (vedi `programma-<nome>.md`).
 Regole comuni:
 
 - per WP: obiettivi del periodo, lavoro svolto per task con il

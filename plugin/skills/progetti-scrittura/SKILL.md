@@ -55,10 +55,10 @@ Senza DoA si può scrivere, ma ogni codice e ogni mese diventa
 Identificare tipo di documento, programma e periodo. Leggere il
 profilo del programma:
 
-- Horizon Europe: `references/programmi/horizon-europe.md`
-- Interreg: `references/programmi/interreg.md`
-- LIFE: `references/programmi/life.md`
-- UCPM / DG ECHO: `references/programmi/ucpm.md`
+- Horizon Europe: `references/programma-horizon-europe.md`
+- Interreg: `references/programma-interreg.md`
+- LIFE: `references/programma-life.md`
+- UCPM / DG ECHO: `references/programma-ucpm.md`
 
 Il GA e il template del progetto prevalgono sul profilo. Se il profilo
 ha più di 12 mesi o se un punto è marcato `[da verificare]` e serve al
