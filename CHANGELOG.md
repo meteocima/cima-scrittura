@@ -14,6 +14,11 @@
 - `prove/`: un ciclo di verifica per aggiornamento, con almeno una prova per
   ambiente, e i prompt di regressione per dominio in `prove/domini/`.
   `build.py --check` avvisa quando la versione non ha la sua cartella.
+- `prove/evals/giro-0.2.0/`: le righe misurabili del giro 0.2.0 come casi per
+  `claude plugin eval`, con i materiali portati dallo `scaffold_script`. Le
+  righe chat restano a mano, perche' l'eval da' sempre lo strumento `Agent`.
+  I grader sugli agenti accettano `Agent` e `Task`. Il caso del comunicato
+  diventa la riga 17. `prove/README.md` spiega come si esegue e quanto costa.
 
 ### Modificato
 - Il punto medio e' vietato come il trattino em, nel nucleo e nei controlli

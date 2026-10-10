@@ -24,9 +24,13 @@ python3 scripts/build.py --check   # solo validazione, in cartella temporanea
 python3 scripts/build.py           # assembla in dist/, valida, impacchetta
 ```
 
-Non esiste una suite di test: `--check` è il controllo da eseguire dopo ogni
-modifica a `nucleo/`, `plugin/` o `scripts/build.py`, e vale sempre su tutto
-il plugin. Oggi dice: 9 skill, 4 agenti, 0 avvisi.
+Non esiste una suite di test unitari: `--check` è il controllo da eseguire
+dopo ogni modifica a `nucleo/`, `plugin/` o `scripts/build.py`, e vale sempre
+su tutto il plugin. Oggi dice: 10 skill, 5 agenti, 0 avvisi.
+
+Il comportamento delle skill si misura con `claude plugin eval` sui casi in
+`prove/evals/`: costa soldi veri, quindi si lancia quando si chiude un
+aggiornamento, non a ogni modifica. Comando e costi in `prove/README.md`.
 
 Output in `dist/`, non versionato: il plugin assemblato, `cima-scrittura.plugin`
 e uno zip per skill in `dist/skills/`.
