@@ -1,6 +1,6 @@
 schema_version: "1.1"
 name: giro-05-profilo-life
-tags: [giro-0.3.0, chat]
+tags: [giro-0.3.0, senza-file]
 context:
   scaffold_script: scaffold.sh
 execution:

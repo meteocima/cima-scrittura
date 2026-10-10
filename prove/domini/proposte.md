@@ -11,6 +11,10 @@ con lui: oggi c'e' solo la prima fetta.
 - `proposte-concept`: i quattro blocchi dell'idea, prima della proposta.
 - `proposte-scrittura`: scrive il testo della proposta dentro il modulo del
   programma, ancorato alla matrice.
+- `proposte-revisione`: valutazione simulata con tre valutatori e un
+  rapporteur, punteggi solo dalla griglia reale del bando.
+- Agenti `proposte-valutatore` (parametrizzato per profilo) e
+  `proposte-rapporteur`, in `plugin/agents/`.
 - Previsti e non ancora scritti:
   `proposte-revisione`, `proposte-coerenza`, `proposte-risposta-esr`; agenti
   `proposte-valutatore`, `proposte-rapporteur`, `proposte-verificatore`.
@@ -33,7 +37,9 @@ Stanno in `plugin/condivisi/proposte/`. Regole in
 | `programma-interreg.md` | `proposte-analisi-bando` |
 | `programma-life.md` | `proposte-analisi-bando` |
 | `programma-ucpm.md` | `proposte-analisi-bando` |
-| `anti-pattern-proposte.md` | `proposte-scrittura`, e le skill di revisione quando esisteranno |
+| `anti-pattern-proposte.md` | `proposte-scrittura`, `proposte-revisione`, agenti (percorso passato nel prompt) |
+| `griglia-valutazione.md` | `proposte-revisione`, agenti |
+| `profili-valutatori.md` | `proposte-revisione` |
 
 ## Profili dei programmi
 

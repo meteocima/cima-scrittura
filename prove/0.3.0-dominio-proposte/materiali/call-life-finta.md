@@ -1,13 +1,11 @@
 # Materiale finto per le prove
 
-Call LIFE inventata, costruita sulla forma di un call document LIFE. Il codice
+Call inventata, costruita sulla forma di un call document LIFE. Il codice
 `LIFE-2027-SAP-CLIMA-99` non esiste.
 
-Serve a misurare che la skill prenda dal profilo le cose che la call non dice:
-quattro criteri da 20 punti, peso 1,5 su Impact, soglia complessiva 55 dopo la
-pesatura, limite di 120 pagine della Part B.
-
-Il resto da qui in giu' e' il testo della call.
+Che cosa misura la prova che lo usa sta nel `nota.md` del caso, non qui: un
+materiale che dichiara i propri tranelli insegna la risposta a chi deve
+essere misurato.
 
 ---
 

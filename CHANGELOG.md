@@ -37,6 +37,12 @@ Tutte le prove del giro stanno in `prove/0.3.0-dominio-proposte/`.
   consorzio, impatto) prima di scrivere la proposta, con la tabella di
   copertura dei criteri del bando e l'elenco di che cosa manca per diventare
   una proposta (issue #13).
+- Skill `proposte-revisione` e agenti `proposte-valutatore` e
+  `proposte-rapporteur`: valutazione simulata con tre profili esperti in
+  contesti separati piu' un rapporteur che riporta le divergenze senza
+  mediarle e dichiara il superamento delle soglie. Con loro
+  `griglia-valutazione.md` (il motore, con la regola che senza griglia reale
+  non si danno punteggi) e `profili-valutatori.md` (issue #17).
 - `prove/domini/proposte.md` e i primi casi eval del dominio:
   `instradamento/09-analisi-bando` e `giro-0.3.0/01-matrice-chat`, che misura
   la modalita' chat togliendo `Agent` e `Task` dagli strumenti della sessione
