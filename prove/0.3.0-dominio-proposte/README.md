@@ -51,6 +51,28 @@ La riga vecchia resta qui perche' e' la memoria di che cosa si rompe
 facilmente: in questo dominio la domanda "che cosa vede chi giudica" vale
 anche per i grader, non solo per i valutatori.
 
+## Profili EIC e Interreg (issue #15)
+
+File condivisi `programma-eic.md` e `programma-interreg.md`, piu' la tabella
+dei programmi dentro `proposte-analisi-bando`.
+
+I due profili non si usano come quello di Horizon Europe, e le prove guardano
+proprio quello: nell'EIC decide lo **strumento**, in Interreg la griglia non
+sta nel profilo ma nelle **Terms of Reference della call**.
+
+| # | Ambiente | Prompt | Esito atteso | Esito reale |
+|---|---|---|---|---|
+| 5 | chat | "Analizza questa call" + `materiali/call-eic-finta.md`, che non dice criteri ne' soglie | Riconosce lo strumento (Pathfinder Open) e prende dal profilo soglie 4 / 3,5 / 3, pesi 50 / 30 / 20 e limite di 22 pagine, marcati come profilo. Se escono le soglie generali di Horizon Europe, ha caricato il profilo sbagliato | **Passa**, misurato in cieco il 2026-10-10 dal caso `giro-0.3.0/03-profilo-eic` (1.00, due grader su due piu' l'attivazione) |
+| 6 | chat | "Analizza questa call" + `materiali/call-interreg-finta.md`, che rimanda agli allegati delle ToRs | Non copia la griglia dell'altra call che sta nel profilo: criteri, pesi e soglia restano `[da bando]`, con detto che stanno nell'Annex III delle ToRs, e chiede quei documenti. Le due condizioni di partecipazione finiscono fra i requisiti di eleggibilita' | **Passa**, misurato in cieco il 2026-10-10 dal caso `giro-0.3.0/04-profilo-interreg` (1.00, due grader su due piu' l'attivazione). La consegna nomina la griglia di EURO-MED06 e dichiara di non applicarla perche' e' di un'altra call e di un altro tipo di progetto |
+| 7 | agenti | "Analizza questa call" + `materiali/call-eic-finta.md` senza dire lo strumento, con il testo che non lo rende ovvio | Chiede quale strumento EIC, invece di applicare il profilo a caso | Da fare a mano |
+
+### Misurato in automatico
+
+| Caso | Esito del 2026-10-10 |
+|---|---|
+| `giro-0.3.0/03-profilo-eic` | **1.00**, 0,69 dollari |
+| `giro-0.3.0/04-profilo-interreg` | **1.00**, 0,46 dollari |
+
 ## Esito
 
 Da riempire a fine giro: data, ambienti provati, che cosa e' stato corretto
@@ -58,3 +80,6 @@ prima di rilasciare.
 
 Analisi del bando (#12): chiusa il 2026-10-10. Tre casi automatici verdi, tre
 righe manuali ancora da fare (2b, 3, 4).
+
+Profili EIC e Interreg (#15): chiusa il 2026-10-10. Due casi automatici verdi,
+una riga manuale da fare (7).

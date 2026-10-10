@@ -96,11 +96,24 @@ dice, e' `[da bando]`, non si deduce dal tema.
 | Programma | File |
 |---|---|
 | Horizon Europe | `references/programma-horizon-europe.md` |
+| EIC (Pathfinder, Transition, Accelerator) | `references/programma-eic.md` |
+| Interreg (Euro-MED, Alpine Space, ADRION, Marittimo e gli altri) | `references/programma-interreg.md` |
 
-Per gli altri programmi (EIC, Interreg, LIFE, UCPM/ECHO, bandi nazionali e
-regionali) il profilo non c'e' ancora: si lavora sul solo testo del topic e
-si dichiara in una riga che le regole generali del programma non sono state
-applicate, come prevede `references/nucleo/vincoli.md` sezione 4.
+Due profili non si usano come quello di Horizon Europe:
+
+- **EIC**: criteri, soglie, pesi, numero di fasi e limite di pagine cambiano
+  con lo **strumento**. Se non si capisce dal testo quale sia (Pathfinder
+  Open, Pathfinder Challenges, Transition, Accelerator), chiederlo: senza
+  quello il profilo non si puo' applicare, e le voci restano `[da bando]`.
+- **Interreg**: la griglia non sta nel profilo e nemmeno nel manuale del
+  programma, ma nelle **Terms of Reference della call**, e cambia da una call
+  all'altra. Chiedere manuale e ToRs. La griglia di esempio dentro il profilo
+  e' di una call sola e **non si copia** su un'altra.
+
+Per gli altri programmi (LIFE, UCPM/ECHO, bandi nazionali e regionali) il
+profilo non c'e' ancora: si lavora sul solo testo del topic e si dichiara in
+una riga che le regole generali del programma non sono state applicate, come
+prevede `references/nucleo/vincoli.md` sezione 4.
 
 Se il profilo ha piu' di 12 mesi, o se una voce `[da verificare]` serve alla
 matrice, verificarla con ricerca web sulle fonti ufficiali citate nel profilo.
