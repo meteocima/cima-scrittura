@@ -77,9 +77,12 @@ sezione 3:
 - salvare nella cartella di lavoro la risposta (`revisione/risposta.md`),
   il documento con i commenti originali e la matrice;
 - passare i percorsi assoluti di questi file e di
+  `references/griglia-revisione.md`,
   `references/formato-risposta.md`,
   `references/anti-pattern-progetti.md`,
-  `references/nucleo/protocollo-revisione.md`;
+  `references/nucleo/protocollo-revisione.md`.
+  **La griglia va passata sempre**: senza, i due revisori si inventano due
+  scale diverse e i punteggi non si possono confrontare;
 - profilo "project officer": chiedere di valutare se ogni commento ha
   una risposta pertinente, completa e verificabile, e se gli impegni
   sono compatibili con la DoA;

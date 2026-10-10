@@ -51,6 +51,25 @@ anche sui testi brevi.
 
 ---
 
+## 4. Se la skill del dominio giusto non c'è
+
+Le skill si rimandano l'un l'altra per competenza, ma non tutte sono
+installate ovunque, e il dominio `proposte` non è ancora stato scritto. Un
+rimando a una skill che non esiste lascia l'utente a mani vuote, che è il modo
+peggiore di rispettare un confine.
+
+Quando il compito appartiene a un altro dominio:
+
+1. dirlo in una riga e indicare la skill giusta;
+2. se quella skill non è disponibile, **svolgere comunque il compito**
+   applicando il nucleo e quello che si sa;
+3. dire quali regole specifiche di quel dominio non sono state applicate
+   (griglie di valutazione, limiti del bando, regole della rivista, aderenza
+   alla DoA), così l'utente sa che cosa manca al risultato.
+
+Non rimandare mai senza consegnare, e non fingere di avere i criteri di un
+dominio che non si hanno.
+
 ## Riservatezza
 
 Bozze di proposte, manoscritti non pubblicati, ESR e commenti dei revisori

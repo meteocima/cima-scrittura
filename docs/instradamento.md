@@ -29,4 +29,9 @@ Due confini che si sbagliano facilmente:
 - le **presentazioni** sono un formato, non un dominio: il mazzo lo fa sempre
   `generale-presentazione`, il contenuto resta di chi lo possiede.
 
+**Il dominio `proposte` non è ancora scritto.** Le righe che lo riguardano
+indicano dove andrà, non dove va oggi: finché quelle skill non esistono, vale
+la regola di `nucleo/vincoli.md`, sezione 4, cioè si svolge comunque il
+compito dichiarando quali criteri del dominio mancano.
+
 Prima di un rilascio l'instradamento si prova con i prompt in `prove/`.

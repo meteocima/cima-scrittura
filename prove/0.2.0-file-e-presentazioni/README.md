@@ -103,6 +103,25 @@ quindi scelta da chi sapeva che cosa ci si aspettava, e va riconfermata da una
 persona che non ha letto questo file. I file prodotti da ogni prova sono in
 `esiti-agenti/`.
 
+### Correzioni applicate dopo il giro, 10 ottobre 2026
+
+Nove rilievi dai due ambienti, tutti chiusi. Il plugin va riprovato: le righe
+4, 6, 10, 12, 14 e 17 misurano ora un plugin diverso da quello della rc1.
+
+| # | Rilievo | Dove è stato corretto |
+|---|---|---|
+| 1 | template `.docx` illeggibile per il revisore | `progetti-scrittura` lo converte in testo; il protocollo lo dice per ogni materiale |
+| 2 | griglia non passata ai revisori | `progetti-risposta-review` la passa; il protocollo dice perché |
+| 3 | fonte mancante non chiesta | `generale-presentazione`: la domanda singola va al materiale mancante, non alla durata |
+| 4 | quando un mazzo è istituzionale | tabella per occasione: se esce dal gruppo che lo ha scritto, va dal revisore |
+| 5 | durata sempre chiesta, giro bloccato | senza risposta si procede con l'ipotesi dichiarata |
+| 6 | revisione su uno scheletro di segnaposto | il protocollo vieta i punteggi quando non c'è testo da valutare |
+| 7 | "WP3" dedotto da "D3.2" | `progetti-scrittura`: un codice non ne deduce un altro |
+| 7 | concetto chiave con il punto elenco | `tema-cima.md`: il primo paragrafo del corpo non porta il punto |
+| 7 | skill `proposte-*` nominate e assenti | `vincoli.md` sezione 4: si consegna comunque, dicendo quali criteri mancano |
+| 8 | trattino lungo come cella vuota | `anti-pattern-ai.md`: vietato anche lì, si usa "n.a." |
+| 9 | revisore arruolato come scrivano | il protocollo: se non si riesce a salvare, si passa alla modalità chat |
+
 ### Trovato prima di cominciare
 
 **I materiali non erano nel repository.** La riga `materiali/` del

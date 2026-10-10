@@ -47,18 +47,26 @@ riga quali criteri specifici del dominio non sono stati applicati.
 
 ## Che cosa serve sapere
 
-Prima di costruire, servono quattro cose. Una sola merita una domanda.
+Prima di costruire servono quattro cose. Si fa **una domanda sola**, e si
+sceglie quella che pesa di più.
 
-1. **Quanto dura.** Se non è detto, chiedere: decide tutto il resto.
-2. **Occasione e pubblico.** Dedurli dalla richiesta; per il tono vedere
-   `references/destinatari.md`. Se non sono deducibili, procedere con l'ipotesi
-   più probabile e dichiararla.
-3. **Il contenuto.** Solo ciò che l'utente ha fornito: testo, file, risultati,
-   il deliverable o il paper da cui nasce il mazzo. Niente altro.
+1. **Il contenuto.** Solo ciò che l'utente ha fornito: testo, file, risultati,
+   il deliverable o il paper da cui nasce il mazzo. Se la richiesta rimanda a
+   un documento che non è stato allegato ("le slide dal nostro paper", "dal
+   D3.2"), **è questa la domanda da fare**: chiedere il documento. Un mazzo di
+   soli segnaposto non serve a nessuno, e la durata non lo salva.
+2. **Quanto dura.** Se il materiale c'è e manca solo la durata, è questa la
+   domanda: decide quante slide.
+3. **Occasione e pubblico.** Dedurli dalla richiesta; per il tono vedere
+   `references/destinatari.md`.
 4. **Lingua.** Dedurla secondo `voce-e-lingua.md`.
 
-Ogni dato che serve e manca diventa un segnaposto nella slide, elencato nella
-consegna. Non fare una raffica di domande: costruire il mazzo con i segnaposto.
+**Se la domanda resta senza risposta, non fermarsi.** Procedere con l'ipotesi
+più probabile, dichiararla fra le assunzioni e consegnare: per la durata,
+quella tipica dell'occasione secondo `struttura.md`; per il materiale
+mancante, un mazzo di segnaposto con l'avvertenza che va rifatto quando il
+documento arriva. Tutto il resto che manca diventa segnaposto nella slide,
+elencato nella consegna, senza raffiche di domande.
 
 ## Flusso di lavoro
 
@@ -94,10 +102,18 @@ in una riga. Il lavoro non si ferma per un formato.
 
 ## Revisione separata
 
-Serve per i mazzi **pubblici o istituzionali** (giornate pubbliche, eventi con
-enti e istituzioni, presentazioni a nome di CIMA) e quando l'utente la chiede
-per qualsiasi mazzo. Per i mazzi interni e di lavoro basta l'autorevisione con
-la griglia. La modalità si deduce dagli strumenti disponibili
+Decide **chi guarda il mazzo**, non quanto è importante.
+
+| Mazzo | Revisione |
+|---|---|
+| giornata pubblica, evento con enti e istituzioni, presentazione a nome di CIMA | revisore separato |
+| review di progetto davanti alla Commissione, a un'agenzia o a reviewer esterni | revisore separato |
+| talk di conferenza, pitch di proposta, lezione a un corso esterno | revisore separato |
+| riunione di consorzio, seminario interno, riunione di lavoro, materiale per un collega | autorevisione con la griglia |
+
+La regola in una riga: se il mazzo esce dal gruppo che lo ha scritto, lo
+guarda prima un revisore. Su richiesta dell'utente il revisore si usa per
+qualsiasi mazzo. La modalità si deduce dagli strumenti disponibili
 (`protocollo-revisione.md`, sezione 1).
 
 ## Modalità agenti

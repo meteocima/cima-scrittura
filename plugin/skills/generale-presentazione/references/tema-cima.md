@@ -96,6 +96,10 @@ Il template usa due separatori che il nucleo vieta. Vanno trattati così:
    template come `--original`: senza quel confronto gli errori propri del
    template vengono letti come errori del mazzo.
 
+Nel corpo dei layout di contenuto il **primo paragrafo è il concetto chiave**,
+in arancio e in grassetto, e non porta il punto elenco: è una riga che dice
+che cosa sostiene la slide. I punti elenco cominciano dal secondo paragrafo.
+
 Immagini e grafici nuovi si compongono sopra il layout, nei colori della
 palette. Un grafico va inserito come grafico, non come immagine di un grafico,
 così resta modificabile.

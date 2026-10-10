@@ -74,6 +74,13 @@ Costruire o aggiornare la matrice secondo `references/matrice-doa.md`.
 Per un singolo deliverable basta la parte della matrice che lo
 riguarda (WP, task, deliverable collegati, KPI pertinenti).
 
+**Il codice di un deliverable non dice il work package.** `D3.2` non
+significa WP3: la numerazione dei deliverable è indipendente da quella dei
+work package in molti programmi, e in alcuni progetti coincide per caso.
+Senza DoA, il work package è `[da DoA]` come tutto il resto. Vale per ogni
+codice: task, milestone e numeri di periodo non si deducono l'uno
+dall'altro.
+
 ### 3. Struttura
 
 Seguire il template fornito. Senza template: `references/tipi-documento.md`.
@@ -127,7 +134,11 @@ prompt come in `references/nucleo/protocollo-revisione.md`, sezione 3:
 
 - salvare bozza e matrice nella cartella di lavoro (es.
   `revisione/bozza.md`, `revisione/matrice-doa.md`);
-- passare i percorsi assoluti di bozza, matrice, template (se c'è) e
+- se il template è un `.docx`, salvarne anche una versione in testo (es.
+  `revisione/template.md`) e passare quella: il revisore legge solo testo e
+  un `.docx` per lui è un riferimento che non arriva
+  (`references/nucleo/protocollo-revisione.md`, sezione 3);
+- passare i percorsi assoluti di bozza, matrice, template in testo (se c'è) e
   di questi file della skill: `references/griglia-revisione.md`,
   `references/anti-pattern-progetti.md`, il profilo del programma,
   `references/nucleo/protocollo-revisione.md`;

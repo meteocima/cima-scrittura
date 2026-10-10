@@ -72,12 +72,21 @@ dove lavorare sta scegliendo anche quanto vale la revisione che riceve.
    testo arriva in un formato che il revisore non può aprire da solo (Word,
    PowerPoint, PDF), ricavarne una versione leggibile e passare quella: il
    revisore ha strumenti minimi apposta, e non deve poter toccare il
-   documento. Per un mazzo di slide passare anche una griglia di anteprime:
-   densità e leggibilita' dal solo testo non si vedono.
+   documento. Vale per ogni materiale, non solo per il testo: un template in
+   Word passato come `.docx` a un revisore che legge solo testo è un
+   riferimento che non arriva. Per un mazzo di slide passare anche una
+   griglia di anteprime: densità e leggibilità dal solo testo non si vedono.
 2. Salvare in file anche i materiali di riferimento: bando, linee guida
-   della rivista, griglia di valutazione.
+   della rivista, **griglia di valutazione**. Senza la griglia il revisore se
+   ne inventa una, e due revisori se ne inventano due diverse.
 3. Lanciare i revisori **in parallelo** (tutti nella stessa chiamata),
    con l'agente indicato dalla skill di dominio.
+
+**Se i file non si riescono a salvare, la modalità agenti non è praticabile:
+passare alla modalità chat e dirlo in una riga.** Non chiedere a un agente di
+salvare al posto tuo, e meno che mai al revisore: il revisore ha `Write` solo
+per il proprio rapporto, e usarlo come scrivano annulla la separazione per cui
+esiste.
 
 ### Cosa passare al revisore
 
@@ -180,6 +189,13 @@ Gravità: bloccante / importante / minore
 
 Le skill di dominio possono aggiungere sezioni (es. commenti in stile ESR
 per le proposte) ma non toglierne.
+
+**Testo troppo incompleto per essere valutato.** Se quello che arriva è in
+gran parte segnaposto, non assegnare punteggi: un punteggio minimo su un
+testo che non esiste ancora sembra un giudizio e non lo è. Scrivere invece,
+al posto dei punteggi, che non c'è abbastanza testo da valutare ed elencare
+che cosa serve perché la revisione abbia senso. I problemi che si vedono già
+si segnalano lo stesso.
 
 ### Rapporto dentro il documento
 
