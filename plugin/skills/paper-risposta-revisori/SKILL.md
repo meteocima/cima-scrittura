@@ -13,10 +13,18 @@ e `references/nucleo/terminologia.md`.
 Per la revisione: `references/nucleo/protocollo-revisione.md`.
 Se l'utente fornisce o chiede un file: `references/nucleo/formati-e-file.md`.
 
-Livello di revisione del dominio: **standard**. Deroga al protocollo,
-dichiarata: questa skill fa solo l'autorevisione con il controllo di
-coerenza della sezione 6, perché il giudizio sul merito l'hanno già dato
-i revisori reali.
+Livello di revisione del dominio: **standard**. Sul **merito** delle
+risposte il giudizio l'hanno già dato i revisori reali, quindi non serve
+simularne altri: basta l'autorevisione con il controllo di coerenza della
+sezione 6.
+
+Resta però il caso dei testi che vengono pubblicati: nelle riviste a revisione
+aperta, come quelle Copernicus, la risposta agli autori esce con un DOI
+(`references/formato-risposta.md`). Lì vale la regola generale dei testi
+destinati alla pubblicazione (`references/nucleo/protocollo-revisione.md`,
+sezione 2): in modalità agenti almeno un revisore separato sulla forma e sulla
+completezza delle risposte, in modalità chat autovalutazione dichiarata e
+pacchetto revisore.
 
 ## Deroghe allo stile di base
 

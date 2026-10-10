@@ -162,10 +162,22 @@ Regole trasversali:
 
 ## 5. Controllo prima della consegna
 
-Livello di revisione del dominio: **standard**. Deroga al protocollo,
-dichiarata: questa skill fa solo l'autorevisione con la checklist sotto;
-la revisione standard (revisori separati e sintesi) è il compito di
-`paper-revisione`, da proporre per i manoscritti completi.
+Livello di revisione del dominio: **standard**.
+
+- **Testi brevi scritti da soli** (abstract, titolo, cover letter, key
+  points, dichiarazioni): basta l'autorevisione con la checklist qui sotto.
+  È l'eccezione che `references/nucleo/protocollo-revisione.md`, sezione 2,
+  concede ai livelli standard e completo.
+- **Manoscritto completo o sezione destinata alla sottomissione**:
+  l'eccezione non vale, perché sono testi destinati alla pubblicazione. In
+  modalità agenti serve almeno un revisore separato; in modalità chat
+  servono l'autovalutazione dichiarata con la riga della sezione 4a del
+  protocollo e il pacchetto revisore. Entrambe le cose le fa
+  `paper-revisione`: non limitarsi a proporla, eseguirla, e dirlo in una
+  riga.
+
+Vale anche quando questa skill riscrive un testo dell'utente: una riscrittura
+è scrittura (`docs/adr/0011`, richiamato in `protocollo-revisione.md`).
 
 1. Procedura di `references/nucleo/anti-pattern-ai.md` (trattino em,
    lessico, aperture e chiusure, elenchi).

@@ -78,12 +78,10 @@ verificate il 2026-10-10.
   changes in manuscript".
 - In revisione: author's response in un PDF separato, con riferimenti a
   pagine e righe, più versione marked-up del manoscritto.
-- Policy sull'AI (testo uguale per GMD, HESS, NHESS, ESSD, ACP, WCD,
-  verificato il 2026-10-10): "Generative AI must not be used for text or
-  interpretations"; ammesso l'uso assistivo su struttura delle frasi,
-  leggibilità, punteggiatura, grammatica e ortografia. Fonte, per GMD:
-  https://www.geoscientific-model-development.net/policies/ai_policy.html
-  (stesso percorso `/policies/ai_policy.html` sui siti delle altre).
+- Policy sull'AI: vale il divieto dell'editore, con il testo e la data di
+  verifica in `references/rivista-copernicus.md`, sezione sull'uso di AI
+  generativa. Non ricopiarlo qui: una policy scritta in due posti diverge nei
+  due posti, e quella di Copernicus cambia che cosa questa skill può fare.
 
 **Altri editori**: file e formati variano. Seguire la lettera di
 decisione, poi il profilo dell'editore; se nessuno dei due indica cosa

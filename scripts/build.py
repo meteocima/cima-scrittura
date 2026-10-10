@@ -203,6 +203,18 @@ def valida_skill(skill_dir: Path, agenti: set[str] = frozenset()) -> None:
         if citati and not re.search(rf"^##\s+{titolo}\s*$", corpo, re.MULTILINE):
             errore(f"{rel}/SKILL.md: nomina {', '.join(citati)} ma manca la sezione '## {titolo}'")
 
+    # Una skill a livello standard o completo deve dire come avviene la revisione
+    # separata: o nomina un agente, o nomina la skill di revisione del dominio.
+    # Senza questo, una deroga al protocollo passa invisibile (vedi dominio paper).
+    m = re.search(r"[Ll]ivello di revisione[^.\n]*\*\*(standard|completo)\*\*", corpo)
+    if m and not citati:
+        dominio = nome.split("-", 1)[0]
+        if not re.search(rf"{re.escape(dominio)}-(revisione|risposta)", corpo):
+            avviso(
+                f"{rel}/SKILL.md: dichiara livello {m.group(1)} ma non nomina ne' un agente "
+                f"ne' una skill di revisione del dominio: come avviene la revisione separata?"
+            )
+
     # Riferimenti a file references/ citati nel testo devono esistere.
     for ref in sorted(set(re.findall(r"references/[\w./-]+\.md", corpo))):
         if not (skill_dir / ref).is_file():
