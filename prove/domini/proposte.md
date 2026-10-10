@@ -15,9 +15,10 @@ con lui: oggi c'e' solo la prima fetta.
   rapporteur, punteggi solo dalla griglia reale del bando.
 - Agenti `proposte-valutatore` (parametrizzato per profilo) e
   `proposte-rapporteur`, in `plugin/agents/`.
-- Previsti e non ancora scritti:
-  `proposte-revisione`, `proposte-coerenza`, `proposte-risposta-esr`; agenti
-  `proposte-valutatore`, `proposte-rapporteur`, `proposte-verificatore`.
+- `proposte-risposta-esr`: i rilievi dell'ESR uno per uno, con la posizione e
+  la modifica, per rifare la proposta.
+- Previsto e non ancora scritto: `proposte-coerenza`, con l'agente
+  `proposte-verificatore`.
 
 Finche' non esistono, le skill che li nominano nei confini valgono come
 indicazione di dove andra' la richiesta, e vale

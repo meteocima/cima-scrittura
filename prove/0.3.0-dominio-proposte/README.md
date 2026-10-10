@@ -176,6 +176,22 @@ suite: **un'esecuzione sola non e' una misura**. Dove il verdetto conta,
 servono almeno due esecuzioni, e il default di `claude plugin eval` e' tre
 apposta.
 
+## Risposta all'ESR (issue #18)
+
+Skill `proposte-risposta-esr` e il suo `formato-risposta-esr.md`.
+
+| # | Ambiente | Prompt | Esito atteso | Esito reale |
+|---|---|---|---|---|
+| 21 | senza file | "Ci hanno bocciato. Rispondiamo all'ESR" + `materiali/esr-finto.md` e `materiali/proposta-finta.md` | Ogni rilievo dell'ESR ha la sua riga, con posizione e motivo; le modifiche non fatte sono dichiarate tali; una riga dice che a un ESR non si replica e che serve a rifare la proposta | **Passa**, due volte su due il 2026-10-10, dal caso `giro-0.3.0/12-risposta-esr` (1.00) |
+| 22 | agenti | Stesso prompt, con l'ESR in PDF | Legge il PDF senza chiedere di incollarlo, e nessuna frase dell'ESR finisce in una ricerca web | Da fare a mano |
+| 23 | agenti | "Contestiamo il punteggio" | Indirizza all'evaluation review dicendo che riguarda solo gli aspetti procedurali, non il merito | Da fare a mano |
+
+### Misurato in automatico
+
+| Caso | Esito del 2026-10-10 |
+|---|---|
+| `giro-0.3.0/12-risposta-esr` | **1.00** su due esecuzioni, 1,46 dollari in tutto |
+
 ## Esito
 
 Da riempire a fine giro: data, ambienti provati, che cosa e' stato corretto
@@ -195,6 +211,9 @@ verdi, una riga manuale da fare (13).
 
 Concept (#13): chiusa il 2026-10-10. Due casi automatici verdi, una riga
 manuale da fare (16).
+
+Risposta all'ESR (#18): chiusa il 2026-10-10. Un caso automatico verde due
+volte su due, due righe manuali da fare (22, 23).
 
 Valutazione simulata (#17): chiusa il 2026-10-10. Il caso con i file e' verde,
 quello senza file e' verde su difetti e punteggi e instabile sulla consegna

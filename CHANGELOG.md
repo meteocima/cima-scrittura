@@ -43,6 +43,11 @@ Tutte le prove del giro stanno in `prove/0.3.0-dominio-proposte/`.
   mediarle e dichiara il superamento delle soglie. Con loro
   `griglia-valutazione.md` (il motore, con la regola che senza griglia reale
   non si danno punteggi) e `profili-valutatori.md` (issue #17).
+- Skill `proposte-risposta-esr`: scompone i rilievi dell'Evaluation Summary
+  Report uno per uno, con la posizione presa e il motivo, tenendo separato
+  cio' che e' gia' fatto da cio' che e' solo deciso. Dice che a un ESR non si
+  replica e che l'unica strada formale, l'evaluation review, riguarda solo gli
+  aspetti procedurali (issue #18).
 - `prove/domini/proposte.md` e i primi casi eval del dominio:
   `instradamento/09-analisi-bando` e `giro-0.3.0/01-matrice-chat`, che misura
   la modalita' chat togliendo `Agent` e `Task` dagli strumenti della sessione

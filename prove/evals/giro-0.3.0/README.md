@@ -19,6 +19,7 @@ automatica".
 | 14 | `09-concept-senza-file` | quattro blocchi, partner come ruoli a segnaposto, tabella di copertura | |
 | 17 | `10-valutazione-agenti` | tre `proposte-valutatore` e il `proposte-rapporteur` lanciati davvero, difetti trovati, punteggi con scala e soglie | Write |
 | 18 | `11-valutazione-senza-file` | senza poter salvare file: consegna completa, dichiarazione veritiera dell'indipendenza, stessi punteggi e soglie | |
+| 21 | `12-risposta-esr` | ogni rilievo dell'ESR ha la sua riga con la posizione, nessuna modifica dichiarata che non esiste | |
 
 ## Due cose imparate il 2026-10-10, che cambiano come si scrivono i casi
 
