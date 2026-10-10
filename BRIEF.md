@@ -1,10 +1,11 @@
 # Brief di architettura: plugin `cima-scrittura`
 
 **Leggere per intero prima di lavorare su qualsiasi parte del plugin.**
-Questo file è la fonte delle decisioni condivise. Lo modifica solo la chat
-hub; le chat di dominio propongono modifiche (vedi "Flusso di lavoro").
+Questo file è la fonte dell'architettura corrente. Lo modifica solo la
+sessione hub; le sessioni di dominio propongono modifiche (vedi "Flusso di
+lavoro"). Il perché delle scelte sta in `docs/adr/`.
 
-Versione brief: 6 · Ultimo aggiornamento: 2026-10-10
+Versione brief: 7 · Ultimo aggiornamento: 2026-10-10
 
 ---
 
@@ -52,9 +53,11 @@ attivazioni doppie.
 
 ```
 cima-scrittura/
-├── BRIEF.md                 # questo file
+├── BRIEF.md                 # questo file: architettura corrente
+├── CONTEXT.md               # glossario di chi sviluppa il plugin
 ├── README.md                # per gli utenti CIMA
 ├── CHANGELOG.md
+├── docs/adr/                # una decisione per file, con il perché
 ├── nucleo/                  # fonte unica del nucleo comune
 │   ├── vincoli.md
 │   ├── anti-pattern-ai.md
@@ -162,7 +165,7 @@ stesso dominio (es. `tipologie.md` per scrittura e revisione):
 
 ## 5. Specifiche per dominio
 
-Le chat di dominio possono ridefinire l'elenco delle skill dentro il
+Le sessioni di dominio possono ridefinire l'elenco delle skill dentro il
 proprio prefisso; vanno rispettati livello di revisione e confini.
 
 ### 5.1 Generale (livello di revisione: leggero)
@@ -188,9 +191,12 @@ Revisione in modalità agenti: `generale-revisore` (1 revisore, solo
 è obbligatorio per comunicati stampa, lettere ufficiali e istituzionali,
 testi web e social pubblici, e si usa per qualsiasi testo quando l'utente
 lo chiede; email e verbali: autorevisione con checklist. In
-`generale-revisione` si usa solo su richiesta, perché il testo non è
-stato scritto in quella conversazione e la revisione nel contesto
-principale non ha il pregiudizio dell'autore.
+`generale-revisione` si usa solo su richiesta finché l'intervento è un
+rapporto o una correzione, perché il testo non è stato scritto in quella
+conversazione e la revisione nel contesto principale non ha il
+pregiudizio dell'autore. Quando invece la skill riscrive, la nuova
+versione è stata scritta lì e valgono le regole di `generale-scrittura`:
+revisore obbligatorio per i tipi pubblici (ADR 0011).
 
 Agenti: `generale-revisore`.
 
@@ -213,7 +219,7 @@ Model Development (GMD, Copernicus/EGU). Un profilo per editore o
 rivista in `references/riviste/<nome>.md` (struttura, limiti, sezioni
 obbligatorie come disponibilità di codice e dati, data di verifica),
 costruito da guide for authors correnti verificate con ricerca web, mai a
-memoria. Da chiarire nella chat di dominio: se estendere GMD alle altre
+memoria. Da chiarire nella sessione di dominio: se estendere GMD alle altre
 riviste Copernicus/EGU usate da CIMA (es. HESS, NHESS), che condividono
 gran parte delle regole. Riferimenti da costruire anche: checklist di
 reporting pertinenti.
@@ -256,13 +262,13 @@ confronto tra punteggio simulato e ESR reale.
 
 ### 5.4 Progetti (livello: standard)
 
-Dominio aggiunto con la versione 2 del brief (decisione 1). Copre i
+Dominio aggiunto con la versione 2 del brief (ADR 0008). Copre i
 testi dei progetti già finanziati, scritti per la Commissione, le
 agenzie o il consorzio. Riferimento principale di ogni testo: il
 Grant Agreement e la descrizione dell'azione (DoA / Annex 1), che
 l'utente fornisce o carica.
 
-Skill previste (la chat di dominio può ridefinirle):
+Skill previste (la sessione di dominio può ridefinirle):
 
 - `progetti-scrittura`: deliverable, parte tecnica dei report periodici,
   technical report, executive summary. Ogni affermazione su attività e
@@ -315,24 +321,29 @@ Le descrizioni delle skill si sovrappongono su parole come "scrivi",
 | traduci, translate (qualsiasi testo) | generale (`generale-traduzione`): per abstract, paper, proposte e deliverable traduce lingua e terminologia senza cambiare struttura e contenuto; per adattarli ai limiti del dominio rimanda alla skill di quel dominio |
 
 Ogni descrizione include una clausola "Non usare per…" coerente con questa
-tabella. La chat hub verifica l'instradamento con prompt di prova prima
+tabella. La sessione hub verifica l'instradamento con prompt di prova prima
 del rilascio.
 
-## 7. Flusso di lavoro tra chat
+## 7. Flusso di lavoro tra sessioni
 
-- **Chat hub** (questa): BRIEF.md, `nucleo/`, `scripts/`, `plugin.json`,
-  README, integrazione, test di instradamento, rilascio.
-- **Chat di dominio**: solo `plugin/skills/<prefisso>-*`,
+"Sessione" è una conversazione di sviluppo con Claude su questo
+repository, da non confondere con la "modalità chat" in cui girano le
+skill (sezione 2, principio 4).
+
+- **Sessione hub** (questa): BRIEF.md, `nucleo/`, `docs/adr/`,
+  `scripts/`, `plugin.json`, README, integrazione, test di instradamento,
+  rilascio.
+- **Sessione di dominio**: solo `plugin/skills/<prefisso>-*`,
   `plugin/agents/<prefisso>-*` e `plugin/condivisi/<dominio>/`.
-- Ogni chat di dominio lavora su un branch `dominio/<prefisso>` e apre una
-  pull request verso `main`. La chat hub integra.
-- Modifiche al nucleo o al brief proposte da una chat di dominio: aprire
-  una issue su GitHub con titolo `[nucleo] …` o `[brief] …`, oppure
+- Ogni sessione di dominio lavora su un branch `dominio/<prefisso>` e apre
+  una pull request verso `main`. La sessione hub integra.
+- Modifiche al nucleo o al brief proposte da una sessione di dominio:
+  aprire una issue su GitHub con titolo `[nucleo] …` o `[brief] …`, oppure
   annotarle nella descrizione della pull request.
 - Materiali riservati (ESR, proposte, manoscritti): mai nel repository.
-  Si caricano direttamente nella chat che ne ha bisogno.
+  Si caricano direttamente nella sessione che ne ha bisogno.
 
-### Prompt di avvio per una chat di dominio
+### Prompt di avvio per una sessione di dominio
 
 ```
 Lavoriamo al dominio <generale|paper|proposte|progetti> del plugin cima-scrittura
@@ -343,42 +354,31 @@ tuo prefisso. Prima di scrivere le skill proponimi il piano del dominio.
 
 ## 8. Decisioni
 
-### Prese
+Una decisione per file in `docs/adr/`, con il contesto e le alternative
+scartate. Qui solo l'indice. Chi prende una decisione nuova scrive l'ADR
+e aggiunge la riga; se una decisione cambia, il brief descrive il presente
+e il vecchio ADR va marcato superato.
 
-1. Deliverable e report periodici diventano il dominio `progetti`
-   (sezione 5.4). Deciso il 2026-10-10.
-2. Riviste di riferimento per il dominio paper: gruppo Elsevier, gruppo
-   Nature, GMD (sezione 5.2). Deciso il 2026-10-10.
-3. Le skill del plugin devono comparire anche in chat per
-   l'organizzazione CIMA (gli agenti funzionano solo in Cowork):
-   confermato dall'utente il 2026-10-10. Da verificare in pratica al
-   primo rilascio.
-4. `generale-revisore` si fa, ma si usa solo per testi pubblici o
-   istituzionali e su richiesta; email e verbali con autorevisione
-   (sezione 5.1). Riga "Leggero" di `nucleo/protocollo-revisione.md`
-   aggiornata di conseguenza. Deciso il 2026-10-10.
-5. Riferimenti comuni di dominio in `plugin/condivisi/<dominio>/`,
-   iniettati da `build.py` come il nucleo (sezione 3). Proposto dalla
-   chat del dominio generale (PR #1), deciso il 2026-10-10.
-6. La traduzione di qualsiasi testo va a `generale-traduzione`, che non
-   cambia struttura e contenuto dei testi degli altri domini (sezione 6).
-   PR #1, deciso il 2026-10-10.
-7. Dominio progetti: aggiunta `progetti-risposta-review`; email di
-   routine al PO a `generale`, risposte di merito a `progetti`;
-   autorevisione per summary brevi scritti da soli, ma revisore per i
-   testi destinati alla pubblicazione. `build.py` accetta sottocartelle
-   in `plugin/condivisi/<dominio>/`. Deciso il 2026-10-10.
+| ADR | Decisione |
+|---|---|
+| [0001](docs/adr/0001-decisioni-in-docs-adr.md) | Le decisioni si registrano in `docs/adr/` |
+| [0002](docs/adr/0002-quattro-domini-con-prefisso.md) | Quattro domini, con il prefisso nel nome |
+| [0003](docs/adr/0003-nucleo-iniettato-a-build-time.md) | Il nucleo viene duplicato dentro ogni skill a build time |
+| [0004](docs/adr/0004-condivisi-di-dominio.md) | Riferimenti comuni di dominio in `plugin/condivisi/<dominio>/` |
+| [0005](docs/adr/0005-chi-scrive-non-valuta.md) | Chi scrive non valuta: la revisione sta in un contesto separato |
+| [0006](docs/adr/0006-risultato-completo-senza-agenti.md) | Ogni skill consegna il risultato completo anche senza agenti |
+| [0007](docs/adr/0007-skill-caricabili-singolarmente-in-chat.md) | Le skill si distribuiscono anche come zip singoli |
+| [0008](docs/adr/0008-progetti-dominio-separato.md) | `progetti` è un dominio separato da `generale` |
+| [0009](docs/adr/0009-confini-del-dominio-progetti.md) | Confini del dominio progetti |
+| [0010](docs/adr/0010-generale-revisore-solo-testi-pubblici.md) | `generale-revisore` solo per i testi pubblici, e su richiesta in revisione |
+| [0011](docs/adr/0011-una-riscrittura-e-scrittura.md) | Una riscrittura è scrittura |
+| [0012](docs/adr/0012-traduzione-a-generale-traduzione.md) | La traduzione di qualsiasi testo va a `generale-traduzione` |
+| [0013](docs/adr/0013-riviste-di-riferimento-paper.md) | Riviste di riferimento del dominio paper |
+| [0014](docs/adr/0014-divieto-del-trattino-em.md) | Il trattino em è un errore di build |
+| [0015](docs/adr/0015-modello-dei-valutatori.md) | Modello dei valutatori (**aperta**) |
 
-### Aperte
-
-1. **Modello dei valutatori.** Tecnicamente possibile: il campo `model`
-   degli agenti accetta `inherit`, `sonnet`, `opus`, `haiku` (già
-   validato da `build.py`). Limiti: vale solo in modalità agenti; i
-   modelli sono della stessa famiglia, quindi la diversità di giudizio è
-   minore di quella data da contesto separato e profili diversi; la
-   disponibilità dipende dal piano dell'organizzazione. Decidere con il
-   test di accettazione delle proposte: stessa proposta valutata con
-   `inherit` e con un modello diverso, confronto con l'ESR reale.
+Il vocabolario del repository (dominio, nucleo, revisione, modalità,
+segnaposto) sta in `CONTEXT.md`.
 
 ## 9. Build e test
 

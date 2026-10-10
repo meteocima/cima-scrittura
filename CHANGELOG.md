@@ -18,8 +18,22 @@
 - Dominio progetti: skill `progetti-scrittura`, `progetti-revisione`,
   `progetti-risposta-review`; agente `progetti-revisore`; file comuni in
   `plugin/condivisi/progetti/` (brief v6).
+- `CLAUDE.md`: guida per chi sviluppa con Claude Code.
+- `CONTEXT.md`: glossario del repository (dominio, nucleo, revisione,
+  modalità, segnaposto), distinto da `nucleo/terminologia.md`, che è la
+  terminologia dei testi prodotti.
+- `docs/adr/`: una decisione per file, con il perché e le alternative
+  scartate (15 ADR, di cui uno aperto).
 
 ### Modificato
+- Brief v7: la sezione 8 diventa l'indice degli ADR; "chat hub" e "chat di
+  dominio" diventano "sessione hub" e "sessione di dominio", per non
+  confonderle con la modalità chat in cui girano le skill.
+- `generale-revisione`: "livello di intervento" diventa "tipo di
+  intervento", per non confonderlo con il livello di revisione del nucleo.
+- `plugin/condivisi/generale/`: le intestazioni chiedevano di modificare
+  tutte le copie insieme, istruzione superata dalla fonte unica di
+  dominio (ADR 0004) e contraria al controllo della build.
 - `build.py`: sottocartelle ammesse in `plugin/condivisi/<dominio>/`.
 - Protocollo di revisione: ai livelli standard e completo, autorevisione
   ammessa per testi brevi scritti da soli, mai per testi da pubblicare.
@@ -27,6 +41,14 @@
   `dist/.check/`.
 
 ### Deciso
+
+Dalla versione 7 del brief ogni decisione ha il suo file in `docs/adr/`.
+
+- Una riscrittura è scrittura: se una skill di revisione riscrive un testo
+  pubblico, il revisore separato diventa obbligatorio come in
+  `generale-scrittura` (ADR 0011).
+- Le decisioni architetturali si registrano in `docs/adr/` invece che
+  nell'elenco numerato del brief (ADR 0001).
 - Riviste di riferimento del dominio paper: gruppo Elsevier, gruppo
   Nature, GMD.
 - `generale-revisore` solo per testi pubblici o istituzionali e su

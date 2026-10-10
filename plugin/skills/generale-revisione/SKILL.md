@@ -43,7 +43,7 @@ della rivista, aderenza alla DoA).
 Testi misti (per esempio una email che accompagna un deliverable):
 rivedere la email qui, rimandare il deliverable.
 
-## Livello di intervento
+## Tipo di intervento
 
 Dedurlo dalla richiesta:
 
@@ -74,21 +74,31 @@ la riscrittura in una riga.
 6. **Fonti citate nel testo**: verificarle con `verifica-fonti.md` e
    riportare l'esito (verificata, dati discordanti, non trovata). Senza
    strumento di ricerca, elencarle come da verificare.
-7. **Consegna** secondo il livello di intervento.
+7. **Consegna** secondo il tipo di intervento.
 
 In una riscrittura: mantenere i fatti dell'autore, non aggiungerne;
 inserire segnaposto dove il testo è vago e serve un dato; applicare poi
-l'autorevisione con `checklist.md` alla nuova versione.
+l'autorevisione con `checklist.md` alla nuova versione e, per i tipi
+pubblici, la revisione separata (sezione "Secondo parere indipendente").
 
 ## Secondo parere indipendente
 
-Il testo non è stato scritto in questa conversazione, quindi la revisione
-nel contesto principale non ha il pregiudizio dell'autore. Il revisore
-separato si usa **solo** quando l'utente lo chiede ("fallo controllare da
-qualcuno che non ha visto la conversazione", "secondo parere",
-"revisione indipendente"), tipicamente dopo una riscrittura. Senza
-questa richiesta le due sezioni seguenti non si applicano: si consegna
-il rapporto o il testo rivisto e basta.
+Finché l'intervento è un rapporto o una correzione, il testo non è stato
+scritto in questa conversazione: la revisione nel contesto principale non
+ha il pregiudizio dell'autore, e il revisore separato si usa **solo**
+quando l'utente lo chiede ("fallo controllare da qualcuno che non ha
+visto la conversazione", "secondo parere", "revisione indipendente").
+
+**Una riscrittura cambia la regola.** La nuova versione l'ha scritta
+questa conversazione, quindi valgono le stesse regole di
+`generale-scrittura`: se il tipo di testo richiede il revisore separato
+secondo `tipologie.md` (lettere ufficiali e istituzionali, comunicati
+stampa, testi web e social pubblici), in modalità agenti il revisore è
+obbligatorio, anche senza richiesta dell'utente. Riscrittura di un tipo
+che non lo richiede: basta l'autorevisione con `checklist.md`.
+
+Fuori da questi due casi le sezioni seguenti non si applicano: si
+consegna il rapporto o il testo corretto e basta.
 
 ## Modalità agenti
 
