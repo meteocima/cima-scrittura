@@ -98,8 +98,10 @@ dice, e' `[da bando]`, non si deduce dal tema.
 | Horizon Europe | `references/programma-horizon-europe.md` |
 | EIC (Pathfinder, Transition, Accelerator) | `references/programma-eic.md` |
 | Interreg (Euro-MED, Alpine Space, ADRION, Marittimo e gli altri) | `references/programma-interreg.md` |
+| LIFE | `references/programma-life.md` |
+| UCPM e DG ECHO | `references/programma-ucpm.md` |
 
-Due profili non si usano come quello di Horizon Europe:
+Quattro profili non si usano come quello di Horizon Europe:
 
 - **EIC**: criteri, soglie, pesi, numero di fasi e limite di pagine cambiano
   con lo **strumento**. Se non si capisce dal testo quale sia (Pathfinder
@@ -109,11 +111,15 @@ Due profili non si usano come quello di Horizon Europe:
   programma, ma nelle **Terms of Reference della call**, e cambia da una call
   all'altra. Chiedere manuale e ToRs. La griglia di esempio dentro il profilo
   e' di una call sola e **non si copia** su un'altra.
+- **LIFE**: quattro criteri da 20 punti, non tre da 5, e il peso su Impact
+  entra nel punteggio che decide la soglia. I bonus valgono punti veri.
+- **UCPM**: ogni sotto-criterio dice in quale **casella** della Part B si
+  risponde e quanti punti vale. La matrice riporta quella numerazione.
 
-Per gli altri programmi (LIFE, UCPM/ECHO, bandi nazionali e regionali) il
-profilo non c'e' ancora: si lavora sul solo testo del topic e si dichiara in
-una riga che le regole generali del programma non sono state applicate, come
-prevede `references/nucleo/vincoli.md` sezione 4.
+Per i programmi senza profilo (bandi nazionali, regionali, di agenzie) si
+lavora sul solo testo del bando e si dichiara in una riga che le regole
+generali del programma non sono state applicate, come prevede
+`references/nucleo/vincoli.md` sezione 4.
 
 Se il profilo ha piu' di 12 mesi, o se una voce `[da verificare]` serve alla
 matrice, verificarla con ricerca web sulle fonti ufficiali citate nel profilo.

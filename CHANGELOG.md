@@ -22,6 +22,11 @@ Tutte le prove del giro stanno in `prove/0.3.0-dominio-proposte/`.
   Work Programme 2026 e da manuale e Terms of Reference di Interreg Euro-MED
   (issue #15). Nell'EIC criteri e soglie cambiano con lo strumento; in
   Interreg la griglia sta nelle ToRs della singola call, non nel profilo.
+- `plugin/condivisi/proposte/programma-life.md` e `programma-ucpm.md`:
+  profili di valutazione di LIFE e UCPM/ECHO, costruiti il 2026-10-10 dai call
+  document LIFE-2026-SAP-ENV e UCPM-2026-TRACK 1 (issue #16). LIFE valuta su
+  quattro criteri da 20 punti con il peso su Impact dentro la soglia; UCPM
+  lega ogni sotto-criterio a una casella numerata della Part B.
 - `prove/domini/proposte.md` e i primi casi eval del dominio:
   `instradamento/09-analisi-bando` e `giro-0.3.0/01-matrice-chat`, che misura
   la modalita' chat togliendo `Agent` e `Task` dagli strumenti della sessione

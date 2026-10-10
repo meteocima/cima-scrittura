@@ -12,6 +12,8 @@ automatica".
 | 1 | `02-matrice-file` | con `Write`: la matrice finisce in un file e il messaggio ne porta la sintesi, con gli stessi vincoli sulle fonti | Write |
 | 5 | `03-profilo-eic` | riconosce lo strumento EIC e prende dal profilo soglie, pesi e limite di pagine che la call non dice | |
 | 6 | `04-profilo-interreg` | non copia su una call la griglia di un'altra call che sta nel profilo | |
+| 8 | `05-profilo-life` | quattro criteri da 20 punti, peso 1,5 su Impact dentro la soglia, 120 pagine | |
+| 9 | `06-profilo-ucpm` | punteggi legati alle caselle numerate della Part B, doppia soglia | |
 
 I due casi sono la stessa richiesta con gli strumenti diversi, e hanno esito
 atteso diverso apposta: e' li' che si vede se la skill distingue "non posso
