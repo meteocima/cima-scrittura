@@ -86,7 +86,9 @@ Il testo non è stato scritto in questa conversazione, quindi la revisione
 nel contesto principale non ha il pregiudizio dell'autore. Il revisore
 separato si usa **solo** quando l'utente lo chiede ("fallo controllare da
 qualcuno che non ha visto la conversazione", "secondo parere",
-"revisione indipendente"), tipicamente dopo una riscrittura.
+"revisione indipendente"), tipicamente dopo una riscrittura. Senza
+questa richiesta le due sezioni seguenti non si applicano: si consegna
+il rapporto o il testo rivisto e basta.
 
 ## Modalità agenti
 
@@ -103,7 +105,8 @@ Strumento per lanciare subagent disponibile (`Agent` o `Task`):
    `references/checklist.md` e dei file in `references/nucleo/`
    (vincoli, anti-pattern-ai, voce-e-lingua, terminologia,
    protocollo-revisione); formato (sezione 5 del protocollo, senza
-   punteggi); percorso del rapporto `revisione/rapporto-[tipo].md`.
+   punteggi); lingua del rapporto (quella in cui scrive l'utente,
+   `voce-e-lingua.md`); percorso del rapporto `revisione/rapporto-[tipo].md`.
    Niente riassunti della conversazione o spiegazioni delle modifiche
    fatte.
 4. Presentare il rapporto all'utente e proporre le correzioni, senza
@@ -122,8 +125,10 @@ Strumento per lanciare subagent non disponibile:
    fatta vale come parere non condizionato e va detto in una riga.
 2. Stesso formato del revisore (sezione 5 del protocollo, senza
    punteggi).
-3. Offrire il pacchetto revisore (sezione 4b del protocollo) in un unico
-   blocco da copiare in una conversazione nuova. Si può citare Cowork una
+3. Se il testo è una riscrittura fatta in questa conversazione, offrire
+   il pacchetto revisore (sezione 4b del protocollo) in un unico blocco
+   da copiare in una conversazione nuova; per il testo originale
+   offrirlo solo se l'utente insiste. Si può citare Cowork una
    sola volta, come modo per avere una revisione indipendente.
 
 Consegnare comunque il risultato completo, senza chiedere all'utente di

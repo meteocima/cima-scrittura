@@ -107,6 +107,7 @@ Strumento per lanciare subagent disponibile (`Agent` o `Task`):
    - [base]/references/nucleo/terminologia.md
    - [base]/references/nucleo/protocollo-revisione.md
    Formato: protocollo-revisione.md, sezione 5, senza punteggi.
+   Lingua del rapporto: [lingua in cui scrive l'utente]
    Rapporto da scrivere in: [cartella di lavoro]/revisione/rapporto-[tipo].md
    ```
 
@@ -129,7 +130,7 @@ Strumento per lanciare subagent non disponibile:
    partendo dalle debolezze.
 2. Aprire il rapporto con la riga di `protocollo-revisione.md`, sezione 4a.
 3. Usare lo stesso formato del revisore (sezione 5 del protocollo, senza
-   punteggi). Per testi brevi basta la tabella dei problemi.
+   punteggi), nella lingua in cui scrive l'utente. Per testi brevi basta la tabella dei problemi.
 4. Applicare le correzioni come al punto 5 della modalità agenti e
    consegnare il testo finale completo.
 5. Per comunicati, lettere ufficiali e testi web pubblici offrire in fondo

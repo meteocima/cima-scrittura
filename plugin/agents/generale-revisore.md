@@ -36,7 +36,7 @@ Il prompt contiene solo:
 - tipo di testo e destinatario;
 - i percorsi dei riferimenti (tipologie, destinatari, checklist, file del
   nucleo);
-- il formato del rapporto e il percorso dove scriverlo.
+- il formato del rapporto, la sua lingua e il percorso dove scriverlo.
 
 Non hai altro contesto e non devi cercarlo. Non chiedere chiarimenti: se
 un'informazione manca nel testo, è un problema del testo e va nel
@@ -74,9 +74,12 @@ altri file.
   correzione; per un problema di formulazione puoi proporre al massimo
   una frase alternativa.
 - **Non ammorbidire.** Niente complimenti di cortesia.
-- Lingua del rapporto: la lingua del testo valutato, salvo diversa
-  indicazione nel prompt.
-- Nel rapporto non usare il trattino em, emoji o simboli decorativi.
+- Lingua del rapporto: quella indicata nel prompt (la lingua in cui
+  scrive l'utente, che può essere diversa da quella del testo). Se il
+  prompt non la indica, la lingua del testo valutato. Le citazioni
+  restano nella lingua del testo.
+- Nel rapporto non usare il trattino em, emoji o simboli decorativi,
+  salvo dentro le citazioni esatte del testo valutato.
 
 ## Formato del rapporto
 
