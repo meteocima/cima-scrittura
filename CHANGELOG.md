@@ -91,7 +91,10 @@ restano come memoria dei due giri di prova.
   un file (issue #7) sono state eseguite dentro questo rilascio.
 - Dodici delle quattordici righe manuali del giro 0.3.0 diventano casi eval
   (`giro-0.3.0/14` - `25`), con quattro materiali finti nuovi e la versione
-  PDF dell'ESR finto; verdi tutti e dodici. Restano a mano la 2b e la 29.
+  PDF dell'ESR finto; verdi tutti e dodici. Le due righe rimaste a mano:
+  la 2b passa in claude.ai con Sonnet; la 29 passa in Cowork con Opus e non
+  con Sonnet, che li' non attiva nessuna skill mentre in Claude Code le
+  attiva venti volte su venti (issue #35).
 - `prove/README.md`: i casi `senza-file` si lanciano a parte, senza
   concedere `Write`, perche' la concessione sulla riga di comando scavalca la
   lista `allowed_tools` del caso.

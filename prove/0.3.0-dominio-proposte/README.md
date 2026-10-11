@@ -24,9 +24,9 @@ Skill `proposte-analisi-bando`, file condivisi `matrice-bando.md` e
 |---|---|---|---|---|
 | 1 | agenti | "Analizza questo topic" + `materiali/topic-finto.md` | Si attiva `proposte-analisi-bando`. Matrice salvata in un file della cartella di lavoro; nel messaggio la sintesi con gli scavalcamenti, i requisiti obbligatori e le voci `[da bando]`. Soglia Impact 4 e limite 30 pagine presi dal topic. Pesi non dichiarati dal topic: marcati come profilo, mai inventati | **Passa**, misurato in cieco il 2026-10-10 dal caso `giro-0.3.0/02-matrice-file` (punteggio 1.00, tre grader su tre). La matrice e' finita in un file, la sintesi nel messaggio, la soglia 4 e le 30 pagine vengono dal topic con lo scavalcamento dichiarato |
 | 2 | chat | Stesso prompt, senza strumento per i subagent e senza possibilita' di salvare file | Stessa matrice **per intero nel messaggio**; nessuna richiesta di cambiare ambiente; consegna completa | **Passa**, misurato in cieco il 2026-10-10 dal caso `giro-0.3.0/01-matrice-chat` (punteggio 1.00, quattro grader su quattro). La sessione dichiara in una riga che non puo' salvare file e consegna la matrice intera |
-| 2b | chat | Stesso prompt con lo zip della skill caricato in una conversazione claude.ai, allegando il topic invece di metterlo su disco | Come la riga 2, piu': il topic allegato viene letto senza chiedere di incollarlo | Da fare a mano. Il caso automatico misura la consegna senza subagent, non come il materiale arriva in una conversazione vera |
-| 3 | agenti | "Su che cosa saremo valutati per il topic HORIZON-CL3-2026-DRS-01-99?" senza allegare il testo | Si attiva la skill, che chiede il testo del topic in un messaggio solo e intanto costruisce la matrice dal solo profilo, con ogni riga marcata `[profilo]` | Da fare a mano |
-| 4 | agenti | "Analizza questo topic" + un topic di un programma senza profilo (per esempio un bando LIFE) | Costruisce la matrice dal solo testo del topic e dichiara in una riga che le regole generali del programma non sono state applicate, come prevede `nucleo/vincoli.md` sezione 4 | Da fare a mano |
+| 2b | chat | Stesso prompt con lo zip della skill caricato in una conversazione claude.ai, allegando il topic invece di metterlo su disco | Come la riga 2, piu': il topic allegato viene letto senza chiedere di incollarlo | **Passa** (2026-10-11, claude.ai con Sonnet, `esiti-chat/riga-2b/`). Il topic allegato viene letto senza chiedere di incollarlo. La matrice finisce in un file e il messaggio ne porta la sintesi, invece della matrice intera nel messaggio: l'esito atteso era copiato dalla riga 2, che suppone di non poter salvare file, mentre claude.ai i file li crea, e la skill lega il file a questo e non alla modalita'. Vale quindi la consegna della riga 1, ed e' quella. Soglia di Impact 4 e 30 pagine dal topic con lo scavalcamento dichiarato, outcome alla lettera, fonte su ogni riga, nessun numero inventato, General Annexes dichiarate non lette. Minore: la fase resta `[da bando]` benche' una scadenza sola indichi una procedura in una fase |
+| 3 | agenti | "Su che cosa saremo valutati per il topic HORIZON-CL3-2026-DRS-01-99?" senza allegare il testo | Si attiva la skill, che chiede il testo del topic in un messaggio solo e intanto costruisce la matrice dal solo profilo, con ogni riga marcata `[profilo]` | **Passa**, misurato in cieco il 2026-10-11 dal caso `giro-0.3.0/14-topic-senza-testo` (1.00): matrice dal profilo marcata come tale, testo del topic chiesto, nessun outcome inventato. Eseguito con `Write` concesso, che scavalca la lista del caso (vedi `prove/README.md`): il comportamento misurato non dipende dal file |
+| 4 | agenti | "Analizza questo bando" + `materiali/bando-regionale-finto.md`, di un programma senza profilo (la riga diceva "per esempio un bando LIFE", ma LIFE ha il profilo dalla issue #16) | Costruisce la matrice dal solo testo del topic e dichiara in una riga che le regole generali del programma non sono state applicate, come prevede `nucleo/vincoli.md` sezione 4 | **Passa**, misurato in cieco il 2026-10-11 dal caso `giro-0.3.0/15-bando-senza-profilo` (1.00): criteri 40/35/25 e soglia 60 dal bando, assenza del profilo dichiarata, nessuna regola di Horizon Europe importata. Eseguito con `Write` concesso, che scavalca la lista del caso (vedi `prove/README.md`): il comportamento misurato non dipende dal file |
 
 ### Misurato in automatico
 
@@ -70,7 +70,7 @@ sta nel profilo ma nelle **Terms of Reference della call**.
 |---|---|---|---|---|
 | 5 | chat | "Analizza questa call" + `materiali/call-eic-finta.md`, che non dice criteri ne' soglie | Riconosce lo strumento (Pathfinder Open) e prende dal profilo soglie 4 / 3,5 / 3, pesi 50 / 30 / 20 e limite di 22 pagine, marcati come profilo. Se escono le soglie generali di Horizon Europe, ha caricato il profilo sbagliato | **Passa**, misurato in cieco il 2026-10-10 dal caso `giro-0.3.0/03-profilo-eic` (1.00, due grader su due piu' l'attivazione) |
 | 6 | chat | "Analizza questa call" + `materiali/call-interreg-finta.md`, che rimanda agli allegati delle ToRs | Non copia la griglia dell'altra call che sta nel profilo: criteri, pesi e soglia restano `[da bando]`, con detto che stanno nell'Annex III delle ToRs, e chiede quei documenti. Le due condizioni di partecipazione finiscono fra i requisiti di eleggibilita' | **Passa**, misurato in cieco il 2026-10-10 dal caso `giro-0.3.0/04-profilo-interreg` (1.00, due grader su due piu' l'attivazione). La consegna nomina la griglia di EURO-MED06 e dichiara di non applicarla perche' e' di un'altra call e di un altro tipo di progetto |
-| 7 | agenti | "Analizza questa call" + `materiali/call-eic-finta.md` senza dire lo strumento, con il testo che non lo rende ovvio | Chiede quale strumento EIC, invece di applicare il profilo a caso | Da fare a mano |
+| 7 | agenti | "Analizza questa call" + `materiali/call-eic-finta.md` senza dire lo strumento, con il testo che non lo rende ovvio | Chiede quale strumento EIC, invece di applicare il profilo a caso | **Passa**, misurato in cieco il 2026-10-11 dal caso `giro-0.3.0/16-eic-strumento-ignoto` (1.00): chiede lo strumento invece di applicare un profilo a caso. Eseguito con `Write` concesso, che scavalca la lista del caso (vedi `prove/README.md`): il comportamento misurato non dipende dal file |
 
 ### Misurato in automatico
 
@@ -90,7 +90,7 @@ sotto-criterio a una **casella numerata** della Part B con i suoi punti.
 |---|---|---|---|---|
 | 8 | chat | "Analizza questa call" + `materiali/call-life-finta.md`, che non dice criteri ne' soglie | Quattro criteri 0-20, soglia 10 per criterio e 55 complessiva, peso 1,5 su Impact con la soglia calcolata dopo la pesatura, limite di 120 pagine | **Passa**, misurato in cieco il 2026-10-10 dal caso `giro-0.3.0/05-profilo-life` (1.00) |
 | 9 | chat | "Analizza questa call" + `materiali/call-ucpm-finta.md` | Relevance 40, Quality 30, Impact 30 su 100, soglie 20/15/15 piu' la complessiva 65 come doppia condizione, sotto-criteri legati alle caselle della Part B, limite di 50 pagine | **Passa**, misurato in cieco il 2026-10-10 dal caso `giro-0.3.0/06-profilo-ucpm` (1.00) |
-| 10 | agenti | "Analizza questa call" + una call LIFE in due fasi | Riconosce che alla prima fase si invia una concept note e che alcune sezioni non si compilano, invece di chiedere la proposta intera | Da fare a mano |
+| 10 | agenti | "Analizza questa call" + una call LIFE in due fasi | Riconosce che alla prima fase si invia una concept note e che alcune sezioni non si compilano, invece di chiedere la proposta intera | **Passa**, misurato in cieco il 2026-10-11 dal caso `giro-0.3.0/17-life-due-fasi` (1.00), con `materiali/call-life-due-fasi-finta.md`. Eseguito con `Write` concesso, che scavalca la lista del caso (vedi `prove/README.md`): il comportamento misurato non dipende dal file |
 
 ### Misurato in automatico
 
@@ -107,7 +107,7 @@ Skill `proposte-scrittura` e file condiviso `anti-pattern-proposte.md`.
 |---|---|---|---|---|
 | 11 | chat | "Scrivi la sezione Impact della proposta per questo topic" + `materiali/topic-finto.md`, senza dare partner ne' numeri | Testo completo della sezione, con ogni dato mancante a segnaposto e l'elenco dei segnaposto in fondo. KPI con baseline o segnaposto al posto della baseline. Almeno un expected outcome richiamato alla lettera | **Passa**, misurato in cieco il 2026-10-10 dal caso `giro-0.3.0/07-impact-chat` (1.00) |
 | 12 | agenti | Stesso prompt piu' `materiali/modulo-parte-b-finto.md` | Il testo torna **dentro** il file del modulo: sezioni e numerazione intatte, comprese quelle non richieste, tabella 2.3 compilata con segnaposto invece che cancellata | **Passa**, misurato in cieco il 2026-10-10 dal caso `giro-0.3.0/08-impact-modulo` (1.00). Controllato anche il file prodotto, non solo la risposta: 219 righe, intestazioni e sezione 3 intatte, 102 segnaposto, outcomes del bando copiati alla lettera nella tabella |
-| 13 | agenti | "Scrivi la sezione Impact" con il budget gia' deciso dall'utente e la richiesta di calcolare i mesi-persona | Dice in una riga che il budget come numeri e' fuori ambito e scrive la narrativa | Da fare a mano |
+| 13 | agenti | "Scrivi la sezione Impact" con il budget gia' deciso dall'utente e la richiesta di calcolare i mesi-persona | Dice in una riga che il budget come numeri e' fuori ambito e scrive la narrativa | **Passa**, misurato in cieco il 2026-10-11 dal caso `giro-0.3.0/18-impact-budget` (1.00): mesi-persona dichiarati fuori ambito, nessuno calcolato, sezione scritta. Eseguito con `Write` concesso, che scavalca la lista del caso (vedi `prove/README.md`): il comportamento misurato non dipende dal file |
 
 ### Misurato in automatico
 
@@ -124,7 +124,7 @@ Skill `proposte-concept`.
 |---|---|---|---|---|
 | 14 | chat | Un'idea in due righe piu' `materiali/topic-finto.md`, senza partner ne' numeri | Concept con i quattro blocchi (problema, approccio, consorzio, impatto), partner mancanti come ruoli a segnaposto, tabella di copertura dei criteri del bando, e in fondo che cosa manca per diventare una proposta | **Passa**, misurato in cieco il 2026-10-10 dal caso `giro-0.3.0/09-concept-chat` (1.00) |
 | 15 | agenti | "Prima di buttarci, mi serve un concept da mandare ai partner per questo bando" | Si attiva `proposte-concept`, non `proposte-scrittura` | **Passa**, misurato dal caso `instradamento/10-concept` (1.00) |
-| 16 | agenti | "Scrivi la concept note per la prima fase di questa call in due fasi" | Passa la mano a `proposte-scrittura`: quella concept note e' un testo che il programma valuta con la sua griglia, non uno strumento di lavoro del consorzio | Da fare a mano |
+| 16 | agenti | "Scrivi la concept note per la prima fase di questa call in due fasi" | Passa la mano a `proposte-scrittura`: quella concept note e' un testo che il programma valuta con la sua griglia, non uno strumento di lavoro del consorzio | **Passa**, misurato in cieco il 2026-10-11 dal caso `giro-0.3.0/19-concept-note-due-fasi` (1.00): si attiva `proposte-scrittura` e la concept note e' trattata come testo da consegnare. Eseguito con `Write` concesso, che scavalca la lista del caso (vedi `prove/README.md`): il comportamento misurato non dipende dal file |
 
 ### Misurato in automatico
 
@@ -143,8 +143,8 @@ Skill `proposte-revisione`, agenti `proposte-valutatore` e
 |---|---|---|---|---|
 | 17 | agenti | "Fammi una valutazione simulata di questa proposta" + `materiali/proposta-finta.md` e `materiali/topic-finto.md` | Tre `proposte-valutatore` lanciati in parallelo e poi il `proposte-rapporteur`. Punteggi con la scala, verdetto sulle soglie con la soglia di Impact a 4 presa dal topic, divergenze senza media, correzioni per impatto | **Passa**, misurato in cieco il 2026-10-10 dal caso `giro-0.3.0/10-valutazione-agenti` (1.00). Verificato nella traccia anche il contenuto dei prompt ai valutatori: percorsi, profilo e griglia, nessun riassunto della conversazione, nessuna intenzione di chi ha scritto, nessun punteggio atteso |
 | 18 | senza file | Stesso prompt, senza poter salvare file | Consegna completa nel messaggio, dichiarazione veritiera di quanto e' indipendente, stessi punteggi e soglie | **Passa in parte.** Difetti trovati e punteggi: verdi, tre volte su tre. Consegna: instabile, perche' in due esecuzioni su tre la sessione ha lanciato comunque i valutatori e poi ha **offerto** i tre rapporti invece di consegnarli. Corretta la skill; la domanda piu' grossa, se il nucleo debba ammettere gli agenti senza file, e' la issue #29 |
-| 19 | agenti | Valutazione di una proposta senza fornire il bando | Nessun punteggio: la consegna dice che senza griglia reale non si danno numeri, ed elenca che cosa servirebbe | Da fare a mano |
-| 20 | agenti | Valutazione di una proposta fatta quasi tutta di segnaposto | Nessun punteggio, e i problemi che gia' si vedono segnalati lo stesso | Da fare a mano |
+| 19 | agenti | Valutazione di una proposta senza fornire il bando | Nessun punteggio: la consegna dice che senza griglia reale non si danno numeri, ed elenca che cosa servirebbe | **Passa**, misurato in cieco il 2026-10-11 dal caso `giro-0.3.0/20-valutazione-senza-bando` (1.00): nessun punteggio dato come certo, detto che serve il topic, problemi segnalati. |
+| 20 | agenti | Valutazione di una proposta fatta quasi tutta di segnaposto | Nessun punteggio, e i problemi che gia' si vedono segnalati lo stesso | **Passa**, misurato in cieco il 2026-10-11 dal caso `giro-0.3.0/21-valutazione-segnaposto` (1.00), con `materiali/proposta-segnaposto-finta.md`: nessun punteggio, problemi gia' visibili segnalati. |
 
 ### Misurato in automatico
 
@@ -183,8 +183,8 @@ Skill `proposte-risposta-esr` e il suo `formato-risposta-esr.md`.
 | # | Ambiente | Prompt | Esito atteso | Esito reale |
 |---|---|---|---|---|
 | 21 | senza file | "Ci hanno bocciato. Rispondiamo all'ESR" + `materiali/esr-finto.md` e `materiali/proposta-finta.md` | Ogni rilievo dell'ESR ha la sua riga, con posizione e motivo; le modifiche non fatte sono dichiarate tali; una riga dice che a un ESR non si replica e che serve a rifare la proposta | **Passa**, due volte su due il 2026-10-10, dal caso `giro-0.3.0/12-risposta-esr` (1.00) |
-| 22 | agenti | Stesso prompt, con l'ESR in PDF | Legge il PDF senza chiedere di incollarlo, e nessuna frase dell'ESR finisce in una ricerca web | Da fare a mano |
-| 23 | agenti | "Contestiamo il punteggio" | Indirizza all'evaluation review dicendo che riguarda solo gli aspetti procedurali, non il merito | Da fare a mano |
+| 22 | agenti | Stesso prompt, con l'ESR in PDF | Legge il PDF senza chiedere di incollarlo, e nessuna frase dell'ESR finisce in una ricerca web | **Passa**, misurato in cieco il 2026-10-11 dal caso `giro-0.3.0/22-esr-pdf` (1.00, con `materiali/esr-finto.pdf`): PDF letto, nessuna ricerca web, rilievi coperti con due giudici su tre. Eseguito con `Write` concesso, che scavalca la lista del caso (vedi `prove/README.md`): il comportamento misurato non dipende dal file |
+| 23 | agenti | "Contestiamo il punteggio" | Indirizza all'evaluation review dicendo che riguarda solo gli aspetti procedurali, non il merito | **Passa**, misurato in cieco il 2026-10-11 dal caso `giro-0.3.0/23-contestare-punteggio` (1.00): evaluation review indicata come sola strada, solo procedurale. Eseguito con `Write` concesso, che scavalca la lista del caso (vedi `prove/README.md`): il comportamento misurato non dipende dal file |
 
 ### Misurato in automatico
 
@@ -199,8 +199,8 @@ Skill `proposte-coerenza` e agente `proposte-verificatore`.
 | # | Ambiente | Prompt | Esito atteso | Esito reale |
 |---|---|---|---|---|
 | 24 | agenti | "Consegniamo domani. Controlla la coerenza e se stiamo nei limiti" + `materiali/proposta-finta.md` e `materiali/topic-finto.md` | Lancia il `proposte-verificatore`. Incoerenze riportate **in coppia**, con tutti e due i passaggi; limite di 30 pagine preso dal bando e non dal profilo; nessun punteggio | **Passa**, due volte su due il 2026-10-10, dal caso `giro-0.3.0/13-coerenza` (1.00) |
-| 25 | senza file | Stesso prompt | Stesso rapporto nel messaggio, con dichiarato che il controllo non e' indipendente | Da fare a mano |
-| 26 | agenti | "Controlla la coerenza" senza fornire il bando | I limiti restano `[da bando]` e non vengono stimati; le incoerenze interne si cercano lo stesso | Da fare a mano |
+| 25 | senza file | Stesso prompt | Stesso rapporto nel messaggio, con dichiarato che il controllo non e' indipendente | **Passa**, misurato in cieco il 2026-10-11 dal caso `giro-0.3.0/24-coerenza-senza-file`, due volte su due senza `Write` concesso (1.00): verificatore lanciato con i file per percorso, rapporto intero nel messaggio, indipendenza dichiarata. La prima esecuzione, con `Write` concesso, aveva dato 0,67: la sessione salvava il rapporto e ci rimandava, ed e' cosi' che si e' scoperto che la concessione scavalca la lista del caso |
+| 26 | agenti | "Controlla la coerenza" senza fornire il bando | I limiti restano `[da bando]` e non vengono stimati; le incoerenze interne si cercano lo stesso | **Passa**, misurato in cieco il 2026-10-11 dal caso `giro-0.3.0/25-coerenza-senza-bando` (1.00, due giudici su tre sui limiti): limiti non stimati, verificatore lanciato, incoerenze trovate. |
 
 ### Misurato in automatico
 
@@ -216,7 +216,7 @@ Non una skill nuova: il giro che fa esistere il dominio per chi scrive.
 |---|---|---|---|---|
 | 27 | agenti | "Scrivi il work package 3" | Si attiva una skill (prima non se ne attivava nessuna, `adr/0020`): `progetti-scrittura` rivendica il mezzo ambiguo e fa la domanda sola sul Grant Agreement | **Passa**, due volte su due il 2026-10-10, dal caso `instradamento/01-work-package` |
 | 28 | agenti | "Draft the impact section" | Come sopra | **Passa**, due volte su due, dal caso `instradamento/06-impact-section` |
-| 29 | agenti | Stessa frase, e alla domanda si risponde "stiamo scrivendo una proposta" | `progetti-scrittura` passa la mano a `proposte-scrittura` invece di scrivere con i criteri mancanti | Da fare a mano: serve il secondo turno della conversazione |
+| 29 | agenti | Stessa frase, e alla domanda si risponde "stiamo scrivendo una proposta" | `progetti-scrittura` passa la mano a `proposte-scrittura` invece di scrivere con i criteri mancanti | **Passa con Opus, non passa con Sonnet** (2026-10-11, Cowork, `esiti-cowork/riga-29/`). Con Opus il primo turno fa la sola domanda sul Grant Agreement e, alla risposta, il secondo turno e' di `proposte-scrittura`: chiede bando o matrice e il file della Part B in un messaggio solo, promette segnaposto per il resto e dice che budget e mesi-persona non li calcola. Nel contesto della conversazione risultano caricate tutte e due, `progetti-scrittura` e poi `proposte-scrittura`. Con Sonnet, due conversazioni su due, al primo turno non si attiva nessuna skill e la risposta fa tre domande sue: il passaggio di mano non si puo' nemmeno provare. Non e' la descrizione ne' il modello da solo: lo stesso giorno i dieci casi di `instradamento/` con `--model sonnet` in Claude Code attivano la skill giusta venti volte su venti, `01-work-package` compreso (2,63 dollari). Il difetto sta nella combinazione Sonnet e Cowork, e da qui non si riproduce (issue #35) |
 
 ### Che cosa e' cambiato nei documenti
 
@@ -258,15 +258,40 @@ grader `llm` possa leggere la traccia. Una pista: nei risultati i grader `llm`
 hanno un campo `config.focus`, che vale `last_message`; se accetta `trace`,
 il controllo diventa automatico. Non verificato.
 
+## Righe manuali diventate casi automatici (2026-10-11)
+
+Dodici delle quattordici righe manuali si potevano misurare in cieco, e sono
+diventate i casi da `14` a `25` di `prove/evals/giro-0.3.0/`. Servivano
+quattro materiali nuovi: `call-eic-ambigua-finta.md`,
+`call-life-due-fasi-finta.md`, `bando-regionale-finto.md`,
+`proposta-segnaposto-finta.md`, piu' `esr-finto.pdf` ricavato da
+`esr-finto.md`.
+
+| Giro | Esito | Costo |
+|---|---|---|
+| dodici casi, `--runs 1`, `Write` concesso | undici a 1.00, il `24` a 0,67 | 10,05 dollari |
+| `24` due volte, `Write` concesso, tracce conservate | 0,67 tutte e due | 1,95 dollari |
+| `24` due volte, senza `Write` | 1.00 tutte e due | 1,51 dollari |
+
+Il `24` non aveva trovato un difetto della skill ma della suite: la
+concessione `--allow-tools Write` sulla riga di comando scavalca la lista
+`allowed_tools` del caso, e nelle tracce la sessione principale salvava
+matrice e proposta in `coerenza/` e rimandava al rapporto salvato, che per una
+sessione con i file e' la consegna giusta. Senza la concessione il rapporto
+arriva intero nel messaggio. `prove/README.md` ora dice di lanciare i casi
+`senza-file` a parte.
+
+Restano manuali la 2b (allegato in una conversazione claude.ai con lo zip) e
+la 29 (secondo turno scritto da chi prova, che l'eval non sa simulare).
+
 ## Esito
 
 **Il giro non e' finito.** Le sei skill e i tre agenti del dominio sono
-scritti e misurati in cieco, ma la 0.3.0 non si rilascia finche' non sono
-state fatte le righe manuali: sono quelle dove conta come il risultato arriva
-davvero a chi legge, e un caso automatico non le vede.
-
-Da fare prima del rilascio: le righe manuali di ciascuna sezione qui sopra
-(2b, 3, 4, 7, 10, 13, 16, 19, 20, 22, 23, 25, 26, 29).
+scritti e misurati in cieco. Prima del rilascio resta una riga da fare a
+mano. La 2b e' passata il 2026-10-11 in claude.ai con Sonnet. La 29 passa in
+Cowork con Opus e non con Sonnet, che al primo turno non attiva nessuna
+skill: in Claude Code Sonnet le attiva tutte, quindi il difetto sta nella
+combinazione Sonnet e Cowork, da indagare nell'app (issue #35).
 
 Le righe in modalita' chat del giro 0.2.0 che producono un file (3, 5, 8, 11
 e 13, issue #7) sono state eseguite il 2026-10-11: passano tutte, la 13 con
@@ -274,34 +299,34 @@ una riserva che l'`adr/0022` ha reso conforme. Esiti in
 `prove/0.2.0-file-e-presentazioni/`. Le righe agenti da rifare sulla rc2
 (issue #6) sono state lasciate cadere lo stesso giorno.
 
-Analisi del bando (#12): chiusa il 2026-10-10. Tre casi automatici verdi, tre
-righe manuali ancora da fare (2b, 3, 4).
+Analisi del bando (#12): chiusa il 2026-10-10. Cinque casi automatici verdi,
+e la riga manuale 2b passata.
 
-Profili EIC e Interreg (#15): chiusa il 2026-10-10. Due casi automatici verdi,
-una riga manuale da fare (7).
+Profili EIC e Interreg (#15): chiusa il 2026-10-10. Tre casi automatici verdi.
 
-Profili LIFE e UCPM/ECHO (#16): chiusa il 2026-10-10. Due casi automatici
-verdi, una riga manuale da fare (10).
+Profili LIFE e UCPM/ECHO (#16): chiusa il 2026-10-10. Tre casi automatici
+verdi.
 
-Scrittura della proposta (#14): chiusa il 2026-10-10. Due casi automatici
-verdi, una riga manuale da fare (13).
+Scrittura della proposta (#14): chiusa il 2026-10-10. Tre casi automatici
+verdi.
 
-Concept (#13): chiusa il 2026-10-10. Due casi automatici verdi, una riga
-manuale da fare (16).
+Concept (#13): chiusa il 2026-10-10. Tre casi automatici verdi.
 
 Il dominio prende le sue richieste (#20): chiusa il 2026-10-10. Le due frasi
-ambigue dell'`adr/0020` ora attivano una skill, due volte su due.
+ambigue dell'`adr/0020` ora attivano una skill, due volte su due, anche con
+Sonnet in Claude Code. La riga 29 passa con Opus in Cowork, non con Sonnet.
 
-Coerenza e limiti (#19): chiusa il 2026-10-10. Un caso automatico verde due
-volte su due, due righe manuali da fare (25, 26).
+Coerenza e limiti (#19): chiusa il 2026-10-10. Tre casi automatici verdi.
 
-Risposta all'ESR (#18): chiusa il 2026-10-10. Un caso automatico verde due
-volte su due, due righe manuali da fare (22, 23).
+Risposta all'ESR (#18): chiusa il 2026-10-10. Tre casi automatici verdi.
 
 Valutazione simulata (#17): chiusa il 2026-10-10. Il caso con i file e' verde,
 quello senza file e' verde su difetti e punteggi e instabile sulla consegna
-(issue #29). Due righe manuali da fare (19, 20).
+(issue #29); verdi anche i due casi senza bando e su proposta di segnaposto.
 
 Senza file (#29): decisa il 2026-10-11 con l'`adr/0021`. Il caso 11 verde due
 volte su due con il grader piu' severo; un residuo sul rapporteur annotato
-sopra.
+sopra. Da verificare se il caso 11 e' stato eseguito con `Write` concesso:
+la traccia controllata a mano dice che la matrice e' passata nel prompt, cioe'
+che la sessione non l'ha salvata, ma il comando documentato allora concedeva
+`Write` a tutta la suite.
