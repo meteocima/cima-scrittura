@@ -23,10 +23,10 @@ Livello di revisione: standard.
   `build.py` li copia in `references/` di tutte e tre le skill `paper-*`.
   Nessuna copia nel sorgente delle skill.
 - `conferenze.md` serve solo a `paper-scrittura` e resta nella skill.
-- Lacune note: le guide delle singole riviste Elsevier (sciencedirect.com)
-  e RMetS (rmets.onlinelibrary.wiley.com) non erano leggibili dagli
-  strumenti di ricerca; quei profili hanno molte voci `[da verificare]`.
-  Si completano aprendo le guide da un browser o incollandone il testo.
+- Le guide Elsevier (sciencedirect.com) e RMetS
+  (rmets.onlinelibrary.wiley.com) non si lasciano leggere dagli strumenti
+  di ricerca: i due profili sono stati completati il 2026-10-11 aprendo le
+  guide da un browser (issue #10). Per aggiornarli si fa lo stesso.
 - Aggiornare un profilo: modificare il file in `plugin/condivisi/paper/`
   e la sua data di verifica.
 

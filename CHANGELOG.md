@@ -78,6 +78,14 @@ restano come memoria dei due giri di prova.
   arrivare nel prompt e che senza percorso di uscita il rapporto e' la
   risposta. `proposte-revisione` e `proposte-coerenza` rinviano al nucleo;
   la riga sulla consegna completa dei rapporti passa nel nucleo.
+- Profili `rivista-elsevier.md` e `rivista-rmets.md` completati (issue #10):
+  le guide delle sei riviste Elsevier e delle quattro RMetS, che gli
+  strumenti di ricerca non aprivano, sono state lette da un browser il
+  2026-10-11. Le circa 70 voci `[da verificare]` diventano regole con fonte:
+  limiti di parole, abstract, highlights, graphical abstract, stile dei
+  riferimenti, livello della data policy, CRediT, testo della dichiarazione
+  sull'AI, tipo di peer review e APC. Restano aperti solo i punti che le
+  guide non trattano. ADR 0013 registra la lacuna chiusa.
 - `plugin.json`: versione 0.3.0. Le righe del giro 0.2.0 non ancora eseguite
   (issue #6 e #7) restano valide e si chiudono dentro questo rilascio.
 

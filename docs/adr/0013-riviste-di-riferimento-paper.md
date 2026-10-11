@@ -16,6 +16,10 @@ Due conseguenze registrate insieme ai profili:
 
 - Elsevier e RMetS hanno guide non leggibili dagli strumenti di ricerca, e i
   loro profili hanno molte voci `[da verificare]` da completare a mano.
+  Lacuna chiusa il 2026-10-11 (issue #10): le guide delle sei riviste
+  Elsevier e delle quattro RMetS, lette da un browser, hanno riempito i due
+  profili. Restano solo i punti che le guide non trattano (cover letter,
+  revisori suggeriti, tempi), elencati in fondo a ciascun profilo.
 - Copernicus/EGU vieta l'AI generativa per il testo e le interpretazioni. Per
   quelle riviste le skill di scrittura e di risposta ai revisori si limitano a
   interventi assistivi, controlli e schemi.

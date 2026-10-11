@@ -9,164 +9,183 @@
 > all'utente.
 
 
-Data di verifica: 2026-10-10
+Data di verifica: 2026-10-11
 
 Fonti principali:
-- https://www.rmets.org/publications/journals (elenco riviste RMetS)
-- https://www.rmets.org/publication/quarterly-journal
-- https://www.rmets.org/international-journal-of-climatology
-- https://www.rmets.org/publication/meteorological-applications
-- https://www.rmets.org/atmospheric-science-letters
+- Author guidelines delle quattro riviste, lette per intero da browser il 2026-10-11:
+  - QJRMS: https://rmets.onlinelibrary.wiley.com/hub/journal/1477870x/about/author-guidelines
+  - International Journal of Climatology: https://rmets.onlinelibrary.wiley.com/hub/journal/10970088/about/author-guidelines
+  - Meteorological Applications: https://rmets.onlinelibrary.wiley.com/hub/journal/14698080/about/author-guidelines
+  - Atmospheric Science Letters: https://rmets.onlinelibrary.wiley.com/hub/journal/1530261x/about/author-guidelines
+- https://rmets.onlinelibrary.wiley.com/hub/ai-policy (RMetS policy on the use of AI)
+- https://rmets.onlinelibrary.wiley.com/pb-assets/hub-assets/rmets/Policy_on_availability_of_data-1508421522713.pdf (RMetS policy on the availability of data, PDF di tre pagine, senza data nel testo)
+- Listini APC Wiley aggiornati al 2 settembre 2026, da https://authors.wiley.com/author-resources/Journal-Authors/open-access/article-publication-charges.html (Open Access Journal Price List e Hybrid OA Price List)
+- https://www.rmets.org/publications/journals e pagine rivista su rmets.org (ambiti)
 - https://authors.wiley.com/author-resources/Journal-Authors/open-access/data-sharing-citation/data-sharing-policy.html (Wiley data sharing policy)
 - https://authors.wiley.com/author-resources/Journal-Authors/open-access/credit.html (Wiley CRediT)
-- https://authors.wiley.com/ethics-guidelines/index.html (Wiley research integrity: authorship, COI, funding, AI, etica; il contenuto servito corrisponde a https://www.wiley.com/en-us/publishing/article/research-integrity)
+- https://authors.wiley.com/ethics-guidelines/index.html (Wiley research integrity)
 
-Avvertenza sulla verifica: le author guidelines delle singole riviste su rmets.onlinelibrary.wiley.com (URL sotto) NON sono state lette. WebFetch restituisce errore, l'accesso via proxy è rifiutato e il browser si ferma sulla verifica anti-bot di Cloudflare (non aggirata). Tutto ciò che dipende da quelle pagine (limiti di parole, struttura, stile dei riferimenti, lingua, cover letter, tipo di data policy adottata da ciascuna rivista) è marcato `[da verificare]`. Prima di usare questo profilo su un manoscritto reale, aprire manualmente le guide e completare i segnaposto.
-
-Guide ufficiali delle riviste (URL individuati via ricerca, contenuto non letto):
-- QJRMS: https://rmets.onlinelibrary.wiley.com/hub/journal/1477870x/about/author-guidelines (oppure .../homepage/forauthors.html)
-- International Journal of Climatology: https://rmets.onlinelibrary.wiley.com/hub/journal/10970088/about/author-guidelines
-- Meteorological Applications: https://rmets.onlinelibrary.wiley.com/hub/journal/14698080/about/author-guidelines `[da verificare: URL dedotto dallo schema, non confermato]`
-- Atmospheric Science Letters: https://rmets.onlinelibrary.wiley.com/hub/journal/1530261x/about/author-guidelines
+Nota per Claude: le quattro guide condividono quasi tutto il testo (stesso modello RMetS). Le regole comuni qui sotto valgono per tutte e quattro, salvo dove la sezione della rivista dice altro. Le guide contengono qualche frase copiata da un'altra rivista o da un altro tipo di articolo (segnalata nel punto in cui compare): in quei casi vale il senso della regola, e nel dubbio si chiede all'autore di controllare la guida.
 
 ## Regole comuni dell'editore
 
 ### Tipi di articolo
-Fonte: pagine rivista su rmets.org (sopra).
-- Le pagine RMetS citano: "research papers", "major reviews of progress", "featured reports" (IJOC); "research and review articles" (Meteorological Applications); "shorter contributions" (ASL). Per QJRMS nessun tipo elencato.
-- Elenco completo e definizioni per rivista: `[da verificare: author guidelines Wiley non accessibili]`
+Fonte: author guidelines delle quattro riviste.
+- Research Article e Review Article in QJRMS, IJOC e Meteorological Applications; Research Articles e Perspectives in ASL. Tutte accettano Special Issue Articles su proposta. IJOC e Meteorological Applications pubblicano anche Editorial (circa 1500 parole). Limiti e dettagli nella sezione di ciascuna rivista.
+- Gli editor possono trasferire il manoscritto a un'altra rivista RMetS se lo ritengono più adatto ("transfer without prejudice"); Meteorological Applications partecipa anche al Refer & Transfer di Wiley.
 
 ### Struttura e sezioni obbligatorie
-Fonte: https://authors.wiley.com/ethics-guidelines/index.html ; https://authors.wiley.com/author-resources/Journal-Authors/open-access/credit.html ; https://authors.wiley.com/author-resources/Journal-Authors/open-access/data-sharing-citation/data-sharing-policy.html
-- Sezioni richieste dalle policy Wiley trasversali: sezione dedicata ai finanziamenti ("Authors must list all funding sources in their manuscript within a dedicated funding section."), Data Availability Statement, Author Contribution (per le riviste che adottano CRediT).
-- Ordine delle sezioni, title page, sezioni IMRaD, formato del file: `[da verificare: author guidelines non accessibili; la pagina Wiley Manuscript Preparation Guidelines ha restituito solo metadati]`
+Fonte: author guidelines delle quattro riviste.
+- Solo inglese. "Free Format Submission": alla prima sottomissione il formato è libero; ASL chiede il formato della rivista in revisione.
+- File principale in MS Word o RTF (IJOC, Meteorological Applications, ASL). Con LaTeX: PDF combinato come documento principale e file LaTeX come "Supplementary material not for review" (QJRMS, IJOC, ASL; QJRMS chiede il PDF con numeri di riga). Meteorological Applications usa invece le designazioni "Main Document – LaTeX .tex File", "Main Document - LaTeX PDF" e "LaTeX Supplementary File", e raccomanda il template Wiley NJD.
+- Title page: titolo breve con le parole chiave principali e senza abbreviazioni; running title sotto i 70 caratteri; nomi completi, affiliazioni ed email di tutti gli autori.
+- Corpo (IJOC, ASL): Introduction, Methods, Results, Discussion e/o Conclusion.
+- Dopo il corpo, nell'ordine indicato: Acknowledgments; Funding (sponsor e numeri di grant, nomi verificati sull'Open Funder Registry); Conflict of Interest statement; Permission to reproduce material from other sources; Authors' contributions; Data availability statement; References.
+- Supporting Information: numerata Figure S1, Table S1, Video S1, Appendix S1; un paragrafo intitolato "Supporting information" prima dei riferimenti con i titoli brevi del materiale; citata nel testo.
+- Graphical abstract **obbligatorio** in tutte e quattro per Research Articles, Review Articles e Special Issue Articles: titolo, autori con asterisco sul corresponding author, non più di 80 parole o 3 frasi sui risultati principali, una figura leggibile in 50 mm × 60 mm. Se manca la figura si usa la Figura 1. In Meteorological Applications, revisione double-blind, il graphical abstract NON deve contenere nomi o affiliazioni.
+- Figure: per la revisione va bene qualunque formato leggibile, mai lettering a mano. Colori accessibili ai daltonici: evitare rosso/verde (convertirlo in verde/magenta) e i colori superflui.
+- Tabelle autonome, modificabili, non incollate come immagini.
 
 ### Abstract, keywords, eventuali summary o key points
-- Lunghezza abstract, numero di keywords, eventuali key points o plain language summary: `[da verificare: author guidelines non accessibili]`
+Fonte: author guidelines.
+- Abstract di non più di 300 parole (QJRMS, IJOC, Meteorological Applications), senza citazioni, comprensibile a un pubblico multidisciplinare senza il resto del testo. IJOC e Meteorological Applications chiedono cinque elementi: introduzione accessibile, contesto scientifico, risultati principali, implicazioni, prospettiva più ampia. Nella guida di QJRMS il paragrafo dell'abstract parla di "dataset", testo copiato da un modello per data paper: il limite di 300 parole vale, il contenuto è quello di un abstract di ricerca.
+- ASL: l'elenco delle sezioni non nomina abstract e keywords, ma l'abstract è escluso dal conteggio delle parole, quindi esiste. Limite dell'abstract ASL: [da verificare: non indicato nella guida].
+- Keywords: da 3 a 8, almeno 2 presenti nel titolo (raccomandato).
+- Niente key points né plain language summary: le guide non li prevedono. Il testo del graphical abstract (max 80 parole) fa da sintesi.
 
 ### Limiti (parole, figure, tabelle, riferimenti)
-- `[da verificare: author guidelines non accessibili]`. Per ASL la pagina RMetS parla solo di "shorter contributions", senza limiti numerici.
+Fonte: author guidelines. Il dettaglio per rivista è nella sezione Riviste.
+- QJRMS: nessun limite di parole; non più di 6 tabelle e 12 figure senza approvazione preventiva degli Editor-in-Chief.
+- IJOC: 7.500 parole per Research e Review Article, didascalie e bibliografia escluse.
+- Meteorological Applications: 11.000 parole per Research Article, 15.000 per Review Article, didascalie e bibliografia escluse.
+- ASL: 3.500 parole, escluse abstract, acknowledgements, riferimenti e didascalie; nessun limite fisso di figure e tabelle.
 
 ### Stile dei riferimenti e citazioni
-Fonte: https://authors.wiley.com/author-resources/Journal-Authors/open-access/data-sharing-citation/data-sharing-policy.html
-- I dataset condivisi vanno citati nella lista dei riferimenti. Formato Wiley per la citazione di dati: Authors; Year; Dataset title; Data repository or archive; Version (if any); Persistent identifier (e.g. DOI).
-- Stile dei riferimenti per gli articoli (autore-anno o numerico, formato specifico RMetS): `[da verificare: author guidelines non accessibili]`
+Fonte: author guidelines; https://authors.wiley.com/author-resources/Journal-Authors/open-access/data-sharing-citation/data-sharing-policy.html; policy RMetS sui dati.
+- Harvard, autore-anno: nel testo Smith (2000), con a, b, c per lo stesso autore nello stesso anno; lista in ordine alfabetico. Con il Free Format lo stile è "for information only": lo applica il tipografo.
+- **DOI obbligatorio**: QJRMS ("All references must include a working DOI", con eccezioni per libri, tesi, pubblicazioni datate e atti di convegno) e Meteorological Applications ("ALL provided references contain a DOI") rimandano agli autori i manoscritti che ne sono privi. IJOC e ASL non lo chiedono esplicitamente.
+- Dati non pubblicati e comunicazioni personali solo nel testo (es. Smith A, 2000, unpublished data), mai nella lista.
+- Dati: la policy RMetS ammette in bibliografia solo dataset archiviati in modo permanente in un data centre; i dati disponibili solo dall'autore si trattano come comunicazione personale. Formato RMetS: author(s), title of data set, access number or code, data centre, location, country, date. Formato Wiley: Authors; Year; Dataset title; Data repository or archive; Version (if any); Persistent identifier (e.g. DOI).
 
 ### Dichiarazioni obbligatorie
 
 **Data availability statement**
-Fonte: https://authors.wiley.com/author-resources/Journal-Authors/open-access/data-sharing-citation/data-sharing-policy.html
-- Gli articoli di ricerca e di sintesi "must include a Data Availability Statement, whether or not the data used in the article is shared."
-- Livelli di policy Wiley: Encourages Data Sharing; Expects Data Sharing ("data supporting the results in the paper will be archived in an appropriate public repository", eccezioni per vincoli etici o legali); Mandates Data Sharing (archiviazione come condizione di pubblicazione, eccezioni concesse dall'editor); Mandates Data Sharing and Peer Reviews Data.
-- Contenuto del DAS: con Encourages, presenza o assenza di dati e, se condivisi, accesso e identificativo persistente; con Expects, disponibilità o motivo dell'assenza, link al repository e citazione dei dati; con Mandates, link al repository e citazione obbligatori, oppure descrizione delle restrizioni.
-- Esempi ufficiali di formulazione: "Data sharing not applicable to this article as no datasets were generated or analysed during the current study"; "Research data are not shared."; "The data are not publicly available due to privacy or ethical restrictions."; "Restrictions apply to the availability of these data, which were used under license for this study."
-- Livello adottato da QJRMS, IJOC, Meteorological Applications, ASL: `[da verificare: author guidelines non accessibili]`
+Fonti: author guidelines; policy RMetS sui dati; Wiley data sharing policy.
+- Obbligatorio alla sottomissione in tutte e quattro ("a Data Availability Statement must be provided at submission").
+- Livello Wiley: IJOC, ASL e Meteorological Applications sono **Expects Data Sharing**: dati in un repository pubblico, link al repository, identificativo persistente (DOI o accession number) e citazione dei dati; script e altri materiali dell'analisi archiviati pubblicamente "whenever possible"; eccezione solo per vincoli etici o legali. QJRMS rimanda solo alla policy RMetS.
+- Policy RMetS (vale per tutte): rendere dati e materiali disponibili su richiesta come condizione di pubblicazione; restrizioni dichiarate all'editor alla sottomissione; dati accessibili a editor e revisori se richiesti; preferiti i repository pubblici. Per RMetS il codice di modello e di elaborazione non è "data" ma metadato, comunque da fornire quando serve.
+- Esempi ufficiali Wiley di formulazione: "Data sharing not applicable to this article as no datasets were generated or analysed during the current study"; "The data are not publicly available due to privacy or ethical restrictions."; "Restrictions apply to the availability of these data, which were used under license for this study."
 
 **Conflitti di interesse**
-Fonte: https://authors.wiley.com/ethics-guidelines/index.html
-- "Editors, authors, and peer reviewers should disclose interests that might appear to affect their ability" (a svolgere il proprio ruolo in modo imparziale).
-- Formulazione e posizione richieste nel manoscritto: `[da verificare: author guidelines non accessibili]`
+Fonte: author guidelines.
+- Tutti gli autori dichiarano le potenziali fonti di conflitto (brevetti, azioni, consigli di amministrazione, consulenze, compensi da aziende). Chi non ha nulla da dichiarare "must also state this at submission". Il corresponding author raccoglie le dichiarazioni di tutti.
+- Posizione: sezione "Conflict of Interest statement" dopo Acknowledgments e Funding.
 
 **CRediT**
-Fonte: https://authors.wiley.com/author-resources/Journal-Authors/open-access/credit.html
-- Le riviste Wiley che adottano CRediT richiedono una sezione Author Contribution; i ruoli si inseriscono alla sottomissione per tutti gli autori, a cura del submitting author ("submitting author is responsible for ensuring that contributions of all authors are correct"). Se mancanti, possono essere forniti in revisione. La dichiarazione viene pubblicata con l'articolo.
-- Grado di contributo indicabile: "(lead)", "(supporting)", "(equal)".
-- 14 ruoli: Conceptualization; Data Curation; Formal Analysis; Funding Acquisition; Investigation; Methodology; Project Administration; Resources; Software; Supervision; Validation; Visualization; Writing – Original Draft Preparation; Writing – Review & Editing.
-- Adozione di CRediT da parte delle quattro riviste RMetS: `[da verificare: author guidelines non accessibili]`
-- Modifiche all'elenco autori dopo la sottomissione: "All co-authors, including those directly affected by the change, must provide their agreement." (https://authors.wiley.com/ethics-guidelines/index.html)
+Fonti: author guidelines; Wiley CRediT.
+- **Obbligatorio** in tutte e quattro: "For all articles, the journal mandates the CRediT (Contribution Roles Taxonomy)".
+- 14 ruoli: Conceptualization; Data Curation; Formal Analysis; Funding Acquisition; Investigation; Methodology; Project Administration; Resources; Software; Supervision; Validation; Visualization; Writing – Original Draft Preparation; Writing – Review & Editing. Grado di contributo indicabile: "(lead)", "(supporting)", "(equal)". I ruoli li inserisce il submitting author per tutti gli autori; la dichiarazione viene pubblicata.
+- Criteri di autorialità: contributo sostanziale a ideazione, dati o analisi; stesura o revisione critica; approvazione finale; responsabilità sul lavoro. Ordine degli autori concordato prima della sottomissione. Modifiche successive: "All co-authors, including those directly affected by the change, must provide their agreement."
 
 **Finanziamenti**
-Fonte: https://authors.wiley.com/ethics-guidelines/index.html
-- "Authors must list all funding sources in their manuscript within a dedicated funding section."
-- "If there is no specific funding, this should be explicitly stated."
-- Wiley rimanda al Crossref Funder Registry (https://www.crossref.org/services/funder-registry/).
+Fonti: author guidelines; Wiley ethics guidelines.
+- Sezione dedicata con sponsor e numeri di grant; nomi dei finanziatori verificati sull'Open Funder Registry. "If there is no specific funding, this should be explicitly stated."
 
 **Uso di AI generativa**
-Fonte: https://authors.wiley.com/ethics-guidelines/index.html (guida dettagliata: https://www.wiley.com/en-gb/publish/article/ai-guidelines/, `[da verificare: pagina non accessibile]`)
-- "Authors must also disclose their use of AI Technologies when submitting a manuscript to a Wiley journal."
-- Esenzione: "AI Tools used solely for spelling, grammar, and general editing are not included in these disclosure requirements."
-- L'uso sostanziale va descritto in modo trasparente e integrato nel manoscritto; gli autori documentano lo strumento usato e lo scopo.
-- Gli autori restano pienamente responsabili dell'accuratezza dei contenuti prodotti con AI.
-- L'AI "must not be listed" come autore.
-- Restrizioni sul miglioramento di fotografie con AI per tutelare l'integrità dei dati.
-- Sezione esatta in cui dichiarare (Methods o Acknowledgements) e testo di esempio: `[da verificare: pagina AI guidelines non accessibile]`
+Fonte: https://rmets.onlinelibrary.wiley.com/hub/ai-policy (richiamata da tutte e quattro le guide).
+- Fuori dall'ambito della policy gli strumenti di ortografia e grammatica.
+- L'AI generativa non può essere autore.
+- Uso nella **scrittura**: ammesso solo "to improve readability and language", con supervisione umana. Va dichiarato in una sezione nuova intitolata "Declaration of Generative AI and AI-assisted technologies in the writing process", con questo testo: "During the preparation of this work, the author(s) used [NAME TOOL/SERVICE] in order to [REASON]. After using this tool/service, the author(s) reviewed and edited the content as needed and take(s) full responsibility for the content of the publication."
+- Uso nell'**elaborazione scientifica o nella generazione di dati**: descritto in dettaglio nei Methods; dichiarazione nella cover letter e in un'appendice dedicata, caricata come documento separato, con prompt e output usati. Testo della dichiarazione: "In preparing this manuscript, the author(s) used the following [GENERATIVE AI TECHNOLOGIES/TOOLS] in order to [REASON/S]. The specific content generated by these AI technologies/tools in the manuscript is clearly marked and described in a dedicated appendix, to be used for editorial and review purposes. Prior to submission, the author(s) reviewed the content generated and take(s) full responsibility for the content of the submitted manuscript."
+- Gli autori rispondono dell'accuratezza di ogni informazione prodotta e dei riferimenti.
+- Revisori: AI solo per migliorare il testo del rapporto; mai caricare il manoscritto su servizi AI pubblici.
 
 **Etica e integrità**
-Fonte: https://authors.wiley.com/ethics-guidelines/index.html
-- Manipolazione impropria di immagini equiparata a fabbricazione o falsificazione dei dati; conservare le immagini originali non elaborate.
-- Preprint: Wiley "encourages authors to submit manuscripts that they have already made available as a preprint"; non cedere il copyright al server di preprint.
-- Ricerca con esseri umani o animali: approvazione etica preventiva, nome del comitato nel manoscritto (raramente pertinente per idrometeorologia, rilevante per studi con questionari o dati personali, ad esempio percezione del rischio).
+Fonti: author guidelines; Wiley ethics guidelines.
+- Membri COPE. La sottomissione implica che il lavoro non sia pubblicato né in valutazione altrove. Controllo antiplagio.
+- Preprint ammessi su server non commerciali (QJRMS, Meteorological Applications) o su server di preprint (IJOC, ASL, che chiedono di indicare il preprint nella cover letter); aggiornarli con il link all'articolo pubblicato.
+- Materiale protetto da copyright: permesso scritto con il Wiley Permission Request Form.
+- Manipolazione impropria di immagini equiparata a fabbricazione o falsificazione; conservare gli originali.
 
 ### Lingua e ortografia (British/US)
-- `[da verificare: author guidelines non accessibili]`
+- Solo inglese. Le guide non scelgono fra britannico e americano: [da verificare: nessuna indicazione nelle author guidelines]. RMetS è britannica e le guide sono in inglese britannico, ma è un indizio, non una regola: mantenere una sola variante coerente.
 
 ### Cover letter e sottomissione
-(formato, numerazione righe, revisori suggeriti, file richiesti)
-- Formato dei file, numerazione righe, cover letter, revisori suggeriti, sistema di sottomissione: `[da verificare: author guidelines non accessibili]`
-- CRediT e dichiarazione sull'uso di AI vanno forniti al momento della sottomissione (fonti CRediT ed ethics sopra).
+Fonte: author guidelines.
+- Sottomissione su Research Exchange (ReX): https://authors.wiley.com/journal/QJ, .../JOC, .../MET, .../ASL.
+- ORCID obbligatorio per il submitting author.
+- Cover letter **facoltativa**, con la rilevanza dei risultati e la loro collocazione nello stato dell'arte; Wiley offre un template. IJOC e ASL vi chiedono le informazioni su eventuali preprint; con uso di AI nei dati la dichiarazione va anche lì (vedi sopra).
+- IJOC offre una Pre-submission checklist.
+- Revisori suggeriti: le guide non ne parlano.
+- Revisione: file "Response to Referees" con risposta punto per punto, una versione con le modifiche evidenziate e una pulita, tabelle e figure in file singoli modificabili, versioni vecchie cancellate.
+- Bozze: correzioni entro due giorni. Ricorsi entro quattro mesi dalla decisione.
 
 ### Revisione tra pari
-Fonte: https://www.rmets.org/publication/meteorological-applications
-- Meteorological Applications dichiara "a double-blind review process" (manoscritto anonimizzato).
-- Tipo di revisione per QJRMS, IJOC, ASL e eventuale transparent peer review: `[da verificare: non indicato su rmets.org, author guidelines non accessibili]`
+Fonte: author guidelines.
+- QJRMS e IJOC: **single-blind**, con un Associate Editor scelto dai Senior Editor.
+- Meteorological Applications e ASL: **double-blind**. Dati personali su una title page separata (obbligatoria alla sottomissione, non inviata ai revisori) e documento principale anonimizzato. ASL è double-blind dal 3 aprile 2024. Meteorological Applications: due revisori; un parere di rigetto porta di norma al rigetto, salvo decisione diversa dell'editor.
+- Tempi: dichiarati solo da ASL (prima decisione in circa 45 giorni, accettazione in circa 120).
+
+### Accesso e APC
+Fonti: author guidelines; listini APC Wiley al 2 settembre 2026 (prezzi pieni, tasse escluse).
+- QJRMS: rivista in abbonamento con opzione open access. APC USD 4540 / GBP 3040 / EUR 3800.
+- IJOC: in abbonamento con opzione open access (Green e Gold). APC USD 4120 / GBP 2750 / EUR 3460.
+- Meteorological Applications: fully open access. APC USD 2960 / GBP 2290 / EUR 2600.
+- ASL: fully open access. APC USD 2940 / GBP 1960 / EUR 2310.
+- Soci RMetS: 20% di sconto sull'APC se il socio è corresponding author. Licenze: CC BY, CC BY-NC, CC BY-NC-ND (ASL solo CC BY secondo il listino). Gli accordi Wiley con le istituzioni possono coprire l'APC: chiedere alla biblioteca.
 
 ## Riviste
 
 ### Quarterly Journal of the Royal Meteorological Society
-- Guida: https://rmets.onlinelibrary.wiley.com/hub/journal/1477870x/about/author-guidelines `[da verificare: non accessibile]`
-- Ambito (https://www.rmets.org/publication/quarterly-journal): "The aims of the journal are to communicate and to document the results of new research in the atmospheric sciences" e campi associati. "The journal is published eight times a year with additional special issues."
-- Accesso: la pagina RMetS indica accesso gratuito per i soci; modello open access `[da verificare]`
-- Tipi di articolo e limiti: `[da verificare: author guidelines non accessibili]`
-- Differenze rispetto alle regole comuni: `[da verificare]`
-- Requisiti particolari: esiste un template LaTeX su Overleaf (qjrms4doc.tex), non verificato come template ufficiale corrente `[da verificare]`
+- Guida: https://rmets.onlinelibrary.wiley.com/hub/journal/1477870x/about/author-guidelines
+- Ambito: risultati di ricerca nuova nelle scienze dell'atmosfera e campi associati, con "sufficient generality to attract reasonably wide interest in the meteorological community". Non si considerano documentazioni di attività prive di analisi scientifica approfondita. Benvenuti i risultati di grandi programmi (campagne di misura, sforzi di modellistica di comunità). Per una review consultare prima gli editor.
+- Tipi: Research Articles, Review Articles, Special Issue Articles; i lavori in più parti si sottomettono insieme.
+- Limiti: max 6 tabelle e 12 figure senza approvazione degli EiC; abstract max 300 parole; keywords 3-8.
+- Differenze: DOI obbligatorio per ogni riferimento; PDF LaTeX con numeri di riga; single-blind; rivista ibrida.
+- Template LaTeX: la guida non ne indica uno; QJRMS non rimanda al template NJD che Meteorological Applications raccomanda.
 
 ### International Journal of Climatology
-- Guida: https://rmets.onlinelibrary.wiley.com/hub/journal/10970088/about/author-guidelines `[da verificare: non accessibile]`
-- Ambito (https://www.rmets.org/international-journal-of-climatology): "The International Journal of Climatology promotes the study of the climate system from subseasonal to interdecadal timescales". Copertura: osservazioni e cambiamenti del sistema climatico, attribuzione, proiezioni, interazione variabilità/cambiamento, studi regionali, legami tra scale ampie e locali.
-- Tipi di articolo (rmets.org): research papers, major reviews of progress, featured reports. Limiti: `[da verificare]`
-- Requisiti particolari (rmets.org, guidance to contributors): le sottomissioni devono contribuire "significantly to the International literature, even if the focus is regional"; citare la letteratura internazionale pertinente; dichiarare il contributo più ampio (scoperta, nuova tecnica, metodologia esistente applicata a un nuovo problema); discutere l'importanza nel contesto internazionale. Rilevante per studi CIMA su bacini italiani o liguri: esplicitare la portata generale.
-- Accesso: gratuito per i soci; modello open access `[da verificare]`
+- Guida: https://rmets.onlinelibrary.wiley.com/hub/journal/10970088/about/author-guidelines
+- Ambito: sistema climatico da scala subseasonal a interdecadale: osservazioni e cambiamenti, attribuzione, proiezioni, variabilità e cambiamento, implicazioni degli studi regionali, legami fra grandi scale e scale locali.
+- Fuori ambito: lavori il cui fuoco non è la climatologia; articoli regionali che applicano metodi già usati altrove senza dati nuovi.
+- Requisito particolare: contributo significativo alla letteratura internazionale anche se il fuoco è regionale; citare la letteratura internazionale; dichiarare il contributo più ampio (scoperta, tecnica nuova, metodo esistente su problema nuovo). Per studi CIMA su bacini italiani o liguri, rendere esplicita la portata generale.
+- Tipi e limiti: Research Article e Review Article max 7.500 parole (didascalie e bibliografia escluse); Editorial circa 1500 parole. Le pagine su rmets.org citano anche "featured reports", assenti fra i tipi della guida.
+- Differenze: Expects Data Sharing; single-blind; ibrida.
 
 ### Meteorological Applications
-- Guida: https://rmets.onlinelibrary.wiley.com/hub/journal/14698080/about/author-guidelines `[da verificare: URL e contenuto]`
-- Ambito (https://www.rmets.org/publication/meteorological-applications): "welcomes papers on all applications of meteorology, hydrometeorology and climatology", incluse osservazione, previsione, assimilazione dati e verifica. Settori dei lettori: tra gli altri civil protection, water resource management, risk assessment of weather and climate hazards, comunicazione al pubblico.
-- Tipi di articolo: research e review articles. Limiti: `[da verificare]`
-- Differenze: "fully open access journal" (APC applicabile, importo `[da verificare]`); revisione double-blind, quindi manoscritto anonimizzato.
+- Guida: https://rmets.onlinelibrary.wiley.com/hub/journal/14698080/about/author-guidelines (URL confermato)
+- Ambito: tutte le applicazioni di meteorologia, idrometeorologia e climatologia, comprese osservazione, previsione, assimilazione e verifica. Lettori: fra gli altri civil protection, water resource management, risk assessment of weather and climate hazards, comunicazione al pubblico.
+- Tipi e limiti: Research Article max 11.000 parole, Review Article max 15.000 (didascalie e bibliografia escluse; review più lunghe valutate caso per caso); Editorial circa 1500 parole. La definizione di Research Article nella guida dice "within climatology", testo copiato da IJOC.
+- Differenze: double-blind con title page separata (Acknowledgments e Funding vanno lì, non nel testo anonimizzato); graphical abstract senza nomi; DOI obbligatorio per ogni riferimento; due revisori; fully open access (APC sopra); Expects Data Sharing; animazioni GIF, MPEG o AVI fino a 1 MB.
 
 ### Atmospheric Science Letters
-- Guida: https://rmets.onlinelibrary.wiley.com/hub/journal/1530261x/about/author-guidelines `[da verificare: non accessibile]`
-- Ambito (https://www.rmets.org/atmospheric-science-letters): "publishes research that advances the understanding of atmospheric and climate science", con osservazioni, modellistica e "novel methodologies (including machine learning)". Pubblica "shorter contributions more rapidly than conventional journals".
-- Tipi di articolo e limiti di lunghezza: `[da verificare]`
-- Differenze: "This is a fully open access journal." (APC `[da verificare]`)
+- Guida: https://rmets.onlinelibrary.wiley.com/hub/journal/1530261x/about/author-guidelines
+- Ambito: ricerca che fa avanzare la comprensione delle scienze dell'atmosfera e del clima con osservazioni, modellistica e metodi nuovi, compreso il machine learning: dinamica, variabilità e cambiamento climatico e impatti, accoppiamento oceano-atmosfera, previsione meteorologica e climatica, fisica dell'atmosfera, osservazione e telerilevamento, interazioni atmosfera-suolo, estremi, qualità dell'aria.
+- Fuori ambito: ricerca metodologica molto specialistica e non accessibile a un pubblico ampio (indirizzata a Meteorological Applications); casi di studio locali o regionali senza rilevanza più ampia (Meteorological Applications o Weather).
+- Tipi e limiti: Research Articles e Perspectives, max 3.500 parole (escluse abstract, acknowledgements, riferimenti e didascalie; circa 3-5 pagine A4 a interlinea singola in corpo 12); nessun limite fisso di figure e tabelle, il materiale in più va nelle Supporting Information.
+- Differenze: double-blind dal 3 aprile 2024 con title page separata; tempi dichiarati (prima decisione circa 45 giorni, accettazione circa 120); formato della rivista richiesto in revisione; fully open access (APC sopra); Expects Data Sharing. La guida chiede i nomi degli autori nel graphical abstract nonostante la revisione double-blind: segnalare la contraddizione all'autore e farla chiarire all'editorial office (asl2office@wiley.com).
 
 ## Checklist di conformità
-Solo elementi verificati su fonti ufficiali:
-- [ ] Data Availability Statement presente, anche se i dati non sono condivisi.
-- [ ] Se i dati sono condivisi: link al repository, identificativo persistente (DOI) e citazione del dataset nella lista dei riferimenti nel formato Wiley.
-- [ ] Sezione dedicata ai finanziamenti con tutte le fonti, oppure dichiarazione esplicita di assenza di finanziamento specifico.
-- [ ] Dichiarazione dei conflitti di interesse.
-- [ ] Ruoli CRediT per tutti gli autori, concordati da tutti prima della sottomissione (se la rivista adotta CRediT).
-- [ ] Uso sostanziale di AI generativa dichiarato e descritto nel manoscritto; nessuna AI tra gli autori; uso limitato a ortografia e grammatica non richiede dichiarazione.
-- [ ] Nessuna manipolazione impropria di immagini; originali conservati.
-- [ ] Meteorological Applications: manoscritto anonimizzato per revisione double-blind.
-- [ ] IJOC: contributo alla letteratura internazionale esplicitato anche per studi regionali, con letteratura internazionale citata.
-- [ ] Coerenza con l'ambito dichiarato della rivista scelta.
+Elementi verificati sulle author guidelines e sulle policy RMetS e Wiley:
+- [ ] Rivista coerente con l'ambito e non nei casi "out of scope" (IJOC, ASL).
+- [ ] Solo inglese, una sola variante (britannica o americana).
+- [ ] Title page con titolo senza abbreviazioni, running title sotto i 70 caratteri, autori con affiliazioni ed email; per Meteorological Applications e ASL in un file separato, con il resto del manoscritto anonimizzato.
+- [ ] Abstract entro 300 parole, senza citazioni, comprensibile da solo.
+- [ ] Keywords da 3 a 8, almeno 2 presenti nel titolo.
+- [ ] Limiti di parole della rivista rispettati (IJOC 7.500, Meteorological Applications 11.000/15.000, ASL 3.500); per QJRMS max 6 tabelle e 12 figure.
+- [ ] Graphical abstract per Research, Review e Special Issue Articles: titolo, autori (non per Meteorological Applications), max 80 parole o 3 frasi, figura 50 × 60 mm.
+- [ ] Sezioni finali nell'ordine: Acknowledgments, Funding con numeri di grant (o dichiarazione di assenza di finanziamento), Conflict of Interest statement (anche se negativo), Permissions, Authors' contributions (CRediT), Data availability statement.
+- [ ] Data Availability Statement presente alla sottomissione; per IJOC, ASL e Meteorological Applications dati in repository pubblico con link, DOI o accession number e citazione; script archiviati quando possibile.
+- [ ] Riferimenti Harvard autore-anno; per QJRMS e Meteorological Applications un DOI funzionante su ogni riferimento.
+- [ ] Dataset citati solo se archiviati in un data centre; dati disponibili solo dall'autore trattati come comunicazione personale.
+- [ ] Supporting Information numerata con prefisso S e annunciata da un paragrafo prima dei riferimenti.
+- [ ] Figure accessibili ai daltonici, senza combinazioni rosso/verde.
+- [ ] Se usata AI nella scrittura: sezione "Declaration of Generative AI and AI-assisted technologies in the writing process" con il testo RMetS; se usata nei dati: Methods, cover letter e appendice separata con prompt e output. Nessuna AI fra gli autori.
+- [ ] ORCID del submitting author.
+- [ ] In revisione: Response to Referees punto per punto, versione con modifiche evidenziate e versione pulita.
 
 ## Punti non verificati
-1. Tipi di articolo completi e definizioni per rivista.
-2. Struttura del manoscritto e title page.
-3. Lunghezza abstract, numero keywords, key points o plain language summary.
-4. Limiti di parole, figure, tabelle, riferimenti.
-5. Stile dei riferimenti RMetS.
-6. Livello di data sharing policy Wiley adottato da ciascuna rivista.
-7. Formulazione e posizione della dichiarazione sui conflitti di interesse.
-8. Adozione di CRediT da parte delle quattro riviste.
-9. Posizione e testo della dichiarazione sull'uso di AI (pagina Wiley AI guidelines non accessibile).
-10. Lingua e ortografia (British/US).
-11. Cover letter, numerazione righe, revisori suggeriti, formati dei file.
-12. Tipo di peer review per QJRMS, IJOC, ASL.
-13. URL della guida di Meteorological Applications.
-14. Modello di accesso (open access o ibrido) di QJRMS e IJOC.
-15. Importo APC per Meteorological Applications e ASL.
-16. Template LaTeX ufficiale corrente di QJRMS.
-17. Tipi di articolo e limiti di QJRMS, ASL, Meteorological Applications, IJOC (dettaglio per rivista).
+1. Lingua: le guide non scelgono fra inglese britannico e americano.
+2. Limite di parole dell'abstract di ASL.
+3. Revisori suggeriti: le guide non ne parlano.
+4. Graphical abstract di ASL: la guida chiede i nomi degli autori nonostante la revisione double-blind.
