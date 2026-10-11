@@ -269,8 +269,9 @@ Da fare prima del rilascio:
 
 - le righe manuali di ciascuna sezione qui sopra (2b, 3, 4, 7, 10, 13, 16, 19,
   20, 22, 23, 25, 26, 29);
-- le righe non eseguite del giro 0.2.0 (issue #6 e #7), che si chiudono dentro
-  questo rilascio.
+- le righe in modalita' chat del giro 0.2.0 che producono un file (3, 5, 8, 11
+  e 13, issue #7). Le righe agenti da rifare sulla rc2 (issue #6) sono state
+  lasciate cadere il 2026-10-11.
 
 Analisi del bando (#12): chiusa il 2026-10-10. Tre casi automatici verdi, tre
 righe manuali ancora da fare (2b, 3, 4).

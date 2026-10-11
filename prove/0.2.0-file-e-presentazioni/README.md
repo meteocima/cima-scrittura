@@ -54,10 +54,15 @@ passa, il resto del giro non misura niente: misura Claude senza il plugin.
 
 | # | Ambiente | Prompt | Esito atteso | Esito reale |
 |---|---|---|---|---|
-| 16 | chat | "Comunicato stampa sull'avvio del servizio di previsione" | Testo completo, autovalutazione dichiarata, pacchetto revisore in fondo, Cowork citato al massimo una volta | |
+| 16 | chat | "Comunicato stampa sull'avvio del servizio di previsione" | Testo completo, autovalutazione dichiarata, pacchetto revisore in fondo, Cowork citato al massimo una volta || Tolta dal giro il 2026-10-11: non produce file, e il testo in chat lo misurano gia' le prove dei domini (issue #7) |
 | 17 | agenti | Stesso prompt della 16 | Salva la bozza, lancia `generale-revisore`, presenta il rapporto || **Passa.** Bozza salvata in `revisione/bozza-comunicato.md`, `generale-revisore` lanciato, rapporto presentato (13 problemi: il perché fuori dal primo paragrafo, "anticipo di [n] ore" letto come prestazione garantita, "early warning" in un testo italiano); correzioni senza dati nuovi applicate |
 
 Più le prove di regressione in `../domini/`, per i domini toccati.
+
+Il 2026-10-11, con la 0.2.0 assorbita nella 0.3.0, le righe agenti 4, 6, 10,
+12, 14 e 17 **non** vengono rieseguite sulla rc2 (issue #6 chiusa): restano gli
+esiti della rc1. Delle righe chat restano da fare solo quelle che producono un
+file, 3, 5, 8, 11 e 13 (issue #7).
 
 ## Esito
 

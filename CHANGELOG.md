@@ -6,8 +6,9 @@ Il quarto dominio, `proposte`, costruito un ticket alla volta (issue #11).
 Tutte le prove del giro stanno in `prove/0.3.0-dominio-proposte/`.
 
 La 0.3.0 assorbe la 0.2.0, che non esce da sola: le sue voci qui sotto
-escono con questo rilascio, e le sue righe ancora da eseguire (issue #6 e #7)
-fanno parte delle prove della 0.3.0. I tag `v0.2.0-rc1` e `v0.2.0-rc2`
+escono con questo rilascio. Delle sue prove ancora aperte resta solo la
+modalita' chat delle righe che producono un file (issue #7); le righe agenti
+da rifare sulla rc2 (issue #6) sono lasciate cadere. I tag `v0.2.0-rc1` e `v0.2.0-rc2`
 restano come memoria dei due giri di prova.
 
 ### Aggiunto
@@ -86,8 +87,8 @@ restano come memoria dei due giri di prova.
   riferimenti, livello della data policy, CRediT, testo della dichiarazione
   sull'AI, tipo di peer review e APC. Restano aperti solo i punti che le
   guide non trattano. ADR 0013 registra la lacuna chiusa.
-- `plugin.json`: versione 0.3.0. Le righe del giro 0.2.0 non ancora eseguite
-  (issue #6 e #7) restano valide e si chiudono dentro questo rilascio.
+- `plugin.json`: versione 0.3.0. Del giro 0.2.0 restano da eseguire, dentro
+  questo rilascio, le righe chat che producono un file (issue #7).
 
 ## [0.2.0] mai rilasciata da sola, esce con la 0.3.0
 
