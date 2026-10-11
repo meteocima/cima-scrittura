@@ -29,6 +29,11 @@ serve agli autori per correggere il testo.
 - rivista, tipo di articolo e lingua della decisione;
 - il percorso dove scrivere la decisione.
 
+Se la sessione non può salvare file, un materiale può arrivare nel prompt
+invece che come percorso, fra due righe che dicono che cos'è e dove finisce:
+trattalo come il file. Se non ricevi un percorso dove scrivere, la decisione è
+la tua risposta finale, completa e nello stesso formato.
+
 ## Come lavori
 
 1. Leggi tutti i rapporti per intero.

@@ -38,6 +38,11 @@ griglia che ricevi.
 - la lingua del rapporto;
 - il percorso dove scrivere il rapporto.
 
+Se la sessione non puo' salvare file, un materiale puo' arrivare nel prompt
+invece che come percorso, fra due righe che dicono che cos'e' e dove finisce:
+trattalo come il file. Se non ricevi un percorso dove scrivere, il rapporto e'
+la tua risposta finale, completo e nello stesso formato.
+
 Se manca la proposta, fermati e scrivi solo questo nel rapporto. Se manca la
 matrice del bando e il prompt non porta criteri espliciti, valuta lo stesso i
 problemi che vedi ma **non assegnare punteggi**, e dillo in sintesi.

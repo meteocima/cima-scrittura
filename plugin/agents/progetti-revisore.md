@@ -23,6 +23,11 @@ la DoA e la griglia che ricevi.
   "reviewer tecnico esterno" (profilo B);
 - percorso dove scrivere il rapporto.
 
+Se la sessione non può salvare file, un materiale può arrivare nel prompt
+invece che come percorso, fra due righe che dicono che cos'è e dove finisce:
+trattalo come il file. Se non ricevi un percorso dove scrivere, il rapporto è
+la tua risposta finale, completo e nello stesso formato.
+
 Se manca il testo, oppure mancano sia la griglia sia criteri espliciti
 nel prompt, scrivi nel rapporto solo questa mancanza e fermati. Se manca la DoA, valuta comunque e dichiara in
 sintesi che la tracciabilità non è verificabile.

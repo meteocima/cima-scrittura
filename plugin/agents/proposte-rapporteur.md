@@ -33,6 +33,11 @@ non rifai la valutazione.
 - la lingua del consolidato;
 - il percorso dove scrivere.
 
+Se la sessione non puo' salvare file, un materiale puo' arrivare nel prompt
+invece che come percorso, fra due righe che dicono che cos'e' e dove finisce:
+trattalo come il file. Se non ricevi un percorso dove scrivere, il consolidato e'
+la tua risposta finale, completo e nello stesso formato.
+
 ## Come lavori
 
 1. Leggi tutti i rapporti per intero.

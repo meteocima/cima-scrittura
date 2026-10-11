@@ -51,15 +51,13 @@ lavoro: la proposta in formato leggibile (`proposta.md`), la matrice
 ricavarne una versione leggibile: i valutatori hanno strumenti minimi apposta
 e non devono poter toccare il documento.
 
-Se i file non si riescono a salvare, la modalita' agenti non e' praticabile:
-passare alla modalita' chat e dirlo in una riga
-(`references/nucleo/protocollo-revisione.md`, sezione 3).
-
-**Qualunque strada si prenda, i tre rapporti e il consolidato arrivano per
-intero nella consegna.** Dove non ci sono file, stanno nei messaggi, uno per
-messaggio se sono lunghi. Offrirli ("se vuoi te li mostro") non e' consegnarli:
-il risultato completo non si subordina a una seconda richiesta dell'utente
-(`adr/0006`).
+Se i file non si riescono a salvare, seguire
+`references/nucleo/protocollo-revisione.md`, sezione 3, "Senza file": i
+valutatori ricevono nel prompt, per intero, cio' che non ha gia' un percorso
+leggibile (di solito la matrice, e la proposta se e' arrivata in Word o PDF),
+il rapporteur i tre rapporti; se non ci stanno interi, modalita' chat. In ogni
+caso i tre rapporti e il consolidato arrivano per intero nella stessa risposta,
+non promessi per dopo.
 
 ## Modalità agenti
 
