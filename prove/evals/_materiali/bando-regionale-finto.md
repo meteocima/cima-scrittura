@@ -1,0 +1,1 @@
+../../0.3.0-dominio-proposte/materiali/bando-regionale-finto.md

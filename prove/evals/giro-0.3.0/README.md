@@ -21,6 +21,24 @@ automatica".
 | 18 | `11-valutazione-senza-file` | senza poter salvare file: consegna completa, dichiarazione veritiera dell'indipendenza, stessi punteggi e soglie | |
 | 21 | `12-risposta-esr` | ogni rilievo dell'ESR ha la sua riga con la posizione, nessuna modifica dichiarata che non esiste | |
 | 24 | `13-coerenza` | `proposte-verificatore` lanciato, incoerenze riportate in coppia, limite preso dal bando, nessun punteggio | Write |
+| 3 | `14-topic-senza-testo` | solo l'identificativo del topic: matrice dal profilo marcata come tale, testo del topic chiesto, niente outcome inventati | WebSearch |
+| 4 | `15-bando-senza-profilo` | bando regionale senza profilo: matrice dal solo bando, dichiarato, nessuna regola di Horizon Europe importata | |
+| 7 | `16-eic-strumento-ignoto` | call EIC che non dice lo strumento: lo chiede invece di applicare un profilo a caso | |
+| 10 | `17-life-due-fasi` | call LIFE in due fasi: concept note alla prima fase, sezioni n/a, niente proposta intera | |
+| 13 | `18-impact-budget` | mesi-persona chiesti insieme alla sezione Impact: fuori ambito detto in una riga, narrativa scritta | |
+| 16 | `19-concept-note-due-fasi` | la concept note della prima fase la prende `proposte-scrittura`, come testo da consegnare | |
+| 19 | `20-valutazione-senza-bando` | valutazione senza topic: niente punteggi presentati come certi, detto che cosa serve, problemi segnalati | Write |
+| 20 | `21-valutazione-segnaposto` | proposta quasi tutta segnaposto: niente punteggi, problemi gia' visibili segnalati | Write |
+| 22 | `22-esr-pdf` | ESR in PDF letto senza chiederlo incollato, nessuna ricerca web | WebSearch, Bash |
+| 23 | `23-contestare-punteggio` | contestazione di merito indirizzata all'evaluation review, solo procedurale | |
+| 25 | `24-coerenza-senza-file` | come il 13 senza poter salvare: rapporto intero nel messaggio, indipendenza dichiarata con verita' | |
+| 26 | `25-coerenza-senza-bando` | senza bando i limiti non si stimano, le incoerenze si cercano lo stesso | Write |
+
+Le righe 2b e 29 restano manuali. La 2b misura come arriva un allegato in una
+conversazione claude.ai con lo zip della skill, che una sessione figlia non
+riproduce. La 29 vuole un secondo turno scritto da chi prova, e l'eval non ha
+un campo per scriverlo: ha solo `context.history_file`, che riproduce una
+conversazione registrata.
 
 ## Due cose imparate il 2026-10-10, che cambiano come si scrivono i casi
 
@@ -48,6 +66,11 @@ misura che cosa succede quando non si possono salvare file, che e' un'altra
 cosa. I casi si chiamano `-senza-file` per questo. La modalita' chat vera,
 cioe' l'assenza dei subagent, resta una prova a mano con lo zip della skill
 caricato in una conversazione.
+
+E nemmeno toglie `Write`, se la riga di comando lo concede: `--allow-tools
+Write` vale per tutti i casi e scavalca la loro lista. Scoperto il 2026-10-11
+sul caso `24`, che con la concessione salvava il rapporto. I casi
+`senza-file` si lanciano a parte, senza concedere `Write` (`prove/README.md`).
 
 Dove il comportamento legittimo puo' essere doppio, i grader non premiano una
 strada: chiedono che la consegna sia completa e che **dichiari il vero** su

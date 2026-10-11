@@ -87,8 +87,14 @@ restano come memoria dei due giri di prova.
   riferimenti, livello della data policy, CRediT, testo della dichiarazione
   sull'AI, tipo di peer review e APC. Restano aperti solo i punti che le
   guide non trattano. ADR 0013 registra la lacuna chiusa.
-- `plugin.json`: versione 0.3.0. Del giro 0.2.0 restano da eseguire, dentro
-  questo rilascio, le righe chat che producono un file (issue #7).
+- `plugin.json`: versione 0.3.0. Le righe chat del giro 0.2.0 che producono
+  un file (issue #7) sono state eseguite dentro questo rilascio.
+- Dodici delle quattordici righe manuali del giro 0.3.0 diventano casi eval
+  (`giro-0.3.0/14` - `25`), con quattro materiali finti nuovi e la versione
+  PDF dell'ESR finto; verdi tutti e dodici. Restano a mano la 2b e la 29.
+- `prove/README.md`: i casi `senza-file` si lanciano a parte, senza
+  concedere `Write`, perche' la concessione sulla riga di comando scavalca la
+  lista `allowed_tools` del caso.
 - `generale-revisione` dopo le prove in chat della issue #7: la revisione
   della nuova versione diventa due passi numerati del flusso (autorevisione,
   poi revisione separata), come in `generale-scrittura`; la consegna scrive

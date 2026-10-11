@@ -64,6 +64,27 @@ cd "$R" && claude plugin eval . --runs 1 -j 4 --ablation none --scaffold \
   --allow-tools Write Bash --judge-model opus --no-publish
 ```
 
+I casi con il tag `senza-file` vanno lanciati **a parte, senza concedere
+`Write`**: la concessione sulla riga di comando vale per tutti i casi e
+scavalca la lista `allowed_tools` del caso, quindi una sessione che il caso
+vuole senza file salva lo stesso. Scoperto il 2026-10-11 dalle tracce del caso
+`giro-0.3.0/24-coerenza-senza-file`: con la concessione la sessione salvava il
+rapporto e rimandava al file, senza la concessione lo consegnava intero.
+
+Quindi due copie: in una si tolgono i casi `senza-file` e si lancia il
+comando qui sopra, nell'altra si lanciano solo quelli, con `Bash` e basta.
+
+```bash
+R2=$(mktemp -d)/run && cp -r "$R" "$R2"
+grep -rl 'senza-file' "$R/evals" --include=case.yaml | xargs -n1 dirname | xargs rm -rf
+cd "$R2" && claude plugin eval . --tag senza-file --runs 1 -j 4 --ablation none \
+  --scaffold --allow-tools Bash --judge-model opus --no-publish
+```
+
+Prima di quella data il comando documentato concedeva `Write` a tutta la
+suite: gli esiti dei casi `senza-file` di quei giri vanno letti come presi con
+i file a disposizione, salvo dove la traccia dice il contrario.
+
 Le opzioni, una per una:
 
 - `--allow-tools Write Bash`: l'eval tiene `Write`, `Bash` ed `Edit` dietro

@@ -1,0 +1,9 @@
+schema_version: "1.1"
+name: giro-19-concept-note-due-fasi
+tags: [giro-0.3.0, senza-file]
+context:
+  scaffold_script: scaffold.sh
+execution:
+  max_turns: 25
+  timeout_seconds: 1500
+  allowed_tools: [Read, Glob, Grep, Skill]
