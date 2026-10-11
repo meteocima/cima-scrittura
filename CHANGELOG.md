@@ -5,6 +5,11 @@
 Il quarto dominio, `proposte`, costruito un ticket alla volta (issue #11).
 Tutte le prove del giro stanno in `prove/0.3.0-dominio-proposte/`.
 
+La 0.3.0 assorbe la 0.2.0, che non esce da sola: le sue voci qui sotto
+escono con questo rilascio, e le sue righe ancora da eseguire (issue #6 e #7)
+fanno parte delle prove della 0.3.0. I tag `v0.2.0-rc1` e `v0.2.0-rc2`
+restano come memoria dei due giri di prova.
+
 ### Aggiunto
 - Skill `proposte-analisi-bando`: estrae dal testo di un topic la matrice del
   bando (criteri, pesi, soglie, expected outcomes nelle parole del bando,
@@ -76,7 +81,7 @@ Tutte le prove del giro stanno in `prove/0.3.0-dominio-proposte/`.
 - `plugin.json`: versione 0.3.0. Le righe del giro 0.2.0 non ancora eseguite
   (issue #6 e #7) restano valide e si chiudono dentro questo rilascio.
 
-## [0.2.0] in lavorazione
+## [0.2.0] mai rilasciata da sola, esce con la 0.3.0
 
 ### Aggiunto
 - `nucleo/formati-e-file.md`: il plugin legge e consegna i documenti nel
