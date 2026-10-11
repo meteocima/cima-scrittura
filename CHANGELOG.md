@@ -1,6 +1,23 @@
 # Changelog
 
-## [0.3.0] in lavorazione
+## [0.3.1] 2026-10-11
+
+Primo rilascio con il dominio `proposte`. Contiene la 0.3.0 e la 0.2.0, che
+non sono uscite da sole: le loro voci qui sotto escono con questo rilascio.
+Restano fuori la calibrazione sugli ESR reali e la valutazione cieca di una
+proposta vera (issue #21 e #22), che usciranno con la 0.3.2.
+
+### Modificato
+- Le descrizioni di otto skill dicono di caricarle prima di chiedere
+  chiarimenti, come quella di `progetti-scrittura` dopo la issue #35:
+  `generale-scrittura`, `generale-presentazione`, `paper-scrittura`,
+  `paper-risposta-revisori`, `proposte-scrittura`, `proposte-concept`,
+  `proposte-analisi-bando`, `progetti-risposta-review` (issue #36, ADR 0023).
+  La regola entra in `docs/scrivere-una-skill.md`. L'effetto in Cowork con
+  Sonnet non e' ancora misurato: le prove stanno in `prove/0.3.1-chiarimenti/`
+  e si faranno dopo il rilascio.
+
+## [0.3.0] mai rilasciata da sola, esce con la 0.3.1
 
 Il quarto dominio, `proposte`, costruito un ticket alla volta (issue #11).
 Tutte le prove del giro stanno in `prove/0.3.0-dominio-proposte/`.
@@ -113,7 +130,7 @@ restano come memoria dei due giri di prova.
 - Niente pacchetto revisore su un testo fatto di segnaposto (ADR 0022):
   `nucleo/protocollo-revisione.md`, sezioni 4b e 5.
 
-## [0.2.0] mai rilasciata da sola, esce con la 0.3.0
+## [0.2.0] mai rilasciata da sola, esce con la 0.3.1
 
 ### Aggiunto
 - `nucleo/formati-e-file.md`: il plugin legge e consegna i documenti nel

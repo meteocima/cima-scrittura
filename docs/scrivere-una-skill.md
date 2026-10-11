@@ -20,6 +20,13 @@ contiene frasi d'innesco in italiano e in inglese e una clausola
 **"Non usare per…"** che rimanda alle skill degli altri domini, coerente con
 `instradamento.md`. Niente parentesi angolari **[build]**.
 
+Se la skill riceve richieste brevi e sa da sola che cosa chiedere, la
+descrizione lo dice prima di "Non usare per": "Caricarla prima di chiedere
+chiarimenti, perché sa lei che cosa chiedere." Senza, Sonnet in Cowork su una
+richiesta vaga fa domande sue invece di caricare la skill (`adr/0023`). Niente
+due punti dentro la frase: le descrizioni senza virgolette diventerebbero
+YAML non valido.
+
 Corpo sotto le 3.000 parole (oltre, la build avvisa): il resto va in
 `references/`.
 
