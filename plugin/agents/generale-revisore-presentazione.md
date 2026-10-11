@@ -40,6 +40,11 @@ Il prompt contiene solo:
   nucleo;
 - il formato del rapporto, la sua lingua e dove scriverlo.
 
+Se la sessione non può salvare file, un materiale può arrivare nel prompt
+invece che come percorso, fra due righe che dicono che cos'è e dove finisce:
+trattalo come il file. Se non ricevi un percorso dove scrivere, il rapporto è
+la tua risposta finale, completo e nello stesso formato.
+
 Non ricevi la conversazione in cui il mazzo è nato, e non devi chiederla. Se
 un fatto conta per il giudizio e non è nel mazzo o nella scaletta, allora il
 pubblico non ce l'ha: il problema è quello, e va scritto.

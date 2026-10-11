@@ -65,6 +65,14 @@ Tutte le prove del giro stanno in `prove/0.3.0-dominio-proposte/`.
   cancellato: la fonte di verita' sono le skill. Le due frasi ambigue
   dell'ADR 0020 ("scrivi il work package 3", "draft the impact section") ora
   attivano una skill, misurato due volte su due.
+- Senza file la revisione resta agli agenti (issue #29, ADR 0021):
+  `nucleo/protocollo-revisione.md` ha una sottosezione "Senza file" che
+  ammette i materiali nel prompt, per intero e solo se non hanno gia' un
+  percorso, e torna alla modalita' chat quando non ci stanno interi o non si
+  possono dare come testo. Gli otto agenti sanno che un materiale puo'
+  arrivare nel prompt e che senza percorso di uscita il rapporto e' la
+  risposta. `proposte-revisione` e `proposte-coerenza` rinviano al nucleo;
+  la riga sulla consegna completa dei rapporti passa nel nucleo.
 - `plugin.json`: versione 0.3.0. Le righe del giro 0.2.0 non ancora eseguite
   (issue #6 e #7) restano valide e si chiudono dentro questo rilascio.
 

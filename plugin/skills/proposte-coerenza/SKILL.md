@@ -66,8 +66,8 @@ vuole il giudizio, la skill lo dice in una riga e rimanda a
 4. Proporre le correzioni. Riscrivere solo su richiesta, con
    `proposte-scrittura`.
 
-Se i file non si riescono a salvare, passare alla modalità chat e dirlo in
-una riga.
+Se i file non si riescono a salvare, seguire
+`references/nucleo/protocollo-revisione.md`, sezione 3, "Senza file".
 
 ## Modalità chat
 

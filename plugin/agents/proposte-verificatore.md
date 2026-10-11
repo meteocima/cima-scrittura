@@ -32,6 +32,11 @@ Cerchi due cose soltanto, e le cerchi in modo esaustivo.
 - il formato del rapporto;
 - il percorso dove scrivere.
 
+Se la sessione non puo' salvare file, un materiale puo' arrivare nel prompt
+invece che come percorso, fra due righe che dicono che cos'e' e dove finisce:
+trattalo come il file. Se non ricevi un percorso dove scrivere, il rapporto e'
+la tua risposta finale, completo e nello stesso formato.
+
 ## 1. Incoerenze fra sezioni
 
 Confronta le sezioni fra loro e segnala ogni contraddizione, citando

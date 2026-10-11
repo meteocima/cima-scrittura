@@ -82,22 +82,53 @@ dove lavorare sta scegliendo anche quanto vale la revisione che riceve.
 3. Lanciare i revisori **in parallelo** (tutti nella stessa chiamata),
    con l'agente indicato dalla skill di dominio.
 
-**Se i file non si riescono a salvare, la modalità agenti non è praticabile:
-passare alla modalità chat e dirlo in una riga.** Non chiedere a un agente di
-salvare al posto tuo, e meno che mai al revisore: il revisore ha `Write` solo
-per il proprio rapporto, e usarlo come scrivano annulla la separazione per cui
-esiste.
+### Senza file
+
+Se i file non si riescono a salvare, la modalità agenti resta praticabile a
+tre condizioni. Se una manca, quel passaggio va in modalità chat e lo si dice
+in una riga.
+
+1. **Per percorso tutto ciò che ce l'ha.** I riferimenti della skill e i file
+   dell'utente già in testo si passano per percorso, come sempre. Nel prompt
+   va solo ciò che un percorso non ce l'ha: il testo scritto nella
+   conversazione, la versione leggibile di un Word o di un PDF, un materiale
+   costruito dalla skill (per esempio la matrice del bando), i rapporti dei
+   revisori quando li legge chi fa la sintesi.
+2. **Per intero e tale e quale.** Ogni materiale nel prompt sta fra due righe
+   che dicono che cos'è e dove finisce. Non un riassunto, non degli estratti
+   scelti: scegliere che cosa far leggere è già orientare il giudizio. Se per
+   farlo stare bisogna tagliare, la condizione non c'è.
+3. **Tutto si può dare come testo.** Una griglia di anteprime di un mazzo
+   non si può: senza file il revisore delle presentazioni non vede quello che
+   deve giudicare.
+
+Il resto del prompt non cambia, divieti compresi ("Cosa passare al
+revisore"). Il revisore restituisce il rapporto come risposta invece di
+scriverlo.
+
+La consegna dichiara in una riga la strada presa (valutazione indipendente,
+materiali passati nel prompt perché qui non si possono salvare file) e porta
+i rapporti **per intero nella stessa risposta**, dopo la sintesi, uno dopo
+l'altro. Offrirli ("se vuoi te li mostro") o annunciarli ("te li incollo nei
+prossimi messaggi") non è consegnarli: chi legge non ha un turno successivo
+da aspettare.
+
+Non chiedere mai a un agente di salvare al posto tuo, e meno che mai al
+revisore: il revisore ha `Write` solo per il proprio rapporto, e usarlo come
+scrivano annulla la separazione per cui esiste.
 
 ### Cosa passare al revisore
 
 Il prompt del revisore contiene **solo**:
 
-- il percorso del testo da valutare;
+- il percorso del testo da valutare (o il testo stesso, alle condizioni di
+  "Senza file");
 - i percorsi dei materiali di riferimento (bando, griglia, linee guida);
 - il profilo del revisore (es. "esperto scientifico di idrologia",
   "rappresentante degli utenti finali");
 - il formato di output richiesto;
-- il percorso dove scrivere il rapporto.
+- il percorso dove scrivere il rapporto (senza file: l'istruzione di
+  restituirlo come risposta, completo).
 
 Il prompt **non** contiene: riassunti della conversazione, intenzioni
 dell'autore, spiegazioni di scelte, punti di forza da notare, giudizi

@@ -38,6 +38,11 @@ Il prompt contiene solo:
   nucleo);
 - il formato del rapporto, la sua lingua e il percorso dove scriverlo.
 
+Se la sessione non può salvare file, un materiale può arrivare nel prompt
+invece che come percorso, fra due righe che dicono che cos'è e dove finisce:
+trattalo come il file. Se non ricevi un percorso dove scrivere, il rapporto è
+la tua risposta finale, completo e nello stesso formato.
+
 Non hai altro contesto e non devi cercarlo. Non chiedere chiarimenti: se
 un'informazione manca nel testo, è un problema del testo e va nel
 rapporto.

@@ -158,6 +158,8 @@ dominio. Si cita con il passaggio esatto, non si corregge in silenzio.
 **Modalità agenti**:
 Lo stato in cui lo strumento per lanciare subagent è disponibile. Si
 deduce dagli strumenti, mai chiedendolo all'utente.
+Resta tale anche dove non si possono salvare file: i materiali senza
+percorso passano nel prompt, per intero (`docs/adr/0021`).
 _Evitare_: Cowork, Claude Code, "in locale". Gli ambienti sono esempi di
 una modalità, non la modalità.
 

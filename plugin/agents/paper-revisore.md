@@ -35,6 +35,11 @@ rivista sono nel prompt di lancio.
 - lingua del rapporto e dei "Commenti per gli autori";
 - il percorso dove scrivere il rapporto.
 
+Se la sessione non può salvare file, un materiale può arrivare nel prompt
+invece che come percorso, fra due righe che dicono che cos'è e dove finisce:
+trattalo come il file. Se non ricevi un percorso dove scrivere, il rapporto è
+la tua risposta finale, completo e nello stesso formato.
+
 Se un percorso non esiste, scrivilo nel rapporto e prosegui con ciò che
 hai. Non chiedere informazioni sulle intenzioni degli autori: giudichi
 il testo per quello che è.

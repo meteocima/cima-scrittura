@@ -230,6 +230,34 @@ Non una skill nuova: il giro che fa esistere il dominio per chi scrive.
   skill, come per gli altri tre domini.
 - `CLAUDE.md`: quattro domini scritti, e i conteggi del `--check` aggiornati.
 
+## Senza file (issue #29)
+
+Il nucleo ammette la revisione con agenti anche dove non si possono salvare
+file, a tre condizioni (`nucleo/protocollo-revisione.md`, sezione 3, "Senza
+file"; `docs/adr/0021`). Misurato con il caso
+`giro-0.3.0/11-valutazione-senza-file`, due esecuzioni per giro.
+
+| Giro | Esito | Che cosa si e' visto |
+|---|---|---|
+| 2026-10-11, primo | **1.00**, 6,34 dollari | Tutte e due le esecuzioni lanciano tre valutatori e il rapporteur e dichiarano la strada. Ma la seconda chiude con "te li incollo per intero, uno per messaggio" e il turno finisce: i rapporti non arrivano. Il grader non lo vedeva, perche' accettava il consolidato con i punteggi di ciascuno. La frase del nucleo "uno per messaggio se lunghi" invitava a rimandare. Corretti nucleo, skill e grader |
+| 2026-10-11, secondo | **1.00**, 7,48 dollari | Grader piu' severo. Consegne di 52.000 e 29.000 caratteri con i tre rapporti per intero, nessuna promessa per dopo |
+
+Controllato a mano nelle tracce del secondo giro (conservate con
+`--keep-temp`): proposta e topic, che erano gia' file leggibili, passano per
+percorso; nel prompt va solo la matrice costruita dalla skill, per intero e fra
+delimitatori; nessun riassunto della conversazione, nessuna indicazione su
+che cosa guardare.
+
+Resta un residuo: in un'esecuzione su due la sessione ha passato al
+rapporteur i rapporti "in forma ridotta", senza i commenti in stile ESR, e lo
+ha dichiarato. Non e' un riassunto ma e' un taglio, contro la condizione 2.
+Da riguardare se ricompare.
+
+Il controllo sui prompt resta manuale: nessuna documentazione dice che un
+grader `llm` possa leggere la traccia. Una pista: nei risultati i grader `llm`
+hanno un campo `config.focus`, che vale `last_message`; se accetta `trace`,
+il controllo diventa automatico. Non verificato.
+
 ## Esito
 
 **Il giro non e' finito.** Le sei skill e i tre agenti del dominio sono
@@ -242,8 +270,7 @@ Da fare prima del rilascio:
 - le righe manuali di ciascuna sezione qui sopra (2b, 3, 4, 7, 10, 13, 16, 19,
   20, 22, 23, 25, 26, 29);
 - le righe non eseguite del giro 0.2.0 (issue #6 e #7), che si chiudono dentro
-  questo rilascio;
-- la decisione sulla issue #29, che riguarda il nucleo.
+  questo rilascio.
 
 Analisi del bando (#12): chiusa il 2026-10-10. Tre casi automatici verdi, tre
 righe manuali ancora da fare (2b, 3, 4).
@@ -272,3 +299,7 @@ volte su due, due righe manuali da fare (22, 23).
 Valutazione simulata (#17): chiusa il 2026-10-10. Il caso con i file e' verde,
 quello senza file e' verde su difetti e punteggi e instabile sulla consegna
 (issue #29). Due righe manuali da fare (19, 20).
+
+Senza file (#29): decisa il 2026-10-11 con l'`adr/0021`. Il caso 11 verde due
+volte su due con il grader piu' severo; un residuo sul rapporteur annotato
+sopra.

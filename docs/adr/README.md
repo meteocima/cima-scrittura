@@ -27,3 +27,4 @@ dice che cosa vale oggi, questi dicono come ci siamo arrivati.
 | [0018](0018-i-file-sono-cittadini-di-prima-classe.md) | Il plugin lavora sui documenti, non solo sul testo |
 | [0019](0019-presentazioni-formato-non-dominio.md) | Le presentazioni sono un formato, non un dominio |
 | [0020](0020-proposte-resta-un-dominio-separato.md) | `proposte` resta un dominio separato da `progetti` |
+| [0021](0021-agenti-senza-file.md) | Senza file la revisione resta agli agenti, con i materiali nel prompt |
