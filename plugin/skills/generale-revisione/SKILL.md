@@ -71,16 +71,25 @@ la riscrittura in una riga.
    silenzio (`anti-pattern-ai.md`, ultima riga).
 5. **Fatti**: non verificare i dati propri dell'utente (risultati,
    date interne), ma segnalare quelli che sembrano incoerenti tra loro.
-   Non aggiungere fatti.
+   Non aggiungere fatti, con una sola eccezione nelle riscritture: i dati
+   di `references/nucleo/identita-cima.md` (ragione sociale, sede,
+   qualifiche), che sono verificati, si possono usare dove servono al
+   testo, dicendolo nell'elenco delle modifiche.
 6. **Fonti citate nel testo**: verificarle con `verifica-fonti.md` e
    riportare l'esito (verificata, dati discordanti, non trovata). Senza
    strumento di ricerca, elencarle come da verificare.
-7. **Consegna** secondo il tipo di intervento.
-
-In una riscrittura: mantenere i fatti dell'autore, non aggiungerne;
-inserire segnaposto dove il testo è vago e serve un dato; applicare poi
-l'autorevisione con `checklist.md` alla nuova versione e, per i tipi
-pubblici, la revisione separata (sezione "Secondo parere indipendente").
+7. **Correzione o riscrittura**, se è questo l'intervento: mantenere i
+   fatti dell'autore e inserire segnaposto dove il testo è vago e serve un
+   dato. Per un rapporto si passa direttamente al punto 10.
+8. **Autorevisione della nuova versione.** Sempre, dopo una correzione o
+   una riscrittura: applicare `checklist.md` (sezioni A–E) al testo nuovo,
+   non all'originale, cercare nel testo trattino em e punto medio come
+   chiede la procedura di `anti-pattern-ai.md`, e correggere.
+9. **Revisione separata.** Dopo una riscrittura di un tipo che la richiede
+   secondo `tipologie.md` (lettere ufficiali e istituzionali, comunicati,
+   testi web e social pubblici), o quando l'utente la chiede: sezione
+   "Secondo parere indipendente".
+10. **Consegna.** Formato nella sezione "Consegna".
 
 ## Secondo parere indipendente
 
@@ -135,11 +144,14 @@ Strumento per lanciare subagent non disponibile:
    sezione 4a; se è il testo originale dell'utente, la revisione già
    fatta vale come parere non condizionato e va detto in una riga.
 2. Stesso formato del revisore (sezione 5 del protocollo, senza
-   punteggi).
-3. Se il testo è una riscrittura fatta in questa conversazione, offrire
-   il pacchetto revisore (sezione 4b del protocollo) in un unico blocco
-   da copiare in una conversazione nuova; per il testo originale
-   offrirlo solo se l'utente insiste. Si può citare Cowork una
+   punteggi), nel messaggio: almeno Sintesi e tabella dei problemi, anche
+   se la tabella resta vuota. Una frase come "ho ricontrollato con la
+   checklist" non è un rapporto.
+3. Se il testo è una riscrittura fatta in questa conversazione, scrivere
+   in fondo il pacchetto revisore (sezione 4b del protocollo) per intero,
+   in un unico blocco da copiare in una conversazione nuova: il blocco,
+   non la proposta di prepararlo. Per il testo originale offrirlo solo se
+   l'utente insiste. Si può citare Cowork una
    sola volta, come modo per avere una revisione indipendente.
 
 Consegnare comunque il risultato completo, senza chiedere all'utente di
@@ -173,13 +185,22 @@ Dipende dal tipo di intervento.
   (`references/nucleo/formati-e-file.md`, sezione 7).
 - **Correzione**: il testo corretto nello stesso formato in cui è arrivato,
   più l'elenco delle modifiche.
-- **Riscrittura**: la nuova versione nello stesso formato in cui è arrivata,
-  con le stesse regole di consegna di `generale-scrittura`, revisione separata
-  compresa per i tipi pubblici.
+- **Riscrittura**: la nuova versione nello stesso formato in cui è arrivata;
+  un `.docx` si riscrive dentro il file ricevuto, conservandone gli stili.
 
-Dove si posa il file lo dice `formati-e-file.md`, sezione 4. Dopo il testo, in
-quest'ordine e solo se presenti: segnaposto inseriti, fonti, esito della
-revisione, assunzioni.
+Dove si posa il file lo dice `formati-e-file.md`, sezione 4. Dopo il testo di
+una correzione o di una riscrittura, in quest'ordine:
+
+1. **Modifiche principali**: l'elenco, con i dati presi da `identita-cima.md`
+   dichiarati come tali.
+2. **Segnaposto da completare**, se ce ne sono: tutti i `[…]` inseriti.
+3. **Fonti**, se il testo ne cita: verificate, corrette o non trovate.
+4. **Revisione**, sempre: con revisione separata, il rapporto (in modalità
+   agenti la sintesi in 2–4 righe, le correzioni applicate e le proposte
+   aperte; in chat il rapporto per intero, riga 4a in testa, e il pacchetto
+   revisore); senza, una riga che dice che l'autorevisione è stata fatta e
+   che cosa ha corretto.
+5. **Assunzioni**, se ce ne sono: tipo, destinatario o lingua dedotti.
 
 ## Deroghe allo stile di base
 

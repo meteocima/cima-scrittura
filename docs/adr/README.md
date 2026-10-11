@@ -28,3 +28,4 @@ dice che cosa vale oggi, questi dicono come ci siamo arrivati.
 | [0019](0019-presentazioni-formato-non-dominio.md) | Le presentazioni sono un formato, non un dominio |
 | [0020](0020-proposte-resta-un-dominio-separato.md) | `proposte` resta un dominio separato da `progetti` |
 | [0021](0021-agenti-senza-file.md) | Senza file la revisione resta agli agenti, con i materiali nel prompt |
+| [0022](0022-niente-pacchetto-su-uno-scheletro.md) | Niente pacchetto revisore su un testo fatto di segnaposto |

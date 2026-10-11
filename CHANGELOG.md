@@ -89,6 +89,15 @@ restano come memoria dei due giri di prova.
   guide non trattano. ADR 0013 registra la lacuna chiusa.
 - `plugin.json`: versione 0.3.0. Del giro 0.2.0 restano da eseguire, dentro
   questo rilascio, le righe chat che producono un file (issue #7).
+- `generale-revisione` dopo le prove in chat della issue #7: la revisione
+  della nuova versione diventa due passi numerati del flusso (autorevisione,
+  poi revisione separata), come in `generale-scrittura`; la consegna scrive
+  per esteso le sue regole invece di rimandare a `generale-scrittura`, che
+  una skill non può leggere; in chat il rapporto ha almeno sintesi e tabella
+  dei problemi, e il pacchetto revisore si scrive, non si offre. Nelle
+  riscritture si possono usare i dati di `identita-cima.md`, dichiarati.
+- Niente pacchetto revisore su un testo fatto di segnaposto (ADR 0022):
+  `nucleo/protocollo-revisione.md`, sezioni 4b e 5.
 
 ## [0.2.0] mai rilasciata da sola, esce con la 0.3.0
 

@@ -198,6 +198,12 @@ contenga:
 Spiegare in una riga perché: una conversazione nuova non conosce le
 intenzioni dell'autore, quindi giudica il testo per quello che è.
 
+Unica eccezione: se il testo è in gran parte segnaposto (sezione 5, "Testo
+troppo incompleto per essere valutato"), il pacchetto non si prepara, perché
+un revisore esterno su uno scheletro non ha niente da giudicare. Al suo
+posto, una riga dice che il pacchetto va chiesto quando i segnaposto sono
+riempiti.
+
 ## 5. Formato comune del rapporto
 
 ```
@@ -226,7 +232,8 @@ gran parte segnaposto, non assegnare punteggi: un punteggio minimo su un
 testo che non esiste ancora sembra un giudizio e non lo è. Scrivere invece,
 al posto dei punteggi, che non c'è abbastanza testo da valutare ed elencare
 che cosa serve perché la revisione abbia senso. I problemi che si vedono già
-si segnalano lo stesso.
+si segnalano lo stesso. In modalità chat, niente pacchetto revisore (sezione
+4b).
 
 ### Rapporto dentro il documento
 
