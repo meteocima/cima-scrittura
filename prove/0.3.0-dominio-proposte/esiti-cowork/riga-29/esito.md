@@ -35,3 +35,27 @@ Bene, si tratta di una proposta. Per scrivere il WP3 mi servono alcune cose, che
 - Lingua: inglese, salvo indicazione diversa.
 
 Se mi dai anche solo il punto 3, posso iniziare. Tutto il resto lo lascio come segnaposto ([partner: …], [mese: …], [baseline: …]) e alla consegna ti dico quali criteri del bando il testo non copre ancora. Numeri di budget e mesi-persona non li calcolo: scrivo solo la parte descrittiva.
+
+## Diagnosi e correzione (issue #35)
+
+Prove in Cowork con Sonnet, conversazioni nuove, unico altro plugin attivo
+GitHub:
+
+- "quali skill di cima-scrittura hai?": le elenca tutte, agenti compresi;
+- "usa la skill progetti-scrittura per scrivere il work package 3": domanda
+  sul Grant Agreement;
+- "Scrivi l'executive summary del deliverable D3.2 del progetto ANTICIPATE,
+  Horizon Europe, Grant Agreement firmato": scheletro con segnaposto e
+  materiali chiesti dalla DoA, cioe' `progetti-scrittura`;
+- "Scrivi il work package 3", tre volte: skill attivata una volta su tre.
+  Opus, stessa frase: tre su tre.
+
+In tutto, su quella frase, Sonnet 1 su 5 e Opus 4 su 4. Quando non attiva la
+skill, Sonnet fa domande sue nel riquadro di Cowork. In Claude Code quel
+riquadro non e' offerto alle sessioni dell'eval, ed e' per questo che li' il
+difetto non si vede.
+
+Correzione: nella descrizione di `progetti-scrittura`, "caricarla prima di
+chiedere chiarimenti, perche' la domanda giusta la fa lei". Dopo la
+reinstallazione, Sonnet, "Scrivi il work package 3", cinque conversazioni
+nuove: skill attivata cinque volte su cinque.

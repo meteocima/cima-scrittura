@@ -216,7 +216,7 @@ Non una skill nuova: il giro che fa esistere il dominio per chi scrive.
 |---|---|---|---|---|
 | 27 | agenti | "Scrivi il work package 3" | Si attiva una skill (prima non se ne attivava nessuna, `adr/0020`): `progetti-scrittura` rivendica il mezzo ambiguo e fa la domanda sola sul Grant Agreement | **Passa**, due volte su due il 2026-10-10, dal caso `instradamento/01-work-package` |
 | 28 | agenti | "Draft the impact section" | Come sopra | **Passa**, due volte su due, dal caso `instradamento/06-impact-section` |
-| 29 | agenti | Stessa frase, e alla domanda si risponde "stiamo scrivendo una proposta" | `progetti-scrittura` passa la mano a `proposte-scrittura` invece di scrivere con i criteri mancanti | **Passa con Opus, non passa con Sonnet** (2026-10-11, Cowork, `esiti-cowork/riga-29/`). Con Opus il primo turno fa la sola domanda sul Grant Agreement e, alla risposta, il secondo turno e' di `proposte-scrittura`: chiede bando o matrice e il file della Part B in un messaggio solo, promette segnaposto per il resto e dice che budget e mesi-persona non li calcola. Nel contesto della conversazione risultano caricate tutte e due, `progetti-scrittura` e poi `proposte-scrittura`. Con Sonnet, due conversazioni su due, al primo turno non si attiva nessuna skill e la risposta fa tre domande sue: il passaggio di mano non si puo' nemmeno provare. Non e' la descrizione ne' il modello da solo: lo stesso giorno i dieci casi di `instradamento/` con `--model sonnet` in Claude Code attivano la skill giusta venti volte su venti, `01-work-package` compreso (2,63 dollari). Il difetto sta nella combinazione Sonnet e Cowork, e da qui non si riproduce (issue #35) |
+| 29 | agenti | Stessa frase, e alla domanda si risponde "stiamo scrivendo una proposta" | `progetti-scrittura` passa la mano a `proposte-scrittura` invece di scrivere con i criteri mancanti | **Passa con Opus, non passa con Sonnet** (2026-10-11, Cowork, `esiti-cowork/riga-29/`). Con Opus il primo turno fa la sola domanda sul Grant Agreement e, alla risposta, il secondo turno e' di `proposte-scrittura`: chiede bando o matrice e il file della Part B in un messaggio solo, promette segnaposto per il resto e dice che budget e mesi-persona non li calcola. Nel contesto della conversazione risultano caricate tutte e due, `progetti-scrittura` e poi `proposte-scrittura`. Con Sonnet, due conversazioni su due, al primo turno non si attiva nessuna skill e la risposta fa tre domande sue: il passaggio di mano non si puo' nemmeno provare. Non e' la descrizione ne' il modello da solo: lo stesso giorno i dieci casi di `instradamento/` con `--model sonnet` in Claude Code attivano la skill giusta venti volte su venti, `01-work-package` compreso (2,63 dollari). Il difetto sta nella combinazione Sonnet e Cowork, e da qui non si riproduce (issue #35). Diagnosi nell'app: Sonnet vede le skill, le attiva se nominate o se la richiesta e' precisa, ma su "Scrivi il work package 3" le attiva 1 volta su 5 contro 4 su 4 di Opus, perche' preferisce fare domande sue nel riquadro di Cowork. Corretta la descrizione di `progetti-scrittura` ("caricarla prima di chiedere chiarimenti, perche' la domanda giusta la fa lei"): **5 su 5 con Sonnet** in Cowork, instradamento in Claude Code ancora 10 su 10. Il secondo turno con Sonnet non e' stato riprovato |
 
 ### Che cosa e' cambiato nei documenti
 
@@ -289,9 +289,9 @@ la 29 (secondo turno scritto da chi prova, che l'eval non sa simulare).
 **Il giro non e' finito.** Le sei skill e i tre agenti del dominio sono
 scritti e misurati in cieco. Prima del rilascio resta una riga da fare a
 mano. La 2b e' passata il 2026-10-11 in claude.ai con Sonnet. La 29 passa in
-Cowork con Opus e non con Sonnet, che al primo turno non attiva nessuna
-skill: in Claude Code Sonnet le attiva tutte, quindi il difetto sta nella
-combinazione Sonnet e Cowork, da indagare nell'app (issue #35).
+Cowork con Opus; con Sonnet il primo turno non attivava la skill (1 su 5),
+e dopo la correzione della descrizione di `progetti-scrittura` la attiva 5
+su 5 (issue #35).
 
 Le righe in modalita' chat del giro 0.2.0 che producono un file (3, 5, 8, 11
 e 13, issue #7) sono state eseguite il 2026-10-11: passano tutte, la 13 con
@@ -314,7 +314,8 @@ Concept (#13): chiusa il 2026-10-10. Tre casi automatici verdi.
 
 Il dominio prende le sue richieste (#20): chiusa il 2026-10-10. Le due frasi
 ambigue dell'`adr/0020` ora attivano una skill, due volte su due, anche con
-Sonnet in Claude Code. La riga 29 passa con Opus in Cowork, non con Sonnet.
+Sonnet in Claude Code. La riga 29 passa con Opus in Cowork, e con Sonnet
+dopo la correzione della issue #35.
 
 Coerenza e limiti (#19): chiusa il 2026-10-10. Tre casi automatici verdi.
 

@@ -95,6 +95,11 @@ restano come memoria dei due giri di prova.
   la 2b passa in claude.ai con Sonnet; la 29 passa in Cowork con Opus e non
   con Sonnet, che li' non attiva nessuna skill mentre in Claude Code le
   attiva venti volte su venti (issue #35).
+- `progetti-scrittura`: la descrizione dice di caricare la skill prima di
+  chiedere chiarimenti, perche' la domanda sulla fase la fa lei. Con Sonnet in
+  Cowork "scrivi il work package 3" attivava la skill una volta su cinque,
+  perche' Sonnet preferiva fare domande sue; dopo la correzione cinque su
+  cinque (issue #35).
 - `prove/README.md`: i casi `senza-file` si lanciano a parte, senza
   concedere `Write`, perche' la concessione sulla riga di comando scavalca la
   lista `allowed_tools` del caso.
