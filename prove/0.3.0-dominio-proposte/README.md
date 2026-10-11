@@ -265,13 +265,14 @@ scritti e misurati in cieco, ma la 0.3.0 non si rilascia finche' non sono
 state fatte le righe manuali: sono quelle dove conta come il risultato arriva
 davvero a chi legge, e un caso automatico non le vede.
 
-Da fare prima del rilascio:
+Da fare prima del rilascio: le righe manuali di ciascuna sezione qui sopra
+(2b, 3, 4, 7, 10, 13, 16, 19, 20, 22, 23, 25, 26, 29).
 
-- le righe manuali di ciascuna sezione qui sopra (2b, 3, 4, 7, 10, 13, 16, 19,
-  20, 22, 23, 25, 26, 29);
-- le righe in modalita' chat del giro 0.2.0 che producono un file (3, 5, 8, 11
-  e 13, issue #7). Le righe agenti da rifare sulla rc2 (issue #6) sono state
-  lasciate cadere il 2026-10-11.
+Le righe in modalita' chat del giro 0.2.0 che producono un file (3, 5, 8, 11
+e 13, issue #7) sono state eseguite il 2026-10-11: passano tutte, la 13 con
+una riserva che l'`adr/0022` ha reso conforme. Esiti in
+`prove/0.2.0-file-e-presentazioni/`. Le righe agenti da rifare sulla rc2
+(issue #6) sono state lasciate cadere lo stesso giorno.
 
 Analisi del bando (#12): chiusa il 2026-10-10. Tre casi automatici verdi, tre
 righe manuali ancora da fare (2b, 3, 4).

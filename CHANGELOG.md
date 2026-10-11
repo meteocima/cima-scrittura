@@ -6,8 +6,8 @@ Il quarto dominio, `proposte`, costruito un ticket alla volta (issue #11).
 Tutte le prove del giro stanno in `prove/0.3.0-dominio-proposte/`.
 
 La 0.3.0 assorbe la 0.2.0, che non esce da sola: le sue voci qui sotto
-escono con questo rilascio. Delle sue prove ancora aperte resta solo la
-modalita' chat delle righe che producono un file (issue #7); le righe agenti
+escono con questo rilascio. Le sue righe in modalita' chat che producono un
+file (issue #7) sono state eseguite il 2026-10-11 e passano; le righe agenti
 da rifare sulla rc2 (issue #6) sono lasciate cadere. I tag `v0.2.0-rc1` e `v0.2.0-rc2`
 restano come memoria dei due giri di prova.
 
