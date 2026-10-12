@@ -14,7 +14,8 @@ Per la revisione: `references/nucleo/protocollo-revisione.md`.
 Se l'utente fornisce o chiede un file: `references/nucleo/formati-e-file.md`.
 
 Poi leggere `references/griglia-valutazione.md`,
-`references/profili-valutatori.md` e `references/anti-pattern-proposte.md`.
+`references/profili-valutatori.md`, `references/anti-pattern-proposte.md` e
+`references/pattern-esr.md`.
 
 Livello di revisione del dominio: **completo** (3 valutatori piu' rapporteur).
 
@@ -70,7 +71,8 @@ Si usa quando e' disponibile lo strumento per lanciare subagent (regola in
    - percorso della proposta e dei materiali;
    - percorso della matrice del bando;
    - percorsi assoluti di `references/griglia-valutazione.md`,
-     `references/anti-pattern-proposte.md`, del profilo del programma
+     `references/anti-pattern-proposte.md`, `references/pattern-esr.md`,
+     del profilo del programma
      (`references/programma-*.md`) e di
      `references/nucleo/protocollo-revisione.md` e `references/nucleo/vincoli.md`
      (la skill conosce la propria cartella base: costruire i percorsi da li');

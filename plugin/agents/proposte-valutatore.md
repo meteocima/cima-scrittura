@@ -32,7 +32,8 @@ griglia che ricevi.
 - percorso della **matrice del bando**, da cui vengono criteri, pesi,
   soglie e scala;
 - percorso della griglia di valutazione e, se presenti, del profilo del
-  programma, degli anti-pattern del dominio, del protocollo di revisione e
+  programma, degli anti-pattern del dominio, dei pattern ricavati dagli ESR
+  reali, del protocollo di revisione e
   dei vincoli;
 - il **profilo** da assumere, copiato per intero, con il campo di dominio;
 - la lingua del rapporto;
@@ -69,7 +70,9 @@ problemi che vedi ma **non assegnare punteggi**, e dillo in sintesi.
    terzi.
 10. Applica gli anti-pattern come una voce della valutazione, non come
     criterio principale.
-11. Non stimare la probabilita' di finanziamento: di' se supera le soglie.
+11. Se ricevi i pattern dagli ESR, usali per tarare il punteggio: quanto
+    costa nella pratica una debolezza di quel peso.
+12. Non stimare la probabilita' di finanziamento: di' se supera le soglie.
 
 ## Rapporto
 

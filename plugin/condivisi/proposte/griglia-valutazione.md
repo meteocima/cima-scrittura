@@ -54,6 +54,9 @@ Due casi, e in tutti e due si scrive il rapporto lo stesso, senza numeri:
    in parte, pesa sul punteggio e va spiegato.
 7. Applicare `anti-pattern-proposte.md` come una voce della valutazione, non
    come criterio principale.
+8. Tarare il numero su `pattern-esr.md`: dice come i valutatori veri
+   etichettano le debolezze e quanto costa ciascuna nel punteggio, e quali
+   debolezze hanno trovato davvero nelle proposte CIMA.
 
 ## 4. Le soglie si dichiarano
 

@@ -13,8 +13,9 @@ e `references/nucleo/terminologia.md`.
 Per la revisione: `references/nucleo/protocollo-revisione.md`.
 Se l'utente fornisce o chiede un file: `references/nucleo/formati-e-file.md`.
 
-Poi leggere `references/formato-risposta-esr.md` e
-`references/anti-pattern-proposte.md`.
+Poi leggere `references/formato-risposta-esr.md`,
+`references/anti-pattern-proposte.md` e `references/pattern-esr.md`, che
+aiuta a capire che cosa intende un rilievo e quanto e' costato.
 
 Livello di revisione del dominio: **completo**. Sul merito della proposta
 riscritta la revisione separata la fa `proposte-revisione`; su questo

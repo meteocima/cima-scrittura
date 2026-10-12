@@ -1,5 +1,25 @@
 # Changelog
 
+## [0.3.2] non rilasciata
+
+### Aggiunto
+- `plugin/condivisi/proposte/pattern-esr.md`: primo giro di calibrazione del
+  dominio proposte su ESR reali (issue #22). Da quattro proposte CIMA
+  finanziate: come i valutatori etichettano le debolezze e quanto costa
+  ciascuna nel punteggio, 30 pattern anonimi per criterio, che cosa lodano.
+  Tutte e quattro sono sopra soglia: le non finanziate completeranno il file.
+  Prove in `prove/0.3.2-calibrazione-esr/`.
+
+### Modificato
+- `griglia-valutazione.md` rimanda a `pattern-esr.md` per tarare il
+  punteggio; `proposte-revisione` lo legge e lo passa agli agenti
+  `proposte-valutatore`, che lo usano per tarare i punteggi;
+  `proposte-risposta-esr` lo legge.
+- `anti-pattern-proposte.md`: voci confermate dagli ESR marcate [ESR], e
+  cinque voci nuove (obiettivi non misurabili, rinvii a un task, strumento
+  nuovo senza confronto con gli esistenti, rischi tutti bassi, deliverable di
+  gestione mal posti).
+
 ## [0.3.1] 2026-10-11
 
 Primo rilascio con il dominio `proposte`. Contiene la 0.3.0 e la 0.2.0, che
